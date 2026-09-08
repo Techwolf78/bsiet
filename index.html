@@ -1,0 +1,2945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivekanand Shikshan Sanstha</title>
+<meta name="description" content="A pan-Maharashtra educational trust founded in 1954, serving over 2 lakh students across 330+ centres in 14 districts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap">
+<style>
+/* ── Token system (Official Sanstha Brand Colors) ────────── */
+:root {
+  --c-navy:         #002060;      /* Official Royal Blue */
+  --c-navy-mid:     #0B3386;
+  --c-accent:       #C01E2E;      /* Official Sanstha Crimson Red */
+  --c-accent-light: #E03546;
+  --c-saffron:      #E67E22;      /* Vivekananda Saffron */
+  --c-ground:       #F8FAFD;      /* Clean Fresh Light Ground */
+  --c-surface:      #F0F4FA;      /* Fresh Light Blue-tinted Surface */
+  --c-card:         #FFFFFF;
+  --c-stone:        #E2E8F0;
+  --c-text-head:    #0B1B3D;      /* Deep, Crisp Slate */
+  --c-text-body:    #334155;
+  --c-text-muted:   #64748B;
+  --c-text-inv:     #FFFFFF;
+  --c-border:       #E2E8F0;
+  --shadow-card:    0 2px 10px rgba(0, 32, 96, 0.06), 0 12px 28px rgba(0, 32, 96, 0.05);
+}
+
+/* ── Reset & base ──────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--c-ground);
+  color: var(--c-text-body);
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ── Typography scale ─────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--c-text-head);
+  text-wrap: balance;
+  line-height: 1.2;
+}
+.eyebrow {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+}
+p { max-width: 65ch; }
+
+/* ── Layout helpers ───────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+.section { padding-block: 5rem; }
+.section--tight { padding-block: 3.5rem; }
+
+/* ── TOP INSTITUTIONAL HEADER ──────────────────────────── */
+.top-header {
+  background: #FFFFFF;
+  border-bottom: 2px solid #C01E2E;
+  padding-block: 0.75rem;
+}
+.top-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.top-brand {
+  display: flex;
+  align-items: center;
+  gap: 1.125rem;
+}
+.top-logo-emblem {
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+}
+.emblem-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.top-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.motto-marathi {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: #002060;
+  letter-spacing: 0.02em;
+}
+.motto-author {
+  color: #C01E2E;
+  font-weight: 700;
+}
+.sanstha-title-main {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #C01E2E;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.sanstha-sub-badge {
+  font-size: 0.72rem;
+  color: #64748B;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.inspiration-portraits {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+.inspire-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  padding: 0.35rem 0.65rem;
+  border-radius: 8px;
+}
+.inspire-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid #CBD5E1;
+  flex-shrink: 0;
+}
+.inspire-caption {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0F172A;
+  line-height: 1.15;
+}
+.inspire-caption small {
+  color: #C01E2E;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── MAIN NAV (Official Deep Navy Bar) ──────────────────── */
+nav.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #002060;
+  box-shadow: 0 4px 16px rgba(0, 32, 96, 0.16);
+}
+.main-nav .nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 0.7rem;
+}
+.main-nav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  list-style: none;
+}
+.main-nav .nav-links a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.18s;
+  white-space: nowrap;
+}
+.main-nav .nav-links a:hover {
+  color: #FCD34D;
+}
+.nav-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.nav-phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #FFFFFF;
+  font-size: 0.825rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.nav-phone-link svg {
+  flex-shrink: 0;
+}
+.nav-phone-link:hover { color: #FCD34D; }
+.nav-cta {
+  background: #C01E2E;
+  color: #FFFFFF !important;
+  padding: 0.45rem 1.15rem;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(192, 30, 46, 0.35);
+  transition: background 0.18s, transform 0.12s;
+}
+.nav-cta:hover {
+  background: #E03546 !important;
+  transform: translateY(-1px);
+}
+.nav-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #FFFFFF;
+  padding: .25rem;
+}
+
+/* ── HERO ─────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  background: #001648;
+  overflow: hidden;
+  padding-block: 5.5rem 4.5rem;
+  min-height: 640px;
+}
+/* Management Photo Slideshow Background */
+.hero-slider-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.06) translate3d(0, 0, 0);
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 7s ease-out, visibility 1.2s;
+  pointer-events: none;
+}
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translate3d(0, 0, 0);
+}
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: saturate(1.12) contrast(1.04) brightness(0.95);
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    95deg,
+    rgba(0, 20, 68, 0.90) 0%,
+    rgba(0, 32, 96, 0.74) 45%,
+    rgba(0, 32, 96, 0.48) 72%,
+    rgba(0, 20, 68, 0.85) 100%
+  ),
+  linear-gradient(to top, rgba(0, 20, 68, 0.94) 0%, transparent 35%),
+  linear-gradient(to bottom, rgba(0, 20, 68, 0.65) 0%, transparent 20%);
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-watermark {
+  position: absolute;
+  right: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(10rem, 22vw, 22rem);
+  font-weight: 700;
+  color: rgba(255,255,255,.05);
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* Management Slider UI Controls */
+.hero-management-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.4rem 0.95rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  color: #EDE8DF;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+.hero-management-tag .tag-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22C55E;
+  box-shadow: 0 0 10px #22C55E;
+  display: inline-block;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.35); opacity: 0.55; }
+}
+
+.hero-slider-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 3;
+  flex-wrap: wrap;
+}
+.slider-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.slider-dot {
+  width: 30px;
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.35s ease;
+  border: none;
+  padding: 0;
+}
+.slider-dot.active {
+  background: #FFD166;
+  width: 50px;
+  box-shadow: 0 0 8px rgba(255, 209, 102, 0.7);
+}
+.slider-arrows {
+  display: flex;
+  gap: 0.45rem;
+}
+.slider-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #EDE8DF;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.slider-btn:hover {
+  background: var(--c-accent);
+  border-color: var(--c-accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+.slider-caption {
+  font-size: 0.825rem;
+  color: rgba(237, 232, 223, 0.85);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+/* ── NEWS & NOTICE BOARD STRIP ────────────────────────── */
+.news-strip {
+  background: #FFFFFF;
+  padding-block: 2.25rem;
+  border-bottom: 1px solid var(--c-border);
+}
+.news-strip-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.news-card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-top: 3.5px solid var(--c-navy);
+  border-radius: 12px;
+  padding: 1.35rem 1.5rem;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.news-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 32, 96, 0.08);
+}
+.news-card:nth-child(2) {
+  border-top-color: var(--c-accent);
+}
+.news-card:nth-child(3) {
+  border-top-color: #0284C7;
+}
+.news-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--c-navy);
+  margin-bottom: 0.85rem;
+}
+.news-card-header h3 {
+  font-size: 0.95rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--c-text-head);
+}
+.news-content p {
+  font-size: 0.875rem;
+  color: var(--c-text-body);
+  line-height: 1.55;
+  margin-bottom: 0.5rem;
+}
+.news-marathi-headline {
+  font-weight: 600;
+  color: #0B3386;
+}
+.news-date {
+  font-size: 0.75rem;
+  color: var(--c-text-muted);
+}
+.news-badge-gold {
+  display: inline-block;
+  background: #FEF3C7;
+  color: #92400E;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+}
+.notice-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.notice-list li a {
+  font-size: 0.8125rem;
+  color: #0B3386;
+  font-weight: 600;
+  line-height: 1.45;
+  display: inline-block;
+  transition: color 0.18s;
+}
+.notice-list li a:hover {
+  color: var(--c-accent);
+  text-decoration: underline;
+}
+.badge-new {
+  background: var(--c-accent);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-left: 0.25rem;
+  vertical-align: middle;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.hero-eyebrow {
+  color: var(--c-accent-light);
+  margin-bottom: 1.25rem;
+}
+.hero h1 {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  color: #EDE8DF;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--c-accent-light);
+}
+.hero-sub {
+  color: rgba(237,232,223,.7);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 52ch;
+  margin-bottom: 2rem;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .875rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .75rem 1.625rem;
+  border-radius: 6px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: .9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .18s, transform .12s;
+  border: 2px solid transparent;
+  line-height: 1;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary {
+  background: var(--c-accent);
+  color: #fff;
+  border-color: var(--c-accent);
+}
+.btn-primary:hover { background: var(--c-accent-light); border-color: var(--c-accent-light); }
+.btn-outline {
+  background: transparent;
+  color: #EDE8DF;
+  border-color: rgba(237,232,223,.4);
+}
+.btn-outline:hover { border-color: rgba(237,232,223,.8); background: rgba(255,255,255,.06); }
+.btn-dark {
+  background: var(--c-navy);
+  color: #fff;
+  border-color: var(--c-navy);
+}
+.btn-dark:hover { background: var(--c-navy-mid); border-color: var(--c-navy-mid); }
+.btn-accent-outline {
+  background: transparent;
+  color: var(--c-accent);
+  border-color: var(--c-accent);
+}
+.btn-accent-outline:hover { background: var(--c-accent); color: #fff; }
+
+/* Hero quick-contact card */
+.hero-card {
+  background: var(--c-card);
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 8px 40px rgba(0,0,0,.25);
+}
+.hero-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  color: var(--c-text-head);
+}
+.hc-field {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  margin-bottom: 1rem;
+}
+.hc-field label {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+}
+.hc-field input,
+.hc-field select {
+  padding: .625rem .875rem;
+  border: 1.5px solid var(--c-border);
+  border-radius: 7px;
+  background: var(--c-ground);
+  color: var(--c-text-body);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: .9375rem;
+  transition: border-color .18s;
+  width: 100%;
+}
+.hc-field input:focus,
+.hc-field select:focus {
+  outline: none;
+  border-color: var(--c-accent);
+}
+.hc-submit {
+  width: 100%;
+  margin-top: .25rem;
+  justify-content: center;
+}
+
+/* ── STATS STRIP ──────────────────────────────────────── */
+.stats-strip {
+  background: var(--c-surface);
+  border-bottom: 1px solid var(--c-border);
+}
+.stats-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.stat-item {
+  padding: 2.25rem 1.75rem;
+  border-right: 1px solid var(--c-border);
+  text-align: center;
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 700;
+  color: var(--c-accent);
+  line-height: 1;
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+.stat-label {
+  display: block;
+  font-size: .8125rem;
+  font-weight: 500;
+  letter-spacing: .05em;
+  color: var(--c-text-muted);
+  text-transform: uppercase;
+  margin-top: .4rem;
+}
+
+/* ── ABOUT ────────────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.about-visual {
+  position: relative;
+}
+.about-image-frame {
+  background: var(--c-surface);
+  border-radius: 16px;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--c-border);
+}
+.about-illustration {
+  width: 70%;
+  opacity: .85;
+}
+.about-badge {
+  position: absolute;
+  bottom: -1.25rem;
+  right: -1.25rem;
+  background: var(--c-accent);
+  color: #fff;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(196,112,42,.35);
+}
+.badge-year {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+}
+.badge-text {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  opacity: .85;
+}
+.about-content h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 1rem; }
+.about-content .eyebrow { margin-bottom: .625rem; }
+.about-content p { color: var(--c-text-body); margin-bottom: 1rem; }
+.founder-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .625rem;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  padding: .75rem 1.125rem;
+  margin-top: .5rem;
+}
+.founder-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--c-accent);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: .95rem;
+  flex-shrink: 0;
+}
+.founder-info { line-height: 1.3; }
+.founder-name { font-weight: 600; font-size: .9375rem; color: var(--c-text-head); }
+.founder-title { font-size: .78rem; color: var(--c-text-muted); }
+
+/* ── INSTITUTIONS (Fresh Light Styling) ──────────────────── */
+.institutions-bg {
+  background: linear-gradient(180deg, #F0F4FA 0%, #FFFFFF 100%);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+}
+.institutions-bg .eyebrow { color: var(--c-accent); }
+.institutions-bg h2 { color: var(--c-text-head); margin-bottom: .75rem; font-size: clamp(1.75rem, 3vw, 2.5rem); }
+.institutions-intro { color: var(--c-text-muted); max-width: 58ch; margin-bottom: 3rem; }
+.inst-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.inst-card {
+  background: #FFFFFF;
+  border: 1px solid var(--c-border);
+  border-top: 3px solid var(--c-navy);
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+  transition: all .25s ease;
+}
+.inst-card:hover {
+  transform: translateY(-3px);
+  border-top-color: var(--c-accent);
+  box-shadow: 0 10px 30px rgba(0, 32, 96, 0.1);
+}
+.inst-count {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: var(--c-navy);
+  line-height: 1;
+  display: block;
+  margin-bottom: .5rem;
+}
+.inst-card h4 { color: var(--c-text-head); font-size: 1.0625rem; margin-bottom: .5rem; font-weight: 700; }
+.inst-card p { color: var(--c-text-body); font-size: .875rem; max-width: none; line-height: 1.6; }
+
+/* ── PROGRAMS ─────────────────────────────────────────── */
+.programs-header { margin-bottom: 2.75rem; }
+.programs-header h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: .75rem; }
+.programs-header p { color: var(--c-text-muted); }
+.program-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 2.25rem;
+}
+.prog-tab {
+  padding: .5rem 1.125rem;
+  border-radius: 24px;
+  border: 1.5px solid var(--c-border);
+  background: transparent;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+  color: var(--c-text-muted);
+  cursor: pointer;
+  transition: all .18s;
+}
+.prog-tab:hover, .prog-tab.active {
+  background: var(--c-accent);
+  border-color: var(--c-accent);
+  color: #fff;
+}
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.prog-card {
+  background: var(--c-card);
+  border: 1.5px solid var(--c-border);
+  border-radius: 10px;
+  padding: 1.375rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: .875rem;
+  transition: border-color .18s, box-shadow .18s;
+}
+.prog-card:hover {
+  border-color: var(--c-accent);
+  box-shadow: var(--shadow-card);
+}
+.prog-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c-accent);
+  flex-shrink: 0;
+  margin-top: .55rem;
+}
+.prog-card h4 { font-size: 1rem; color: var(--c-text-head); margin-bottom: .25rem; font-family: 'Source Sans 3', sans-serif; font-weight: 600; }
+.prog-card p { font-size: .8125rem; color: var(--c-text-muted); max-width: none; }
+
+/* ── WHY VSS ──────────────────────────────────────────── */
+.why-bg { background: var(--c-surface); }
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.why-left h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 1rem; }
+.why-left p { color: var(--c-text-body); margin-bottom: 1.5rem; }
+.why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+.why-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.why-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--c-accent);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.why-icon svg { width: 18px; height: 18px; fill: #fff; }
+.why-text h4 { font-family: 'Source Sans 3', sans-serif; font-weight: 600; font-size: .9375rem; color: var(--c-text-head); margin-bottom: .2rem; }
+.why-text p { font-size: .875rem; color: var(--c-text-muted); max-width: none; }
+.why-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.why-tile {
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.why-tile-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--c-accent);
+  display: block;
+  line-height: 1;
+  margin-bottom: .35rem;
+  font-variant-numeric: tabular-nums;
+}
+.why-tile-label { font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--c-text-muted); }
+.why-tile--span { grid-column: span 2; text-align: left; display: flex; align-items: center; gap: 1rem; }
+.why-tile--span .why-tile-num { margin-bottom: 0; }
+.why-tile--span .why-tile-info h4 { font-size: .9375rem; font-weight: 600; color: var(--c-text-head); margin-bottom: .2rem; }
+.why-tile--span .why-tile-info p { font-size: .8125rem; color: var(--c-text-muted); max-width: none; }
+
+/* ── INFRASTRUCTURE (Online Photography) ───────────────── */
+.infra-bg {
+  background: var(--c-surface);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+}
+.infra-header { margin-bottom: 2.5rem; }
+.infra-header h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: .625rem; color: var(--c-text-head); }
+.infra-header p { color: var(--c-text-muted); max-width: 58ch; }
+.infra-main-grid {
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.infra-side-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.infra-photo {
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  background: #E2E8F0;
+  border: 1px solid var(--c-border);
+  box-shadow: 0 2px 10px rgba(0, 32, 96, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.infra-photo.main-admin-photo {
+  min-height: 380px;
+}
+.infra-side-col .infra-photo {
+  flex: 1;
+  min-height: 180px;
+}
+.infra-sub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.infra-sub-grid .infra-photo {
+  min-height: 240px;
+}
+.infra-photo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 32, 96, 0.12);
+}
+.infra-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.infra-photo:hover img {
+  transform: scale(1.04);
+}
+.infra-photo-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(0, 20, 60, 0.92) 0%, rgba(0, 20, 60, 0.6) 65%, transparent 100%);
+  padding: 2.25rem 1.25rem 1rem;
+  color: #FFFFFF;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.infra-photo-label strong {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+.infra-photo-label span {
+  font-size: 0.78rem;
+  color: #FFD166;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.infra-stat-overlay {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: var(--c-accent);
+  color: #fff;
+  border-radius: 8px;
+  padding: .45rem .85rem;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  z-index: 2;
+  box-shadow: 0 4px 14px rgba(192, 30, 46, 0.4);
+}
+
+/* ── LEADERSHIP ───────────────────────────────────────── */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.75rem;
+}
+.leader-card {
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+.leader-portrait-wrap {
+  width: 110px;
+  height: 124px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 auto 1.125rem;
+  border: 2px solid var(--c-border);
+  box-shadow: 0 4px 16px rgba(26,39,68,.12);
+}
+.leader-portrait {
+  width: 110px !important;
+  height: 124px !important;
+  display: block;
+}
+.leader-name { font-size: .9375rem; font-weight: 600; color: var(--c-text-head); margin-bottom: .2rem; }
+.leader-role { font-size: .78rem; color: var(--c-text-muted); font-weight: 500; letter-spacing: .03em; }
+
+/* ── ENQUIRY FORM ─────────────────────────────────────── */
+.enquiry-bg {
+  background: var(--c-ground);
+  border-top: 1px solid var(--c-border);
+}
+.enquiry-wrap {
+  display: grid;
+  grid-template-columns: 1.1fr 1.8fr;
+  gap: 4rem;
+  align-items: start;
+}
+.enquiry-left h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: .875rem; }
+.enquiry-left p { color: var(--c-text-body); margin-bottom: 2rem; }
+.contact-details { display: flex; flex-direction: column; gap: 1rem; }
+.contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: .875rem;
+}
+.contact-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.contact-icon svg { width: 16px; height: 16px; fill: var(--c-accent); }
+.contact-text { line-height: 1.4; }
+.contact-text strong { font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--c-text-muted); display: block; margin-bottom: .15rem; }
+.contact-text span { font-size: .9375rem; color: var(--c-text-head); }
+
+/* Form */
+.enquiry-form {
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: 16px;
+  padding: 2.25rem;
+  box-shadow: var(--shadow-card);
+}
+.enquiry-form h3 { font-size: 1.3125rem; margin-bottom: .375rem; }
+.form-sub { font-size: .875rem; color: var(--c-text-muted); margin-bottom: 1.75rem; max-width: none; }
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.125rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+.form-group--full { grid-column: span 2; }
+.form-group label {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: .7rem .95rem;
+  border: 1.5px solid var(--c-border);
+  border-radius: 8px;
+  background: var(--c-ground);
+  color: var(--c-text-body);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: .9375rem;
+  transition: border-color .18s, box-shadow .18s;
+  width: 100%;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--c-accent);
+  box-shadow: 0 0 0 3px rgba(196,112,42,.12);
+}
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+.form-note { font-size: .8125rem; color: var(--c-text-muted); max-width: 40ch; }
+.form-note span { color: var(--c-accent); font-weight: 500; }
+.form-submit { padding-inline: 2rem; }
+
+/* Success toast */
+.form-success {
+  display: none;
+  background: #EFF8EF;
+  border: 1px solid #A3D9A5;
+  border-radius: 8px;
+  padding: .875rem 1.125rem;
+  color: #2A6B2A;
+  font-size: .9rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  align-items: center;
+  gap: .625rem;
+}
+.form-success.show { display: flex; }
+
+/* ── CTA BANNER ───────────────────────────────────────── */
+.cta-banner {
+  background: var(--c-accent);
+  padding-block: 3rem;
+}
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.cta-text h2 {
+  color: #fff;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  margin-bottom: .375rem;
+}
+.cta-text p {
+  color: rgba(255,255,255,.8);
+  font-size: 1rem;
+  max-width: 50ch;
+}
+.cta-actions { display: flex; gap: .875rem; flex-shrink: 0; }
+.btn-white {
+  background: #fff;
+  color: var(--c-accent);
+  border-color: #fff;
+}
+.btn-white:hover { background: rgba(255,255,255,.9); }
+.btn-white-outline {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255,255,255,.6);
+}
+.btn-white-outline:hover { border-color: #fff; background: rgba(255,255,255,.1); }
+
+/* ── FOOTER ───────────────────────────────────────────── */
+footer {
+  background: var(--c-navy);
+  color: rgba(237,232,223,.65);
+  padding-block: 3.5rem 2rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  margin-bottom: 2rem;
+}
+.footer-brand .nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+.footer-brand .nav-logo {
+  width: 44px;
+  height: 44px;
+  background: var(--c-accent);
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.footer-brand .nav-logo svg {
+  width: 24px;
+  height: 24px;
+  fill: #FFFFFF;
+}
+.footer-brand .nav-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.25;
+}
+.footer-brand .nav-name span {
+  display: block;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #FCD34D;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+}
+.footer-brand p { font-size: .875rem; line-height: 1.65; max-width: 28ch; margin-top: .5rem; }
+.footer-col h5 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: rgba(237,232,223,.45);
+  margin-bottom: 1rem;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
+.footer-col li a {
+  font-size: .875rem;
+  color: rgba(237,232,223,.65);
+  transition: color .18s;
+}
+.footer-col li a:hover { color: var(--c-accent-light); }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.footer-bottom p { font-size: .8125rem; }
+.footer-bottom a { color: var(--c-accent-light); }
+.estd-badge {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: .8125rem;
+  color: rgba(237,232,223,.4);
+}
+
+/* ── SECTION HEADER helper ────────────────────────────── */
+.section-header { margin-bottom: 2.75rem; }
+.section-header h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: .625rem; }
+.section-header p { color: var(--c-text-muted); max-width: 56ch; }
+
+/* ── RESPONSIVE ───────────────────────────────────────── */
+@media (max-width: 1000px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-card { max-width: 480px; }
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .about-badge { right: 1rem; }
+  .inst-grid { grid-template-columns: 1fr 1fr; }
+  .leadership-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .why-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .enquiry-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 860px) {
+  .infra-main-grid { grid-template-columns: 1fr; }
+  .infra-sub-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 680px) {
+  .nav-links { display: none; }
+  .nav-mobile-toggle { display: block; }
+  .stats-inner { grid-template-columns: 1fr 1fr; }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3) { border-right: 1px solid var(--c-border); }
+  .inst-grid { grid-template-columns: 1fr; }
+  .leadership-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .form-grid { grid-template-columns: 1fr; }
+  .form-group--full { grid-column: span 1; }
+  .cta-inner { flex-direction: column; align-items: flex-start; }
+  .cta-actions { flex-wrap: wrap; }
+  .why-right { grid-template-columns: 1fr; }
+  .why-tile--span { grid-column: span 1; }
+  .infra-sub-grid { grid-template-columns: 1fr; }
+  .container { padding-inline: 1.25rem; }
+  .section { padding-block: 3.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── TOP INSTITUTIONAL HEADER ──────────────────────────── -->
+<header class="top-header">
+  <div class="container top-header-inner">
+    <div class="top-brand">
+      <div class="top-logo-emblem">
+        <svg viewBox="0 0 100 100" class="emblem-svg">
+          <circle cx="50" cy="50" r="46" fill="#fff" stroke="#002060" stroke-width="3.5"/>
+          <circle cx="50" cy="50" r="41" fill="none" stroke="#C01E2E" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <text x="50" y="30" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="700" fill="#C01E2E" text-anchor="middle">ॐ</text>
+          <path d="M50 34 C44 43 42 50 50 62 C58 50 56 43 50 34 Z" fill="#E67E22"/>
+          <path d="M50 40 C47 46 45 50 50 58 C55 50 53 46 50 40 Z" fill="#F59E0B"/>
+          <path d="M35 62 Q50 72 65 62 Q50 65 35 62 Z" fill="#002060"/>
+          <path d="M28 68 Q50 74 72 68 Q50 79 28 68 Z" fill="#C01E2E"/>
+        </svg>
+      </div>
+      <div class="top-brand-text">
+        <div class="motto-marathi">॥ ज्ञान, विज्ञान आणि सुसंस्कार यांसाठी शिक्षण प्रसार ॥ <span class="motto-author">— शिक्षणमहर्षी डॉ. बापूजी साळुंखे</span></div>
+        <div class="sanstha-title-main">Shri Swami Vivekanand Shikshan Sanstha, Kolhapur</div>
+        <div class="sanstha-sub-badge">Regd. Public Trust No. F-15 (KPR) · Established 1954 · Serving Over 2 Lakh Students in 14 Districts</div>
+      </div>
+    </div>
+    <div class="inspiration-portraits">
+      <div class="inspire-badge" title="Dr. Bapuji Salunkhe - Founder">
+        <div class="inspire-avatar">
+          <svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="18" fill="#F1F5F9"/><circle cx="18" cy="14" r="7" fill="#002060"/><path d="M8 32 C8 24 13 22 18 22 C23 22 28 24 28 32 Z" fill="#002060"/></svg>
+        </div>
+        <span class="inspire-caption">Dr. Bapuji Salunkhe<br><small>Founder</small></span>
+      </div>
+      <div class="inspire-badge" title="Swami Vivekananda - Inspiration">
+        <div class="inspire-avatar">
+          <svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="18" fill="#FEF3C7"/><circle cx="18" cy="14" r="7" fill="#C01E2E"/><path d="M8 32 C8 24 13 22 18 22 C23 22 28 24 28 32 Z" fill="#E67E22"/></svg>
+        </div>
+        <span class="inspire-caption">Swami Vivekananda<br><small>Inspiration</small></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── MAIN NAVIGATION ──────────────────────────────────── -->
+<nav class="main-nav">
+  <div class="container nav-inner">
+    <ul class="nav-links">
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#about">Founder</a></li>
+      <li><a href="#institutions">Institutions</a></li>
+      <li><a href="#infrastructure">Infrastructure</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right-actions">
+      <a href="tel:02312654653" class="nav-phone-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+        0231 – 265 4653
+      </a>
+      <a href="#enquiry" class="nav-cta">Enquire Now</a>
+    </div>
+    <button class="nav-mobile-toggle" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────────────── -->
+<section class="hero" id="heroSection">
+  <!-- Management Photo Slideshow behind text (Centenary Celebration & Inauguration) -->
+  <div class="hero-slider-wrap" id="heroSlider" aria-label="Management Photos">
+    <div class="hero-slide active" data-index="0">
+      <img src="images/management-3.jpg" alt="Dr. Bapuji Salunkhe Birth Centenary Inauguration with Sanstha Management Dignitaries">
+    </div>
+    <div class="hero-slide" data-index="1">
+      <img src="images/management-2.jpg" alt="Inauguration Ceremony with Sanstha Management, Law College Ichalkaranji">
+    </div>
+    <div class="hero-slide" data-index="2">
+      <img src="images/management-1.jpg" alt="Vivekanand Shikshan Sanstha Management Dignitaries and Council">
+    </div>
+  </div>
+
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-watermark">1954</div>
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="hero-management-tag">
+        <span class="tag-pulse"></span>
+        <span>Management &amp; Leadership in Action</span>
+      </div>
+      <p class="eyebrow hero-eyebrow">Maharashtra's Trusted Educational Trust</p>
+      <h1>Lighting Minds<br>Across <em>Maharashtra</em><br>Since Seven Decades</h1>
+      <p class="hero-sub">Founded by Shikshanmaharshi Dr. Bapuji Salunkhe in honour of Swami Vivekananda, VSS has grown from a single purpose — to carry quality education to every corner of Maharashtra — into a network of 330+ centres serving over 2 lakh students.</p>
+      <div class="hero-actions">
+        <a href="#enquiry" class="btn btn-primary">Submit an Enquiry</a>
+        <a href="#institutions" class="btn btn-outline">Explore Our Institutions</a>
+      </div>
+
+      <!-- Management Photos Slider Controls -->
+      <div class="hero-slider-controls">
+        <div class="slider-arrows">
+          <button type="button" class="slider-btn" onclick="prevSlide()" aria-label="Previous Slide">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button type="button" class="slider-btn" onclick="nextSlide()" aria-label="Next Slide">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+        <div class="slider-dots" id="sliderDots">
+          <button type="button" class="slider-dot active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
+          <button type="button" class="slider-dot" onclick="goToSlide(1)" aria-label="Slide 2"></button>
+          <button type="button" class="slider-dot" onclick="goToSlide(2)" aria-label="Slide 3"></button>
+        </div>
+        <span class="slider-caption" id="slideCaption">Sanstha Leadership &amp; Governing Council</span>
+      </div>
+    </div>
+    <div>
+      <div class="hero-card">
+        <h3>Quick Enquiry</h3>
+        <form id="heroForm" onsubmit="handleHeroForm(event)">
+          <div class="hc-field">
+            <label>Your Full Name</label>
+            <input type="text" placeholder="e.g. Rajan Patil" required>
+          </div>
+          <div class="hc-field">
+            <label>Mobile Number</label>
+            <input type="tel" placeholder="+91 9XXXXXXXXX" required>
+          </div>
+          <div class="hc-field">
+            <label>Area of Interest</label>
+            <select>
+              <option value="">Select a program</option>
+              <option>Arts, Commerce &amp; Science</option>
+              <option>Engineering &amp; Technology</option>
+              <option>Education &amp; B.Ed</option>
+              <option>Law</option>
+              <option>Junior College</option>
+              <option>School Admission</option>
+              <option>Hostel Facilities</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary hc-submit">Request a Callback</button>
+        </form>
+        <div id="heroSuccess" class="form-success">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#2A6B2A" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+          Thank you! We will reach you within one working day.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS STRIP ─────────────────────────────────────── -->
+<div class="stats-strip">
+  <div class="container stats-inner">
+    <div class="stat-item">
+      <span class="stat-num">70+</span>
+      <span class="stat-label">Years of Service</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">2 Lakh</span>
+      <span class="stat-label">Students Enrolled</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">330+</span>
+      <span class="stat-label">Educational Centres</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">14</span>
+      <span class="stat-label">Districts Covered</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── NOTICE BOARD & HIGHLIGHTS (Official Portal Live Section) ── -->
+<section class="news-strip">
+  <div class="container news-strip-inner">
+    <div class="news-card">
+      <div class="news-card-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+        <h3>Latest News &amp; Events</h3>
+      </div>
+      <div class="news-content">
+        <p class="news-marathi-headline">संस्थेच्या सचिवा प्राचार्या सौ. शुभांगी मुरलीधर गावडे यांचे शैक्षणिक योगदान</p>
+        <span class="news-date">Updated: Academic Year 2024–25</span>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-card-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <h3>Sanstha Highlights</h3>
+      </div>
+      <div class="news-content">
+        <p>Founder Late Shikshanmaharshi <strong>Dr. Bapuji Salunkhe</strong> birth centenary celebrations &amp; nationwide rural educational outreach across 14 districts.</p>
+        <span class="news-badge-gold">70 Years of Service</span>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-card-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        <h3>Notice Board</h3>
+      </div>
+      <div class="news-content">
+        <ul class="notice-list">
+          <li>
+            <a href="#enquiry">मराठवाडा विभाग: Senior College Section Walk-in Admissions <span class="badge-new">NEW</span></a>
+          </li>
+          <li>
+            <a href="#enquiry">पुणे विभाग: Degree &amp; Junior College Admissions Open <span class="badge-new">NEW</span></a>
+          </li>
+          <li>
+            <a href="#enquiry">कोल्हापूर मुख्य कार्यालय: Scholarship &amp; Hostel Facilities Assistance</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ───────────────────────────────────────────── -->
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-visual">
+      <div class="about-image-frame">
+        <!-- Illustrative SVG of education/lamp -->
+        <svg class="about-illustration" viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="60" y="180" width="200" height="12" rx="6" fill="var(--c-stone)"/>
+          <rect x="148" y="120" width="24" height="60" fill="var(--c-border)"/>
+          <ellipse cx="160" cy="115" rx="52" ry="30" fill="var(--c-accent)" opacity=".15"/>
+          <circle cx="160" cy="95" r="38" fill="var(--c-accent)" opacity=".18"/>
+          <circle cx="160" cy="90" r="24" fill="var(--c-accent)" opacity=".7"/>
+          <circle cx="160" cy="90" r="10" fill="#fff" opacity=".9"/>
+          <!-- rays -->
+          <line x1="160" y1="52" x2="160" y2="40" stroke="var(--c-accent)" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+          <line x1="185" y1="60" x2="192" y2="50" stroke="var(--c-accent)" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+          <line x1="135" y1="60" x2="128" y2="50" stroke="var(--c-accent)" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+          <line x1="198" y1="85" x2="210" y2="82" stroke="var(--c-accent)" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+          <line x1="122" y1="85" x2="110" y2="82" stroke="var(--c-accent)" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+          <!-- Book stack -->
+          <rect x="90" y="155" width="90" height="14" rx="4" fill="var(--c-navy)" opacity=".25"/>
+          <rect x="95" y="144" width="80" height="13" rx="4" fill="var(--c-accent)" opacity=".35"/>
+          <rect x="100" y="134" width="70" height="12" rx="4" fill="var(--c-navy)" opacity=".2"/>
+          <text x="160" y="210" text-anchor="middle" font-family="Playfair Display, serif" font-style="italic" font-size="13" fill="var(--c-text-muted)">ज्ञान · विज्ञान · संस्कृती</text>
+        </svg>
+      </div>
+      <div class="about-badge">
+        <span class="badge-year">1954</span>
+        <span class="badge-text">Established</span>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <p class="eyebrow">Our Story</p>
+      <h2>Education as a Mission, Not a Business</h2>
+      <p>Vivekanand Shikshan Sanstha was founded in Kolhapur with one guiding belief: that access to quality education should have no barrier — of geography, income, or circumstance. Named in the spirit of philosopher Swami Vivekananda, whose life was a testament to the power of knowledge, VSS has remained true to that mission for over seven decades.</p>
+      <p>From a single school in Kolhapur, the Sanstha today reaches 13 Maharashtra districts and one Karnataka district — 170 high schools, 66 junior colleges, 18 arts, commerce and science colleges, teacher training institutions, hostels, and residential facilities — all dedicated to nurturing the students of Maharashtra's towns and villages.</p>
+      <div class="founder-tag">
+        <div class="founder-icon">&#9670;</div>
+        <div class="founder-info">
+          <div class="founder-name">Dr. Bapuji Salunkhe</div>
+          <div class="founder-title">Founder · Shikshanmaharshi · Dalit Mitra Awardee</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── INSTITUTIONS ────────────────────────────────────── -->
+<section class="section institutions-bg" id="institutions">
+  <div class="container">
+    <p class="eyebrow">Our Network</p>
+    <h2>330+ Centres, One Purpose</h2>
+    <p class="institutions-intro">Every institution in the VSS network shares a common goal: equipping students with the knowledge, values, and skills to lead a purposeful life.</p>
+    <div class="inst-grid">
+      <div class="inst-card">
+        <span class="inst-count">170</span>
+        <h4>High Schools</h4>
+        <p>Secondary education for students across rural and semi-urban Maharashtra, taught in Marathi, English and semi-English mediums.</p>
+      </div>
+      <div class="inst-card">
+        <span class="inst-count">66</span>
+        <h4>Junior Colleges</h4>
+        <p>Science, Arts, and Commerce streams at the +2 level, preparing students for university education and professional pursuits.</p>
+      </div>
+      <div class="inst-card">
+        <span class="inst-count">18</span>
+        <h4>Degree Colleges</h4>
+        <p>Arts, Commerce and Science colleges providing undergraduate and postgraduate programs affiliated with leading Maharashtra universities.</p>
+      </div>
+      <div class="inst-card">
+        <span class="inst-count">3</span>
+        <h4>B.Ed Colleges</h4>
+        <p>Professional teacher training programs developing the educators who will shape the next generation of Maharashtra's students.</p>
+      </div>
+      <div class="inst-card">
+        <span class="inst-count">1</span>
+        <h4>Law College</h4>
+        <p>An accessible path to legal education, producing graduates who serve communities across the region's courts and institutions.</p>
+      </div>
+      <div class="inst-card">
+        <span class="inst-count">19</span>
+        <h4>Hostels &amp; Residences</h4>
+        <p>Safe, affordable residential facilities ensuring that distance from home is never a reason a student steps away from education.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROGRAMS ────────────────────────────────────────── -->
+<section class="section" id="programs">
+  <div class="container">
+    <div class="programs-header section-header">
+      <p class="eyebrow">Academic Programs</p>
+      <h2>What You Can Study at VSS</h2>
+      <p>Across our network, students can pursue programs from secondary school through postgraduate study, in streams ranging from science and technology to law and teacher training.</p>
+    </div>
+    <div class="program-tabs" role="tablist">
+      <button class="prog-tab active" onclick="filterTab(this, 'all')">All Programs</button>
+      <button class="prog-tab" onclick="filterTab(this, 'school')">School Level</button>
+      <button class="prog-tab" onclick="filterTab(this, 'junior')">Junior College</button>
+      <button class="prog-tab" onclick="filterTab(this, 'degree')">Degree &amp; Above</button>
+      <button class="prog-tab" onclick="filterTab(this, 'professional')">Professional</button>
+    </div>
+    <div class="program-grid" id="programGrid">
+      <div class="prog-card" data-cat="school">
+        <div class="prog-dot"></div>
+        <div>
+          <h4>SSC / Secondary School</h4>
+          <p>Marathi, English &amp; Semi-English mediums · Std VIII to X</p>
+        </div>
+      </div>
+      <div class="prog-card" data-cat="junior">
+        <div class="prog-dot"></div>
+        <div>
+          <h4>HSC Science</h4>
+          <p>Physics, Chemistry, Biology &amp; Mathematics streams</p>
+        </div>
+      </div>
+      <div class="prog-card" data-cat="junior">
+        <div class="prog-dot"></div>
+        <div>
+          <h4>HSC Arts</h4>
+          <p>History, Political Science, Sociology, Psychology &amp; more</p>
+        </div>
+      </div>
+      <div class="prog-card" data-cat="junior">
+        <div class="prog-dot"></div>
+        <div>
+          <h4>HSC Commerce</h4>
+          <p>Accounts, Economics, Business Studies &amp; Secretarial Practice</p>
+        </div>
+      </div>
+      <div class="prog-card" data-cat="degree">
+        <div class="prog-dot"></div>
+        <div>
+          <h4>B.A. (Arts)</h4>
+          <p>Marathi, English, History, Geography, Philosophy</p>
+        </div>
+      </div>
+      <div class="prog-card" data-cat="degree">
+        <div class="prog-dot"></div>
+        <div>
+          <h4>B.Sc. (Science)</h4>
+          <p>Physics, Chemistry, Botany, Zoology, Mathematics, Computer Science</p>
+        </div>
+      </div>
+      <div class="prog-card" data-cat="degree">
+        <div class="prog-dot"></div>
+        <div>
+          <h4>B.Com. (Commerce)</h4>
+          <p>Financial Accounting, Costing, Taxation, Business Law</p>
+        </div>
+      </div>
+      <div class="prog-card" data-cat="degree">
+        <div class="prog-dot"></div>
+        <div>
+          <h4>M.A. / M.Sc. / M.Com</h4>
+          <p>Postgraduate programs across Arts, Science and Commerce</p>
+        </div>
+      </div>
+      <div class="prog-card" data-cat="professional">
+        <div class="prog-dot"></div>
+        <div>
+          <h4>B.Ed. (Bachelor of Education)</h4>
+          <p>Professional teacher training · 2-year program</p>
+        </div>
+      </div>
+      <div class="prog-card" data-cat="professional">
+        <div class="prog-dot"></div>
+        <div>
+          <h4>D.El.Ed. (Diploma in Elementary Education)</h4>
+          <p>Training for primary school educators across Maharashtra</p>
+        </div>
+      </div>
+      <div class="prog-card" data-cat="professional">
+        <div class="prog-dot"></div>
+        <div>
+          <h4>LL.B. (Bachelor of Laws)</h4>
+          <p>Three-year law degree program at VSS Law College, Kolhapur</p>
+        </div>
+      </div>
+      <div class="prog-card" data-cat="school">
+        <div class="prog-dot"></div>
+        <div>
+          <h4>Residential School</h4>
+          <p>Fully residential education in a structured, nurturing environment</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY VSS ─────────────────────────────────────────── -->
+<section class="section why-bg" id="why">
+  <div class="container why-grid">
+    <div class="why-left">
+      <p class="eyebrow">Why Choose VSS</p>
+      <h2>An Institution Built on Values, Sustained by Results</h2>
+      <p>For over seven decades, Vivekanand Shikshan Sanstha has placed the student at the centre of every decision — from curriculum choices to campus facilities and fee structures designed to remain within reach.</p>
+      <div class="why-list">
+        <div class="why-item">
+          <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+          <div class="why-text">
+            <h4>Affiliated &amp; Recognised</h4>
+            <p>Colleges affiliated with Shivaji University, Kolhapur and recognised by the Government of Maharashtra.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div class="why-text">
+            <h4>Inclusive Access</h4>
+            <p>Scholarship programs, fee concessions and hostels ensure rural and economically disadvantaged students are fully supported.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+          <div class="why-text">
+            <h4>Deep Regional Reach</h4>
+            <p>Present across 14 districts — 13 in Maharashtra and one in Karnataka — bringing campus education close to students' homes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-right">
+      <div class="why-tile">
+        <span class="why-tile-num">A+</span>
+        <span class="why-tile-label">NAAC Grade Institutions</span>
+      </div>
+      <div class="why-tile">
+        <span class="why-tile-num">8</span>
+        <span class="why-tile-label">Teacher Training Colleges</span>
+      </div>
+      <div class="why-tile">
+        <span class="why-tile-num">13</span>
+        <span class="why-tile-label">Maharashtra Districts</span>
+      </div>
+      <div class="why-tile">
+        <span class="why-tile-num">19</span>
+        <span class="why-tile-label">Hostels Statewide</span>
+      </div>
+      <div class="why-tile why-tile--span">
+        <span class="why-tile-num" style="font-size:1.5rem;margin-right:.75rem;">D.Litt</span>
+        <div class="why-tile-info">
+          <h4>Founder honoured by Shivaji University</h4>
+          <p>Dr. Bapuji Salunkhe received an honorary Doctorate of Letters from Shivaji University, Kolhapur, in recognition of his contribution to education.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── INFRASTRUCTURE ─────────────────────────────────── -->
+<section class="section infra-bg" id="infrastructure">
+  <div class="container">
+    <div class="infra-header section-header">
+      <p class="eyebrow">Campus &amp; Infrastructure</p>
+      <h2>Purpose-Built Spaces for Learning</h2>
+      <p>Across 330+ centres, VSS maintains campuses equipped with libraries, laboratories, sports grounds, and residential facilities — ensuring students have all they need within reach.</p>
+    </div>
+    <div class="infra-main-grid">
+      <div class="infra-photo main-admin-photo">
+        <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80" alt="Main Administrative Building, Kolhapur Campus" loading="lazy">
+        <div class="infra-stat-overlay">Kolhapur Campus</div>
+        <div class="infra-photo-label">
+          <strong>Kolhapur Campus · Main Administrative Building</strong>
+          <span>Tarabai Park, Kolhapur</span>
+        </div>
+      </div>
+      <div class="infra-side-col">
+        <div class="infra-photo">
+          <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=800&q=80" alt="Science Laboratories" loading="lazy">
+          <div class="infra-photo-label">
+            <strong>Science Laboratories</strong>
+            <span>Physics, Chemistry &amp; Biotechnology Labs</span>
+          </div>
+        </div>
+        <div class="infra-photo">
+          <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80" alt="Library and Reading Rooms" loading="lazy">
+          <div class="infra-photo-label">
+            <strong>Library &amp; Reading Rooms</strong>
+            <span>Over 1.5 Lakh Books &amp; National Digital Library Access</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="infra-sub-grid">
+      <div class="infra-photo">
+        <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80" alt="Sports and Recreation Grounds" loading="lazy">
+        <div class="infra-photo-label">
+          <strong>Sports &amp; Recreation Grounds</strong>
+          <span>Athletics Tracks, Cricket, Football &amp; Gymnasiums</span>
+        </div>
+      </div>
+      <div class="infra-photo">
+        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80" alt="Student Hostel Facilities" loading="lazy">
+        <div class="infra-photo-label">
+          <strong>Student Hostel Facilities</strong>
+          <span>19 Safe, Residential Hostels Across Maharashtra</span>
+        </div>
+      </div>
+      <div class="infra-photo">
+        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" alt="Classrooms and Lecture Halls" loading="lazy">
+        <div class="infra-photo-label">
+          <strong>Classrooms &amp; Lecture Halls</strong>
+          <span>ICT-Enabled Smart Classrooms &amp; Modern Auditoriums</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEADERSHIP ──────────────────────────────────────── -->
+<section class="section" id="leadership">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Governing Council</p>
+      <h2>Leadership of Vivekanand Shikshan Sanstha</h2>
+    </div>
+    <div class="leadership-grid">
+      <div class="leader-card">
+        <div class="leader-portrait-wrap"><canvas class="leader-portrait" id="lp-cp" width="160" height="180"></canvas></div>
+        <div class="leader-name">Hon. Chandrakant Dada Patil</div>
+        <div class="leader-role">President</div>
+      </div>
+      <div class="leader-card">
+        <div class="leader-portrait-wrap"><canvas class="leader-portrait" id="lp-as" width="160" height="180"></canvas></div>
+        <div class="leader-name">Hon. Abhaykumar Salunkhe</div>
+        <div class="leader-role">Chairman</div>
+      </div>
+      <div class="leader-card">
+        <div class="leader-portrait-wrap"><canvas class="leader-portrait" id="lp-sg" width="160" height="180"></canvas></div>
+        <div class="leader-name">Prin. Mrs. Shubhangi M. Gawade</div>
+        <div class="leader-role">Secretary</div>
+      </div>
+      <div class="leader-card">
+        <div class="leader-portrait-wrap"><canvas class="leader-portrait" id="lp-kg" width="160" height="180"></canvas></div>
+        <div class="leader-name">Kaustubh Gawade</div>
+        <div class="leader-role">Chief Executive Officer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ENQUIRY FORM ────────────────────────────────────── -->
+<section class="section enquiry-bg" id="enquiry">
+  <div class="container enquiry-wrap">
+    <div class="enquiry-left">
+      <p class="eyebrow">Get in Touch</p>
+      <h2>We Are Here to Help You</h2>
+      <p>Whether you are a prospective student, a parent, or an institution exploring partnership opportunities — fill in the form and our team will reach out within one working day.</p>
+      <div class="contact-details" id="contact">
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-text">
+            <strong>Head Office</strong>
+            <span>C.S.No. 2130 "E" Ward, Tarabai Park, Kolhapur – 416 003</span>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+          </div>
+          <div class="contact-text">
+            <strong>Phone</strong>
+            <span>0231 – 265 4653</span>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-text">
+            <strong>Email</strong>
+            <span>vivekanandsanstha@yahoo.com</span>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+          </div>
+          <div class="contact-text">
+            <strong>Office Hours</strong>
+            <span>Monday – Saturday, 9:30 am – 5:30 pm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="enquiry-form">
+      <h3>Send Us an Enquiry</h3>
+      <p class="form-sub">All fields marked with an asterisk are required.</p>
+      <form id="mainForm" onsubmit="handleMainForm(event)">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="fname">First Name *</label>
+            <input id="fname" type="text" placeholder="Your first name" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name *</label>
+            <input id="lname" type="text" placeholder="Your last name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Mobile Number *</label>
+            <input id="phone" type="tel" placeholder="+91 9XXXXXXXXX" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="district">District / City *</label>
+            <input id="district" type="text" placeholder="e.g. Kolhapur, Sangli…" required>
+          </div>
+          <div class="form-group">
+            <label for="stream">Program / Stream of Interest *</label>
+            <select id="stream" required>
+              <option value="">Select one</option>
+              <option>Secondary School (SSC)</option>
+              <option>Junior College – Science</option>
+              <option>Junior College – Arts</option>
+              <option>Junior College – Commerce</option>
+              <option>B.A. (Arts)</option>
+              <option>B.Sc. (Science)</option>
+              <option>B.Com. (Commerce)</option>
+              <option>Postgraduate (M.A./M.Sc./M.Com)</option>
+              <option>B.Ed. / D.El.Ed.</option>
+              <option>LL.B. (Law)</option>
+              <option>Hostel Facility</option>
+              <option>Institutional Partnership</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="purpose">Purpose of Enquiry</label>
+            <select id="purpose">
+              <option value="">Select one</option>
+              <option>Admission for Self</option>
+              <option>Admission for Child / Ward</option>
+              <option>Scholarship Information</option>
+              <option>Transfer Certificate</option>
+              <option>Partnership / Collaboration</option>
+              <option>General Information</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="howheard">How Did You Hear About Us</label>
+            <select id="howheard">
+              <option value="">Select one</option>
+              <option>Friend or Family</option>
+              <option>Social Media</option>
+              <option>School / College Counsellor</option>
+              <option>Google Search</option>
+              <option>Advertisement / Hoarding</option>
+              <option>News / Media</option>
+            </select>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="message">Your Message</label>
+            <textarea id="message" placeholder="Share any specific questions, or the academic year / intake you are enquiring about…"></textarea>
+          </div>
+        </div>
+        <div class="form-footer">
+          <p class="form-note">Your information is used only to respond to your enquiry. <span>We do not share it with third parties.</span></p>
+          <button type="submit" class="btn btn-primary form-submit">Submit Enquiry</button>
+        </div>
+        <div id="mainSuccess" class="form-success">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#2A6B2A" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+          Your enquiry has been received. Our team will contact you within one working day.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BANNER ──────────────────────────────────────── -->
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <div class="cta-text">
+      <h2>Ready to Begin Your Journey With VSS?</h2>
+      <p>Join over 2 lakh students who have found their path through Vivekanand Shikshan Sanstha's network of institutions.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="#enquiry" class="btn btn-white">Submit an Enquiry</a>
+      <a href="tel:02312654653" class="btn btn-white-outline">Call Us Directly</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-brand">
+          <div class="nav-logo"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <div class="nav-name">Vivekanand Shikshan Sanstha<span>Kolhapur · Est. 1954</span></div>
+        </div>
+        <p style="margin-top:.875rem;">Knowledge, Science and Culture — the three pillars on which Shikshanmaharshi Dr. Bapuji Salunkhe built a legacy that now serves 2 lakh students across Maharashtra.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Institutions</h5>
+        <ul>
+          <li><a href="#institutions">High Schools</a></li>
+          <li><a href="#institutions">Junior Colleges</a></li>
+          <li><a href="#institutions">Degree Colleges</a></li>
+          <li><a href="#institutions">B.Ed &amp; Teacher Training</a></li>
+          <li><a href="#institutions">Law College</a></li>
+          <li><a href="#institutions">Hostels</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#about">About the Sanstha</a></li>
+          <li><a href="#programs">Programs Offered</a></li>
+          <li><a href="#leadership">Governing Council</a></li>
+          <li><a href="#enquiry">Submit an Enquiry</a></li>
+          <li><a href="https://www.vivekanandshikshansanstha.edu.in" target="_blank" rel="noopener">Official Website</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:02312654653">0231 – 265 4653</a></li>
+          <li><a href="mailto:vivekanandsanstha@yahoo.com">vivekanandsanstha@yahoo.com</a></li>
+          <li><a href="#contact">Tarabai Park, Kolhapur 416 003</a></li>
+          <li><a href="#contact">Mon – Sat, 9:30 am – 5:30 pm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Vivekanand Shikshan Sanstha, Kolhapur. All rights reserved.</p>
+      <p class="estd-badge">In the spirit of Swami Vivekananda, 1954 –</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* Quick hero form */
+  function handleHeroForm(e) {
+    e.preventDefault();
+    document.getElementById('heroForm').style.display = 'none';
+    document.getElementById('heroSuccess').classList.add('show');
+  }
+
+  /* Main enquiry form */
+  function handleMainForm(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = 'Submitting…';
+    btn.disabled = true;
+    setTimeout(() => {
+      e.target.querySelectorAll('input,select,textarea').forEach(el => el.disabled = true);
+      btn.style.display = 'none';
+      document.getElementById('mainSuccess').classList.add('show');
+    }, 800);
+  }
+
+  /* Program filter tabs */
+  function filterTab(el, cat) {
+    document.querySelectorAll('.prog-tab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    document.querySelectorAll('.prog-card').forEach(card => {
+      if (cat === 'all' || card.dataset.cat === cat) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  /* ── Hero background campus canvas ────────────────────── */
+  function drawHeroBg() {
+    const canvas = document.getElementById('heroBg');
+    if (!canvas) return;
+    const W = canvas.parentElement.offsetWidth || 1200;
+    const H = canvas.parentElement.offsetHeight || 600;
+    canvas.width = W; canvas.height = H;
+    const ctx = canvas.getContext('2d');
+
+    // Deep evening sky gradient
+    const sky = ctx.createLinearGradient(0, 0, 0, H * .62);
+    sky.addColorStop(0, '#0C1C3A');
+    sky.addColorStop(.45, '#1A3060');
+    sky.addColorStop(.75, '#2A4A80');
+    sky.addColorStop(1, '#3A6090');
+    ctx.fillStyle = sky; ctx.fillRect(0, 0, W, H * .62);
+
+    // Stars
+    ctx.fillStyle = 'rgba(255,255,255,.7)';
+    const stars = [[.08,.06,.9],[.15,.03,1.1],[.22,.08,.8],[.32,.04,1],[.44,.02,.9],[.55,.07,1.1],
+      [.65,.03,.8],[.75,.05,1],[.82,.09,.9],[.9,.04,1.1],[.96,.06,.8],[.05,.14,.7],[.28,.12,.9],
+      [.48,.11,.8],[.7,.13,1],[.88,.15,.9],[.12,.18,.7],[.38,.16,.8],[.58,.19,.9],[.78,.17,.7]];
+    stars.forEach(([sx,sy,r]) => {
+      ctx.beginPath(); ctx.arc(W*sx,H*sy,r,0,Math.PI*2); ctx.fill();
+    });
+
+    // Warm horizon glow (golden hour tint)
+    const glow = ctx.createRadialGradient(W*.5,H*.6,0,W*.5,H*.6,W*.5);
+    glow.addColorStop(0,'rgba(196,112,42,.28)');
+    glow.addColorStop(.5,'rgba(196,112,42,.08)');
+    glow.addColorStop(1,'transparent');
+    ctx.fillStyle = glow; ctx.fillRect(0,0,W,H*.7);
+
+    // Ground / forecourt
+    const ground = ctx.createLinearGradient(0, H*.62, 0, H);
+    ground.addColorStop(0, '#1C2E1C'); ground.addColorStop(1, '#0E1810');
+    ctx.fillStyle = ground; ctx.fillRect(0, H*.62, W, H*.38);
+
+    // Pathway — perspective lines
+    ctx.fillStyle = '#2A3C2A';
+    ctx.beginPath(); ctx.moveTo(W*.38,H); ctx.lineTo(W*.62,H); ctx.lineTo(W*.545,H*.62); ctx.lineTo(W*.455,H*.62); ctx.closePath(); ctx.fill();
+    // Path edge lights
+    for(let i=0;i<6;i++){
+      const t=i/5, px=W*(.455+t*.09*.0), py=H*(.62+i*.063);
+      // left light
+      const lx=W*.455+W*.08*t*.5;
+      const ly=H*.62+i*(H*.38/5.5);
+      ctx.fillStyle='rgba(255,220,80,.6)';
+      ctx.beginPath(); ctx.arc(lx-W*.02,ly,2.5,0,Math.PI*2); ctx.fill();
+      ctx.beginPath(); ctx.arc(W-lx+W*.02,ly,2.5,0,Math.PI*2); ctx.fill();
+      // glow
+      const pg=ctx.createRadialGradient(lx-W*.02,ly,0,lx-W*.02,ly,12);
+      pg.addColorStop(0,'rgba(255,220,80,.25)'); pg.addColorStop(1,'transparent');
+      ctx.fillStyle=pg; ctx.beginPath(); ctx.arc(lx-W*.02,ly,12,0,Math.PI*2); ctx.fill();
+    }
+
+    // ── Main building (classical colonial / Raj-era university) ──
+    const bx=W*.08, by=H*.12, bw=W*.84, bh=H*.52;
+
+    // Side wings
+    ctx.fillStyle='#243050'; ctx.fillRect(W*.06,H*.28,W*.14,H*.36);
+    ctx.fillStyle='#243050'; ctx.fillRect(W*.8,H*.28,W*.14,H*.36);
+    // Wing rooflines
+    ctx.fillStyle='#C4702A';
+    ctx.beginPath(); ctx.moveTo(W*.04,H*.28); ctx.lineTo(W*.13,H*.18); ctx.lineTo(W*.22,H*.28); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(W*.78,H*.28); ctx.lineTo(W*.87,H*.18); ctx.lineTo(W*.96,H*.28); ctx.closePath(); ctx.fill();
+
+    // Main central block
+    ctx.fillStyle='#2A3A58'; ctx.fillRect(W*.18,H*.16,W*.64,H*.46);
+
+    // Grand portico / colonnade base
+    ctx.fillStyle='#1E2D48'; ctx.fillRect(W*.28,H*.3,W*.44,H*.32);
+
+    // Main roof / pediment
+    ctx.fillStyle='#B5620A';
+    ctx.beginPath(); ctx.moveTo(W*.16,H*.16); ctx.lineTo(W*.5,H*.03); ctx.lineTo(W*.84,H*.16); ctx.closePath(); ctx.fill();
+    // Pediment detail
+    ctx.fillStyle='#C4702A';
+    ctx.beginPath(); ctx.moveTo(W*.28,H*.16); ctx.lineTo(W*.5,H*.07); ctx.lineTo(W*.72,H*.16); ctx.closePath(); ctx.fill();
+
+    // Central dome
+    ctx.fillStyle='#A05808';
+    ctx.beginPath(); ctx.arc(W*.5,H*.07,W*.052,Math.PI,0); ctx.fill();
+    ctx.fillStyle='#C4702A';
+    ctx.beginPath(); ctx.arc(W*.5,H*.07,W*.036,Math.PI,0); ctx.fill();
+    // Dome lantern
+    ctx.fillStyle='#D4820A'; ctx.fillRect(W*.493,H*-.01,W*.014,H*.08);
+    ctx.fillStyle='#FFD060';
+    const dg=ctx.createRadialGradient(W*.5,H*.06,0,W*.5,H*.06,W*.025);
+    dg.addColorStop(0,'rgba(255,208,80,.5)'); dg.addColorStop(1,'transparent');
+    ctx.fillStyle=dg; ctx.beginPath(); ctx.arc(W*.5,H*.06,W*.025,0,Math.PI*2); ctx.fill();
+
+    // Flag on dome
+    ctx.strokeStyle='rgba(200,200,200,.5)'; ctx.lineWidth=1.5;
+    ctx.beginPath(); ctx.moveTo(W*.5,H*-.01); ctx.lineTo(W*.5,H*-.045); ctx.stroke();
+    ctx.fillStyle='#FF7722';
+    ctx.beginPath(); ctx.moveTo(W*.5,H*-.045); ctx.lineTo(W*.5+W*.03,H*-.028); ctx.lineTo(W*.5,H*-.01); ctx.closePath(); ctx.fill();
+
+    // Columns — main portico
+    const colW=W*.016, colH=H*.3;
+    const colPositions=[.29,.335,.38,.425,.47,.515,.56,.605,.65,.695];
+    colPositions.forEach(cx=>{
+      // Column shaft
+      const cg=ctx.createLinearGradient(W*cx,0,W*(cx+.016),0);
+      cg.addColorStop(0,'#4A5A7A'); cg.addColorStop(.4,'#6A7A9A'); cg.addColorStop(1,'#3A4A6A');
+      ctx.fillStyle=cg; ctx.fillRect(W*cx,H*.3,colW,colH);
+      // Capital
+      ctx.fillStyle='#7A8AAA'; ctx.fillRect(W*cx-colW*.2,H*.3,colW*1.4,H*.018);
+      // Base
+      ctx.fillStyle='#4A5A7A'; ctx.fillRect(W*cx-colW*.15,H*.598,colW*1.3,H*.016);
+    });
+    // Entablature
+    ctx.fillStyle='#3A4A6A'; ctx.fillRect(W*.28,H*.28,W*.44,H*.025);
+    ctx.fillStyle='#5A6A8A'; ctx.fillRect(W*.28,H*.275,W*.44,H*.01);
+
+    // Lit windows — main block
+    const winData=[
+      // [col, row, lit]
+      [.2,H*.2],[.24,H*.2],[.31,H*.2],[.37,H*.2],[.59,H*.2],[.65,H*.2],[.72,H*.2],[.76,H*.2],
+      [.2,H*.32],[.24,H*.32],[.72,H*.32],[.76,H*.32],
+      [.2,H*.44],[.76,H*.44],
+    ];
+    winData.forEach(([wx,wy])=>{
+      const lit=Math.random()>.25;
+      ctx.fillStyle=lit?'rgba(255,230,120,.85)':'rgba(30,45,72,.9)';
+      ctx.fillRect(W*wx, wy, W*.03, H*.07);
+      if(lit){
+        const wg=ctx.createRadialGradient(W*wx+W*.015,wy+H*.035,0,W*wx+W*.015,wy+H*.035,W*.04);
+        wg.addColorStop(0,'rgba(255,230,120,.3)'); wg.addColorStop(1,'transparent');
+        ctx.fillStyle=wg; ctx.beginPath(); ctx.arc(W*wx+W*.015,wy+H*.035,W*.04,0,Math.PI*2); ctx.fill();
+      }
+      ctx.strokeStyle='rgba(90,110,150,.4)'; ctx.lineWidth=1; ctx.strokeRect(W*wx,wy,W*.03,H*.07);
+    });
+
+    // Main entrance arch
+    ctx.fillStyle='#3A2010';
+    ctx.beginPath();
+    ctx.arc(W*.5, H*.48, W*.065, Math.PI, 0);
+    ctx.lineTo(W*.565, H*.62); ctx.lineTo(W*.435, H*.62);
+    ctx.closePath(); ctx.fill();
+    // Warm light spilling from entrance
+    const entG=ctx.createRadialGradient(W*.5,H*.56,0,W*.5,H*.56,W*.12);
+    entG.addColorStop(0,'rgba(255,200,80,.25)'); entG.addColorStop(1,'transparent');
+    ctx.fillStyle=entG; ctx.fillRect(W*.36,H*.44,W*.28,H*.2);
+    // Door arch detail
+    ctx.strokeStyle='rgba(196,112,42,.6)'; ctx.lineWidth=2.5;
+    ctx.beginPath(); ctx.arc(W*.5,H*.48,W*.065,Math.PI,0); ctx.stroke();
+
+    // Entrance steps
+    ctx.fillStyle='#283848';
+    for(let s=0;s<4;s++){
+      ctx.fillRect(W*(.43-s*.015),H*(.62+s*.015),W*(.14+s*.03),H*.018);
+    }
+
+    // Tall coconut / palm trees (silhouette)
+    function palmTree(tx,bh,tw){
+      // trunk
+      ctx.fillStyle='#1A2A14';
+      ctx.beginPath();
+      ctx.moveTo(W*tx-tw*.4,bh); ctx.lineTo(W*tx+tw*.4,bh);
+      ctx.lineTo(W*tx+tw*.25,bh-H*.22); ctx.lineTo(W*tx-tw*.25,bh-H*.22);
+      ctx.closePath(); ctx.fill();
+      // fronds
+      const frondPairs=[[-40,-15],[-25,-30],[-10,-40],[10,-40],[25,-30],[40,-15]];
+      frondPairs.forEach(([fx,fy])=>{
+        ctx.strokeStyle='#0E1A0C'; ctx.lineWidth=3;
+        ctx.beginPath();
+        ctx.moveTo(W*tx, bh-H*.22);
+        ctx.bezierCurveTo(W*tx+fx*.4,bh-H*.22+fy*.3,W*tx+fx*.8,bh-H*.22+fy*.6,W*tx+fx,bh-H*.22+fy);
+        ctx.stroke();
+      });
+    }
+    palmTree(.04, H*.88, W*.02);
+    palmTree(.96, H*.88, W*.02);
+    palmTree(.1, H*.92, W*.015);
+    palmTree(.9, H*.92, W*.015);
+
+    // Ornamental garden beds (foreground)
+    ctx.fillStyle='#162014'; ctx.fillRect(W*.08,H*.78,W*.26,H*.1);
+    ctx.fillStyle='#162014'; ctx.fillRect(W*.66,H*.78,W*.26,H*.1);
+    // Hedge dots
+    const hedgeColors=['#1E3018','#2A4020','#1A2814'];
+    for(let i=0;i<12;i++){
+      ctx.fillStyle=hedgeColors[i%3];
+      ctx.beginPath(); ctx.arc(W*(.1+i*.014),H*.82,W*.01,0,Math.PI*2); ctx.fill();
+      ctx.beginPath(); ctx.arc(W*(.68+i*.014),H*.82,W*.01,0,Math.PI*2); ctx.fill();
+    }
+    // Fountain (centre foreground)
+    ctx.fillStyle='#1A3050'; ctx.beginPath(); ctx.ellipse(W*.5,H*.88,W*.06,H*.03,0,0,Math.PI*2); ctx.fill();
+    ctx.fillStyle='#2A4060'; ctx.beginPath(); ctx.ellipse(W*.5,H*.88,W*.04,H*.02,0,0,Math.PI*2); ctx.fill();
+    const fg=ctx.createRadialGradient(W*.5,H*.85,0,W*.5,H*.85,W*.02);
+    fg.addColorStop(0,'rgba(80,160,255,.4)'); fg.addColorStop(1,'transparent');
+    ctx.fillStyle=fg; ctx.fillRect(W*.47,H*.8,W*.06,H*.1);
+
+    // Reflection of building in wet forecourt
+    ctx.save();
+    ctx.globalAlpha=0.06;
+    ctx.translate(W*.5,H*.62); ctx.scale(1,-0.25); ctx.translate(-W*.5,-H*.62);
+    ctx.fillStyle='#4A6A9A'; ctx.fillRect(W*.18,H*.16,W*.64,H*.46);
+    ctx.restore();
+
+    // Far-side institute buildings (depth)
+    [[.0,.08],[.92,.08]].forEach(([bsx,bsw])=>{
+      ctx.fillStyle='#182038';
+      ctx.fillRect(W*bsx,H*.35,W*bsw,H*.27);
+      // Lit windows
+      for(let wr=0;wr<3;wr++) for(let wc=0;wc<3;wc++){
+        ctx.fillStyle=Math.random()>.3?'rgba(255,220,100,.5)':'rgba(20,30,50,.8)';
+        ctx.fillRect(W*(bsx+.008+wc*.022),H*(.37+wr*.07),W*.014,H*.048);
+      }
+    });
+
+    // Institution name sign (lit, above entrance)
+    ctx.fillStyle='rgba(196,112,42,.9)';
+    ctx.fillRect(W*.33,H*.225,W*.34,H*.045);
+    ctx.fillStyle='#fff';
+    ctx.font=`bold ${Math.round(W*.012)}px 'Source Sans 3',sans-serif`;
+    ctx.textAlign='center';
+    ctx.fillText('VIVEKANAND SHIKSHAN SANSTHA', W*.5, H*.255);
+
+    // Foreground vignette
+    const vig=ctx.createRadialGradient(W*.5,H*.5,W*.2,W*.5,H*.5,W*.75);
+    vig.addColorStop(0,'transparent'); vig.addColorStop(1,'rgba(5,10,20,.55)');
+    ctx.fillStyle=vig; ctx.fillRect(0,0,W,H);
+  }
+
+  /* ── Management portrait drawings ─────────────────────── */
+  function drawPortrait(id, opts) {
+    const canvas = document.getElementById(id);
+    if (!canvas) return;
+    const W = canvas.width, H = canvas.height;
+    const ctx = canvas.getContext('2d');
+
+    // Background gradient
+    const bg = ctx.createLinearGradient(0, 0, 0, H);
+    bg.addColorStop(0, opts.bgTop);
+    bg.addColorStop(1, opts.bgBot);
+    ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+
+    // Subtle texture grain
+    for(let i=0;i<200;i++){
+      ctx.fillStyle=`rgba(${opts.grain},${(Math.random()*.06).toFixed(3)})`;
+      ctx.fillRect(Math.random()*W,Math.random()*H,1,1);
+    }
+
+    const cx = W/2, skin = opts.skin;
+
+    // ── Clothing / body ──
+    if (opts.gender === 'F') {
+      // Saree blouse + drape
+      const blouseG = ctx.createLinearGradient(cx-32, H*.52, cx+32, H*.52);
+      blouseG.addColorStop(0, opts.clothDark); blouseG.addColorStop(.5, opts.cloth); blouseG.addColorStop(1, opts.clothDark);
+      ctx.fillStyle = blouseG;
+      // Body
+      ctx.beginPath(); ctx.ellipse(cx, H*.7, 40, 55, 0, 0, Math.PI*2); ctx.fill();
+      // Saree drape over shoulder
+      ctx.fillStyle = opts.cloth+'CC';
+      ctx.beginPath(); ctx.moveTo(cx-28, H*.5); ctx.quadraticCurveTo(cx-50, H*.62, cx-44, H); ctx.lineTo(cx-28, H); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = opts.clothLight;
+      ctx.beginPath(); ctx.moveTo(cx-28, H*.5); ctx.quadraticCurveTo(cx-48, H*.58, cx-40, H*.75); ctx.lineWidth=2.5; ctx.strokeStyle=opts.clothLight; ctx.stroke();
+      // Neckline
+      ctx.fillStyle = skin;
+      ctx.beginPath(); ctx.ellipse(cx, H*.54, 12, 7, 0, 0, Math.PI*2); ctx.fill();
+      // Neck
+      ctx.fillStyle = skin; ctx.fillRect(cx-7, H*.44, 14, H*.12);
+    } else {
+      // Suit jacket
+      const suitG = ctx.createLinearGradient(cx-40, H*.5, cx+40, H*.5);
+      suitG.addColorStop(0, opts.clothDark); suitG.addColorStop(.5, opts.cloth); suitG.addColorStop(1, opts.clothDark);
+      ctx.fillStyle = suitG;
+      ctx.beginPath(); ctx.ellipse(cx, H*.76, 46, 52, 0, 0, Math.PI*2); ctx.fill();
+      // Shirt / collar showing
+      ctx.fillStyle = opts.shirt || '#F0EEE8';
+      ctx.beginPath(); ctx.moveTo(cx-10, H*.5); ctx.lineTo(cx+10, H*.5); ctx.lineTo(cx+6, H*.64); ctx.lineTo(cx-6, H*.64); ctx.closePath(); ctx.fill();
+      // Tie (if tie color set)
+      if (opts.tie) {
+        ctx.fillStyle = opts.tie;
+        ctx.beginPath(); ctx.moveTo(cx-4, H*.5); ctx.lineTo(cx+4, H*.5); ctx.lineTo(cx+5, H*.63); ctx.lineTo(cx, H*.7); ctx.lineTo(cx-5, H*.63); ctx.closePath(); ctx.fill();
+      }
+      // If kurta: overwrite with kurta
+      if (opts.kurta) {
+        ctx.fillStyle = opts.kurta;
+        ctx.beginPath(); ctx.ellipse(cx, H*.76, 46, 52, 0, 0, Math.PI*2); ctx.fill();
+        // Kurta collar / daaman line
+        ctx.fillStyle = 'rgba(255,255,255,.12)';
+        ctx.beginPath(); ctx.moveTo(cx-3, H*.5); ctx.lineTo(cx+3, H*.5); ctx.lineTo(cx+2, H*.68); ctx.lineTo(cx-2, H*.68); ctx.closePath(); ctx.fill();
+        // Stole
+        ctx.fillStyle = opts.stole+'AA';
+        ctx.beginPath(); ctx.moveTo(cx-44, H*.56); ctx.quadraticCurveTo(cx+8, H*.6, cx+40, H*.68); ctx.lineWidth=10; ctx.strokeStyle=opts.stole+'CC'; ctx.lineCap='round'; ctx.stroke();
+      }
+      // Lapels
+      if (!opts.kurta) {
+        ctx.fillStyle = opts.clothDark;
+        ctx.beginPath(); ctx.moveTo(cx-10, H*.5); ctx.lineTo(cx-22, H*.44); ctx.lineTo(cx-22, H*.62); ctx.closePath(); ctx.fill();
+        ctx.beginPath(); ctx.moveTo(cx+10, H*.5); ctx.lineTo(cx+22, H*.44); ctx.lineTo(cx+22, H*.62); ctx.closePath(); ctx.fill();
+        // Pocket square
+        if (opts.pocket) { ctx.fillStyle=opts.pocket; ctx.fillRect(cx+16,H*.58,W*.06,H*.025); }
+      }
+      // Neck
+      ctx.fillStyle = skin; ctx.fillRect(cx-7, H*.43, 14, H*.1);
+    }
+
+    // ── Head & face ──
+    // Neck shadow
+    ctx.fillStyle = `${skin}88`;
+    ctx.beginPath(); ctx.ellipse(cx, H*.48, 9, 6, 0, 0, Math.PI*2); ctx.fill();
+
+    // Head shape
+    const headG = ctx.createRadialGradient(cx-8, H*.24, 4, cx, H*.28, 38);
+    headG.addColorStop(0, opts.skinHi); headG.addColorStop(.6, skin); headG.addColorStop(1, opts.skinShadow);
+    ctx.fillStyle = headG;
+    ctx.beginPath(); ctx.ellipse(cx, H*.27, 30, 35, 0, 0, Math.PI*2); ctx.fill();
+
+    // Ears
+    ctx.fillStyle = opts.skinShadow;
+    ctx.beginPath(); ctx.ellipse(cx-30, H*.28, 5, 7, -.2, 0, Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(cx+30, H*.28, 5, 7, .2, 0, Math.PI*2); ctx.fill();
+    // Ear inner
+    ctx.fillStyle = skin;
+    ctx.beginPath(); ctx.ellipse(cx-30, H*.28, 3, 5, -.2, 0, Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(cx+30, H*.28, 3, 5, .2, 0, Math.PI*2); ctx.fill();
+
+    // ── Hair ──
+    ctx.fillStyle = opts.hairColor;
+    if (opts.gender === 'F') {
+      // Bun hairstyle — parted, pulled back
+      ctx.beginPath(); ctx.ellipse(cx, H*.16, 31, 18, 0, Math.PI, 0); ctx.fill();
+      // Bun at back
+      ctx.beginPath(); ctx.ellipse(cx, H*.085, 10, 10, 0, 0, Math.PI*2); ctx.fill();
+      // Side wisps
+      ctx.beginPath(); ctx.ellipse(cx-28, H*.2, 5, 10, -.3, 0, Math.PI*2); ctx.fill();
+      ctx.beginPath(); ctx.ellipse(cx+28, H*.2, 5, 10, .3, 0, Math.PI*2); ctx.fill();
+      // Parting highlight
+      if (opts.hairHi) {
+        ctx.strokeStyle = opts.hairHi; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(cx,H*.09); ctx.lineTo(cx,H*.2); ctx.stroke();
+      }
+      // Bindi
+      if (opts.bindi) {
+        ctx.fillStyle = opts.bindi;
+        ctx.beginPath(); ctx.arc(cx, H*.165, 3, 0, Math.PI*2); ctx.fill();
+      }
+    } else if (opts.hairStyle === 'silver') {
+      // Senior — silver/white cropped
+      ctx.beginPath(); ctx.ellipse(cx, H*.155, 30, 16, 0, Math.PI, 0); ctx.fill();
+      ctx.fillStyle = opts.hairColor;
+      ctx.beginPath(); ctx.ellipse(cx-27, H*.22, 5, 9, -.25, 0, Math.PI*2); ctx.fill();
+      ctx.beginPath(); ctx.ellipse(cx+27, H*.22, 5, 9, .25, 0, Math.PI*2); ctx.fill();
+      // Slight recede at temples
+      ctx.fillStyle = headG;
+      ctx.beginPath(); ctx.ellipse(cx-20, H*.14, 9, 5, -.4, 0, Math.PI*2); ctx.fill();
+      ctx.beginPath(); ctx.ellipse(cx+20, H*.14, 9, 5, .4, 0, Math.PI*2); ctx.fill();
+    } else if (opts.hairStyle === 'salt-pepper') {
+      // Middle-aged — dark with gray streaks
+      ctx.beginPath(); ctx.ellipse(cx, H*.155, 31, 17, 0, Math.PI, 0); ctx.fill();
+      ctx.beginPath(); ctx.ellipse(cx-27, H*.22, 5, 10, -.25, 0, Math.PI*2); ctx.fill();
+      ctx.beginPath(); ctx.ellipse(cx+27, H*.22, 5, 10, .25, 0, Math.PI*2); ctx.fill();
+      // Gray streaks
+      ctx.strokeStyle = '#B8B0A8'; ctx.lineWidth=1.5;
+      ctx.beginPath(); ctx.moveTo(cx-15,H*.095); ctx.quadraticCurveTo(cx-12,H*.14,cx-10,H*.17); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(cx+8,H*.095); ctx.quadraticCurveTo(cx+10,H*.13,cx+8,H*.16); ctx.stroke();
+    } else {
+      // Younger — neat, dark, side-parted
+      ctx.beginPath(); ctx.ellipse(cx, H*.155, 31, 17, 0, Math.PI, 0); ctx.fill();
+      ctx.beginPath(); ctx.ellipse(cx-27, H*.22, 5, 10, -.25, 0, Math.PI*2); ctx.fill();
+      ctx.beginPath(); ctx.ellipse(cx+27, H*.22, 5, 10, .25, 0, Math.PI*2); ctx.fill();
+      // Side part line + volume
+      ctx.fillStyle = 'rgba(255,255,255,.06)';
+      ctx.beginPath(); ctx.ellipse(cx-8,H*.12,14,8,-.15,0,Math.PI*2); ctx.fill();
+    }
+
+    // ── Eyebrows ──
+    ctx.strokeStyle = opts.browColor; ctx.lineWidth = 2.2; ctx.lineCap = 'round';
+    // Left
+    ctx.beginPath(); ctx.moveTo(cx-22,H*.215); ctx.quadraticCurveTo(cx-14,H*.205,cx-8,H*.215); ctx.stroke();
+    // Right
+    ctx.beginPath(); ctx.moveTo(cx+8,H*.215); ctx.quadraticCurveTo(cx+14,H*.205,cx+22,H*.215); ctx.stroke();
+
+    // ── Eyes ──
+    // Eye whites
+    ctx.fillStyle='#F8F4F0';
+    ctx.beginPath(); ctx.ellipse(cx-14,H*.265,8,5,0,0,Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(cx+14,H*.265,8,5,0,0,Math.PI*2); ctx.fill();
+    // Iris
+    ctx.fillStyle=opts.irisColor||'#3A2A18';
+    ctx.beginPath(); ctx.arc(cx-14,H*.265,4.5,0,Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(cx+14,H*.265,4.5,0,Math.PI*2); ctx.fill();
+    // Pupil
+    ctx.fillStyle='#100C08';
+    ctx.beginPath(); ctx.arc(cx-14,H*.265,2.2,0,Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(cx+14,H*.265,2.2,0,Math.PI*2); ctx.fill();
+    // Catchlight
+    ctx.fillStyle='rgba(255,255,255,.75)';
+    ctx.beginPath(); ctx.arc(cx-13,H*.26,1.2,0,Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(cx+15,H*.26,1.2,0,Math.PI*2); ctx.fill();
+    // Eyelid line
+    ctx.strokeStyle='rgba(60,40,20,.35)'; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.ellipse(cx-14,H*.265,8,5,0,Math.PI,0); ctx.stroke();
+    ctx.beginPath(); ctx.ellipse(cx+14,H*.265,8,5,0,Math.PI,0); ctx.stroke();
+
+    // ── Nose ──
+    ctx.strokeStyle=opts.skinShadow; ctx.lineWidth=1.2; ctx.lineCap='round';
+    ctx.beginPath(); ctx.moveTo(cx-4,H*.29); ctx.quadraticCurveTo(cx-6,H*.34,cx-3,H*.36); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(cx+4,H*.29); ctx.quadraticCurveTo(cx+6,H*.34,cx+3,H*.36); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(cx-5,H*.365); ctx.quadraticCurveTo(cx,H*.375,cx+5,H*.365); ctx.stroke();
+
+    // ── Mouth / smile ──
+    const smile = opts.smile || 0.5;
+    ctx.strokeStyle=opts.skinShadow; ctx.lineWidth=1.5; ctx.lineCap='round';
+    // Upper lip
+    ctx.beginPath(); ctx.moveTo(cx-10,H*.4); ctx.quadraticCurveTo(cx,H*(0.39-smile*.01),cx+10,H*.4); ctx.stroke();
+    // Lower lip / smile
+    ctx.beginPath(); ctx.moveTo(cx-9,H*.402); ctx.quadraticCurveTo(cx,H*(.43+smile*.02),cx+9,H*.402); ctx.stroke();
+    // Smile dimples
+    if (smile > 0.3) {
+      ctx.fillStyle=opts.skinShadow+'88';
+      ctx.beginPath(); ctx.arc(cx-11,H*.41,1.5,0,Math.PI*2); ctx.fill();
+      ctx.beginPath(); ctx.arc(cx+11,H*.41,1.5,0,Math.PI*2); ctx.fill();
+    }
+
+    // ── Glasses (if set) ──
+    if (opts.glasses) {
+      ctx.strokeStyle='rgba(60,50,30,.7)'; ctx.lineWidth=1.8;
+      ctx.beginPath(); ctx.roundRect(cx-22,H*.245,18,12,3); ctx.stroke();
+      ctx.beginPath(); ctx.roundRect(cx+4,H*.245,18,12,3); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(cx-4,H*.252); ctx.lineTo(cx+4,H*.252); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(cx-22,H*.252); ctx.lineTo(cx-26,H*.248); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(cx+22,H*.252); ctx.lineTo(cx+26,H*.248); ctx.stroke();
+      ctx.fillStyle='rgba(180,200,255,.08)';
+      ctx.beginPath(); ctx.roundRect(cx-22,H*.245,18,12,3); ctx.fill();
+      ctx.beginPath(); ctx.roundRect(cx+4,H*.245,18,12,3); ctx.fill();
+    }
+
+    // Bottom name ribbon
+    const ribbon = ctx.createLinearGradient(0,H*.86,0,H);
+    ribbon.addColorStop(0,opts.bgBot+'CC'); ribbon.addColorStop(1,opts.bgBot);
+    ctx.fillStyle = ribbon; ctx.fillRect(0,H*.86,W,H*.14);
+  }
+
+  function initPortraits() {
+    // President — senior, white kurta, saffron stole, silver hair, glasses
+    drawPortrait('lp-cp', {
+      bgTop:'#1E2E50', bgBot:'#0F1828', grain:'200,210,230',
+      skin:'#C8906A', skinHi:'#DDA880', skinShadow:'#A07050',
+      hairColor:'#D0CCCA', hairStyle:'silver', browColor:'#8A7A6A',
+      gender:'M', kurta:'#F4F0E8', stole:'#C4702A',
+      shirt:'#F4F0E8', smile:0.6, glasses:true,
+    });
+    // Chairman — middle-aged, navy suit, salt-pepper
+    drawPortrait('lp-as', {
+      bgTop:'#1A2840', bgBot:'#0C1420', grain:'190,205,225',
+      skin:'#BE8860', skinHi:'#D09A72', skinShadow:'#9A6A44',
+      hairColor:'#3A3530', hairStyle:'salt-pepper', browColor:'#4A3A2A',
+      gender:'M', cloth:'#1A2744', clothDark:'#101C34', clothLight:'#2A3A58',
+      shirt:'#F0EEE8', tie:'#C4702A', smile:0.4, glasses:false,
+    });
+    // Secretary — female, silk saree (deep teal), bun, bindi
+    drawPortrait('lp-sg', {
+      bgTop:'#1A2C28', bgBot:'#0C1814', grain:'180,215,205',
+      skin:'#C09070', skinHi:'#D4A882', skinShadow:'#9A7050',
+      hairColor:'#1A1410', browColor:'#3A2A18',
+      gender:'F', cloth:'#1A6060', clothDark:'#104848', clothLight:'#40A0A0',
+      bindi:'#C4702A', hairHi:'rgba(255,255,255,.12)', smile:0.65,
+    });
+    // CEO — younger, business formal, dark navy jacket
+    drawPortrait('lp-kg', {
+      bgTop:'#1C2840', bgBot:'#101828', grain:'195,208,228',
+      skin:'#C08A60', skinHi:'#D49C72', skinShadow:'#9C6A40',
+      hairColor:'#1C1810', hairStyle:'young', browColor:'#3A2A18',
+      gender:'M', cloth:'#1E3058', clothDark:'#122040', clothLight:'#2A4070',
+      shirt:'#F2F0EC', tie:'#8A4A20', pocket:'#C4702A', smile:0.5,
+    });
+  }
+
+  /* ── Infrastructure canvas illustrations ─────────────── */
+  function drawCampus(id, scene) {
+    const canvas = document.getElementById(id);
+    if (!canvas) return;
+    canvas.width = canvas.offsetWidth || canvas.parentElement.offsetWidth || 600;
+    const W = canvas.width, H = canvas.height;
+    const ctx = canvas.getContext('2d');
+
+    const scenes = {
+      main: () => {
+        // Sky gradient
+        const sky = ctx.createLinearGradient(0,0,0,H*.6);
+        sky.addColorStop(0,'#C9DDF5'); sky.addColorStop(1,'#E8F0FB');
+        ctx.fillStyle = sky; ctx.fillRect(0,0,W,H*.6);
+        // Ground
+        ctx.fillStyle = '#D4CDBF'; ctx.fillRect(0,H*.6,W,H*.4);
+        ctx.fillStyle = '#BFB9AF'; ctx.fillRect(0,H*.75,W,H*.25);
+        // Path
+        ctx.fillStyle = '#CAC4BA';
+        ctx.beginPath(); ctx.moveTo(W*.42,H); ctx.lineTo(W*.58,H); ctx.lineTo(W*.55,H*.6); ctx.lineTo(W*.45,H*.6); ctx.closePath(); ctx.fill();
+        // Main building body
+        ctx.fillStyle = '#F0EAE0'; ctx.fillRect(W*.15,H*.22,W*.7,H*.42);
+        // Roof
+        ctx.fillStyle = '#C4702A';
+        ctx.beginPath(); ctx.moveTo(W*.12,H*.22); ctx.lineTo(W*.5,H*.04); ctx.lineTo(W*.88,H*.22); ctx.closePath(); ctx.fill();
+        // Central dome
+        ctx.fillStyle = '#B5620A';
+        ctx.beginPath(); ctx.arc(W*.5,H*.14,W*.045,0,Math.PI,true); ctx.fill();
+        ctx.fillStyle = '#D98A4A'; ctx.fillRect(W*.492,H*.04,W*.016,H*.1);
+        // Windows row 1
+        for(let i=0;i<5;i++){
+          const wx=W*(0.2+i*0.14), wy=H*.285, ww=W*.07, wh=H*.1;
+          ctx.fillStyle='#A8C4E0'; ctx.fillRect(wx,wy,ww,wh);
+          ctx.strokeStyle='#E0D8CC'; ctx.lineWidth=1.5; ctx.strokeRect(wx,wy,ww,wh);
+          ctx.beginPath(); ctx.moveTo(wx+ww/2,wy); ctx.lineTo(wx+ww/2,wy+wh); ctx.stroke();
+        }
+        // Windows row 2
+        for(let i=0;i<5;i++){
+          const wx=W*(0.2+i*0.14), wy=H*.42, ww=W*.07, wh=H*.1;
+          ctx.fillStyle='#A8C4E0'; ctx.fillRect(wx,wy,ww,wh);
+          ctx.strokeStyle='#E0D8CC'; ctx.lineWidth=1.5; ctx.strokeRect(wx,wy,ww,wh);
+        }
+        // Door
+        ctx.fillStyle='#8A6A44'; ctx.fillRect(W*.44,H*.49,W*.12,H*.15);
+        ctx.fillStyle='#6B4F2A'; ctx.fillRect(W*.44,H*.49,W*.005,H*.15);
+        ctx.fillRect(W*.555,H*.49,W*.005,H*.15);
+        // Columns
+        for(let x of [.3,.4,.5,.6,.7]){
+          ctx.fillStyle='#E8E0D0'; ctx.fillRect(W*x,H*.22,W*.018,H*.42);
+        }
+        // Pillars at door
+        ctx.fillStyle='#D9CFC0';
+        ctx.fillRect(W*.425,H*.38,W*.022,H*.26);
+        ctx.fillRect(W*.553,H*.38,W*.022,H*.26);
+        // Sign board
+        ctx.fillStyle='#1A2744'; ctx.fillRect(W*.3,H*.33,W*.4,H*.06);
+        ctx.fillStyle='#fff'; ctx.font=`bold ${W*.018}px 'Source Sans 3',sans-serif`;
+        ctx.textAlign='center'; ctx.fillText('Vivekanand Shikshan Sanstha', W*.5, H*.37);
+        // Trees
+        for(let tx of [.06,.13,.82,.89]){
+          ctx.fillStyle='#4A7C59'; ctx.beginPath(); ctx.arc(W*tx,H*.52,W*.04,0,Math.PI*2); ctx.fill();
+          ctx.fillStyle='#3A6049'; ctx.fillRect(W*tx-.01,H*.55,W*.02,H*.08);
+        }
+        // Flagpole
+        ctx.strokeStyle='#888'; ctx.lineWidth=2;
+        ctx.beginPath(); ctx.moveTo(W*.5,H*.04); ctx.lineTo(W*.5,H*-.02); ctx.stroke();
+        ctx.fillStyle='#FF6600';
+        ctx.beginPath(); ctx.moveTo(W*.5,H*-.02); ctx.lineTo(W*.5+W*.05,H*.01); ctx.lineTo(W*.5,H*.04); ctx.closePath(); ctx.fill();
+        // Clouds
+        function cloud(cx,cy,r){
+          ctx.fillStyle='rgba(255,255,255,.85)';
+          for(let d of [[0,0,r],[r*.7,r*.2,r*.7],[r*1.4,0,r*.8],[-r*.6,r*.15,r*.65]]){
+            ctx.beginPath(); ctx.arc(cx+d[0],cy+d[1],d[2],0,Math.PI*2); ctx.fill();
+          }
+        }
+        cloud(W*.1,H*.1,W*.04); cloud(W*.7,H*.07,W*.05); cloud(W*.85,H*.12,W*.035);
+      },
+      lab: () => {
+        // Interior view — lab benches
+        const bg = ctx.createLinearGradient(0,0,0,H);
+        bg.addColorStop(0,'#E8EFF8'); bg.addColorStop(1,'#D0DBF0');
+        ctx.fillStyle=bg; ctx.fillRect(0,0,W,H);
+        // Floor
+        ctx.fillStyle='#C8D4E8'; ctx.fillRect(0,H*.65,W,H*.35);
+        // Lab bench main
+        ctx.fillStyle='#2A3F6B'; ctx.fillRect(W*.05,H*.45,W*.9,H*.22);
+        ctx.fillStyle='#4A6080'; ctx.fillRect(W*.05,H*.45,W*.9,H*.04);
+        // Equipment on bench
+        const colors=['#E0E8F0','#C4702A','#1A2744','#A0B8D0','#E8D0B0'];
+        // Beakers
+        for(let i=0;i<6;i++){
+          const bx=W*(.1+i*.15), by=H*.28, bw=W*.05, bh=H*.18;
+          ctx.fillStyle=colors[i%colors.length]+'88';
+          ctx.beginPath(); ctx.moveTo(bx,by+bh); ctx.lineTo(bx+bw*.2,by); ctx.lineTo(bx+bw*.8,by); ctx.lineTo(bx+bw,by+bh); ctx.closePath(); ctx.fill();
+          ctx.strokeStyle='#8090A8'; ctx.lineWidth=1.5; ctx.stroke();
+        }
+        // Microscope outline
+        ctx.fillStyle='#8A9AB0'; ctx.fillRect(W*.65,H*.18,W*.04,H*.28); ctx.fillRect(W*.62,H*.18,W*.1,H*.04); ctx.fillRect(W*.63,H*.38,W*.08,H*.08);
+        // Window
+        ctx.fillStyle='#B0C8E8'; ctx.fillRect(W*.35,H*.04,W*.3,H*.25);
+        ctx.strokeStyle='#9AAEC8'; ctx.lineWidth=2; ctx.strokeRect(W*.35,H*.04,W*.3,H*.25);
+        ctx.beginPath(); ctx.moveTo(W*.5,H*.04); ctx.lineTo(W*.5,H*.29); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(W*.35,H*.165); ctx.lineTo(W*.65,H*.165); ctx.stroke();
+        // Safety cabinet on wall
+        ctx.fillStyle='#D0DCF0'; ctx.fillRect(W*.78,H*.04,W*.18,H*.35);
+        ctx.strokeStyle='#B0C0D8'; ctx.lineWidth=1.5; ctx.strokeRect(W*.78,H*.04,W*.18,H*.35);
+        // Label
+        ctx.fillStyle='rgba(26,39,68,.7)'; ctx.fillRect(0,H*.85,W,H*.15);
+        ctx.fillStyle='#fff'; ctx.font=`600 ${W*.04}px 'Source Sans 3',sans-serif`;
+        ctx.textAlign='center'; ctx.fillText('Chemistry & Physics Labs', W*.5, H*.95);
+      },
+      library: () => {
+        const bg = ctx.createLinearGradient(0,0,0,H);
+        bg.addColorStop(0,'#F5EEE4'); bg.addColorStop(1,'#E8DDD0');
+        ctx.fillStyle=bg; ctx.fillRect(0,0,W,H);
+        // Floor
+        ctx.fillStyle='#D8CEC4'; ctx.fillRect(0,H*.72,W,H*.28);
+        // Bookshelves
+        const shelfColors=[['#8B4513','#A0522D'],['#6B3A2A','#8B4513'],['#5C3317','#7B4F2A']];
+        for(let s=0;s<3;s++){
+          const sx=W*(.06+s*.31), sy=H*.08, sw=W*.27, sh=H*.62;
+          ctx.fillStyle=shelfColors[s][0]; ctx.fillRect(sx,sy,sw,sh);
+          // Shelves
+          for(let r=0;r<5;r++){
+            const ry=sy+sh*(r*.18+.04);
+            ctx.fillStyle=shelfColors[s][1]; ctx.fillRect(sx,ry,sw,H*.025);
+            // Books
+            const bookPalette=['#C4702A','#1A2744','#4A7C59','#8B3A3A','#4A5A7A','#D4A040','#6A4A7A'];
+            let bx=sx+4;
+            while(bx<sx+sw-8){
+              const bw=Math.random()*W*.022+W*.012;
+              ctx.fillStyle=bookPalette[Math.floor(Math.random()*bookPalette.length)];
+              ctx.fillRect(bx,ry-H*.1,bw,H*.09);
+              ctx.strokeStyle='rgba(0,0,0,.1)'; ctx.lineWidth=.5; ctx.strokeRect(bx,ry-H*.1,bw,H*.09);
+              bx+=bw+1.5;
+            }
+          }
+        }
+        // Reading table
+        ctx.fillStyle='#C8A870'; ctx.fillRect(W*.12,H*.64,W*.76,H*.1);
+        ctx.fillStyle='#A07840'; ctx.fillRect(W*.12,H*.72,W*.06,H*.08);
+        ctx.fillRect(W*.82,H*.72,W*.06,H*.08);
+        ctx.fillRect(W*.12,H*.72,W*.76,H*.015);
+        // Chairs
+        for(let cx of [.2,.4,.6,.75]){
+          ctx.fillStyle='#1A2744'; ctx.fillRect(W*cx,H*.74,W*.06,H*.04);
+          ctx.fillRect(W*cx,H*.6,W*.06,H*.14);
+        }
+        // Lamp on table
+        ctx.strokeStyle='#888'; ctx.lineWidth=2;
+        ctx.beginPath(); ctx.moveTo(W*.5,H*.66); ctx.lineTo(W*.5,H*.52); ctx.stroke();
+        ctx.fillStyle='#F0D060';
+        ctx.beginPath(); ctx.arc(W*.5,H*.5,W*.04,0,Math.PI*2); ctx.fill();
+        // Window light
+        ctx.fillStyle='rgba(255,240,200,.3)';
+        ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(W*.25,0); ctx.lineTo(W*.1,H*.5); ctx.lineTo(0,H*.5); ctx.closePath(); ctx.fill();
+        // Label
+        ctx.fillStyle='rgba(26,39,68,.7)'; ctx.fillRect(0,H*.85,W,H*.15);
+        ctx.fillStyle='#fff'; ctx.font=`600 ${W*.04}px 'Source Sans 3',sans-serif`;
+        ctx.textAlign='center'; ctx.fillText('Central Library', W*.5, H*.95);
+      },
+      sports: () => {
+        // Sky
+        const sky=ctx.createLinearGradient(0,0,0,H*.5);
+        sky.addColorStop(0,'#87CEEB'); sky.addColorStop(1,'#C8E6F5');
+        ctx.fillStyle=sky; ctx.fillRect(0,0,W,H*.5);
+        // Ground / field
+        const field=ctx.createLinearGradient(0,H*.5,0,H);
+        field.addColorStop(0,'#4A8C3A'); field.addColorStop(1,'#3A7C2A');
+        ctx.fillStyle=field; ctx.fillRect(0,H*.5,W,H*.5);
+        // Field stripes
+        ctx.fillStyle='rgba(255,255,255,.07)';
+        for(let i=0;i<5;i++) ctx.fillRect(0,H*(.5+i*.1),W,H*.05);
+        // White boundary
+        ctx.strokeStyle='rgba(255,255,255,.7)'; ctx.lineWidth=2;
+        ctx.strokeRect(W*.07,H*.55,W*.86,H*.37);
+        // Centre circle
+        ctx.beginPath(); ctx.arc(W*.5,H*.73,W*.1,0,Math.PI*2); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(W*.5,H*.55); ctx.lineTo(W*.5,H*.92); ctx.stroke();
+        // Goal posts
+        ctx.strokeStyle='#fff'; ctx.lineWidth=3;
+        ctx.strokeRect(W*.36,H*.57,W*.28,H*.08);
+        // Running track outline
+        ctx.strokeStyle='#C88030'; ctx.lineWidth=3;
+        ctx.beginPath(); ctx.ellipse(W*.5,H*.73,W*.44,H*.22,0,0,Math.PI*2); ctx.stroke();
+        // Stands / bleachers
+        ctx.fillStyle='#1A2744'; ctx.fillRect(0,H*.3,W*.12,H*.22);
+        for(let r=0;r<4;r++) ctx.fillStyle=r%2?'#C4702A':'#1A2744', ctx.fillRect(0,H*(.3+r*.055),W*.12,H*.05);
+        // Pole and flag
+        ctx.strokeStyle='#C0C0C0'; ctx.lineWidth=2;
+        ctx.beginPath(); ctx.moveTo(W*.88,H*.5); ctx.lineTo(W*.88,H*.2); ctx.stroke();
+        ctx.fillStyle='#FF6600'; ctx.beginPath(); ctx.moveTo(W*.88,H*.2); ctx.lineTo(W*.88+W*.06,H*.24); ctx.lineTo(W*.88,H*.28); ctx.closePath(); ctx.fill();
+        // Clouds
+        ctx.fillStyle='rgba(255,255,255,.9)';
+        function c2(cx,cy,r){ for(let d of [[0,0,r],[r*.8,r*.2,r*.65],[r*1.5,0,r*.7]]){ctx.beginPath();ctx.arc(cx+d[0],cy+d[1],d[2],0,Math.PI*2);ctx.fill();} }
+        c2(W*.15,H*.12,W*.04); c2(W*.65,H*.08,W*.05);
+        // Label
+        ctx.fillStyle='rgba(15,24,37,.72)'; ctx.fillRect(0,H*.85,W,H*.15);
+        ctx.fillStyle='#fff'; ctx.font=`600 ${W*.04}px 'Source Sans 3',sans-serif`;
+        ctx.textAlign='center'; ctx.fillText('Sports Ground & Athletics Track', W*.5, H*.95);
+      },
+      hostel: () => {
+        const sky=ctx.createLinearGradient(0,0,0,H*.55);
+        sky.addColorStop(0,'#D0DCEA'); sky.addColorStop(1,'#E4ECF4');
+        ctx.fillStyle=sky; ctx.fillRect(0,0,W,H*.55);
+        ctx.fillStyle='#C8C0B0'; ctx.fillRect(0,H*.55,W,H*.45);
+        ctx.fillStyle='#B8B0A0'; ctx.fillRect(0,H*.8,W,H*.2);
+        // Main hostel block
+        ctx.fillStyle='#EAE2D8'; ctx.fillRect(W*.08,H*.18,W*.84,H*.4);
+        ctx.fillStyle='#C4702A'; ctx.fillRect(W*.08,H*.15,W*.84,H*.05);
+        // Rows of windows
+        for(let row=0;row<3;row++){
+          for(let col=0;col<7;col++){
+            const wx=W*(.12+col*.12), wy=H*(.22+row*.1), ww=W*.07, wh=H*.07;
+            // Random lit/unlit
+            const lit=Math.random()>.3;
+            ctx.fillStyle=lit?'#F8E090':'#A8B8C8';
+            ctx.fillRect(wx,wy,ww,wh);
+            ctx.strokeStyle='#D0C8B8'; ctx.lineWidth=1; ctx.strokeRect(wx,wy,ww,wh);
+            if(lit){ ctx.fillStyle='rgba(248,224,144,.3)'; ctx.fillRect(wx-3,wy,3,wh); }
+          }
+        }
+        // Entrance canopy
+        ctx.fillStyle='#1A2744'; ctx.fillRect(W*.4,H*.42,W*.2,H*.16);
+        ctx.fillStyle='#C4702A'; ctx.fillRect(W*.38,H*.4,W*.24,H*.04);
+        // Sign
+        ctx.fillStyle='#fff'; ctx.font=`bold ${W*.025}px sans-serif`; ctx.textAlign='center';
+        ctx.fillText('VSS Boys / Girls Hostel', W*.5, H*.495);
+        // Trees
+        for(let tx of [.03,.9,.97]){
+          ctx.fillStyle='#3A6B48'; ctx.beginPath(); ctx.arc(W*tx,H*.5,W*.035,0,Math.PI*2); ctx.fill();
+          ctx.fillStyle='#2A5038'; ctx.fillRect(W*tx-.008,H*.52,W*.016,H*.06);
+        }
+        // Label
+        ctx.fillStyle='rgba(15,24,37,.72)'; ctx.fillRect(0,H*.85,W,H*.15);
+        ctx.fillStyle='#fff'; ctx.font=`600 ${W*.04}px 'Source Sans 3',sans-serif`;
+        ctx.textAlign='center'; ctx.fillText('Student Hostel Facilities', W*.5, H*.95);
+      },
+      classroom: () => {
+        const bg=ctx.createLinearGradient(0,0,0,H);
+        bg.addColorStop(0,'#EEF3F8'); bg.addColorStop(1,'#E0E8F2');
+        ctx.fillStyle=bg; ctx.fillRect(0,0,W,H);
+        // Floor
+        ctx.fillStyle='#C8D2DC'; ctx.fillRect(0,H*.75,W,H*.25);
+        // Ceiling
+        ctx.fillStyle='#D8E4F0'; ctx.fillRect(0,0,W,H*.08);
+        // Back wall with blackboard
+        ctx.fillStyle='#1A3A1A'; ctx.fillRect(W*.08,H*.1,W*.84,H*.32);
+        ctx.strokeStyle='#2A5A2A'; ctx.lineWidth=3; ctx.strokeRect(W*.08,H*.1,W*.84,H*.32);
+        // Chalk text on board
+        ctx.fillStyle='rgba(255,255,255,.75)'; ctx.font=`${W*.025}px serif`;
+        ctx.textAlign='center'; ctx.fillText('ज्ञान · विज्ञान · संस्कृती', W*.5, H*.23);
+        ctx.font=`${W*.02}px serif`; ctx.fillText('Vivekanand Shikshan Sanstha', W*.5, H*.32);
+        // Ledge
+        ctx.fillStyle='#8B7355'; ctx.fillRect(W*.08,H*.42,W*.84,H*.025);
+        // Podium
+        ctx.fillStyle='#8B7040'; ctx.fillRect(W*.43,H*.55,W*.14,H*.22);
+        ctx.fillStyle='#A08050'; ctx.fillRect(W*.41,H*.54,W*.18,H*.03);
+        // Student desks
+        const deskColors=['#C8A870','#B89060','#D8B880'];
+        for(let row=0;row<2;row++){
+          for(let col=0;col<4;col++){
+            const dx=W*(.07+col*.22), dy=H*(.56+row*.1), dw=W*.17, dh=H*.04;
+            ctx.fillStyle=deskColors[(row+col)%3]; ctx.fillRect(dx,dy,dw,dh);
+            ctx.fillStyle='#8A6840'; ctx.fillRect(dx+dw*.1,dy+dh,W*.015,H*.07);
+            ctx.fillRect(dx+dw*.75,dy+dh,W*.015,H*.07);
+          }
+        }
+        // Windows (side wall perspective)
+        ctx.fillStyle='#B8D0E8'; ctx.fillRect(W*.88,H*.1,W*.08,H*.55);
+        ctx.strokeStyle='#98B0C8'; ctx.lineWidth=1.5; ctx.strokeRect(W*.88,H*.1,W*.08,H*.55);
+        ctx.beginPath(); ctx.moveTo(W*.88,H*.325); ctx.lineTo(W*.96,H*.325); ctx.stroke();
+        // Light coming through window
+        ctx.fillStyle='rgba(184,208,232,.15)';
+        ctx.beginPath(); ctx.moveTo(W*.88,H*.1); ctx.lineTo(W*.4,H*.55); ctx.lineTo(W*.4,H*.7); ctx.lineTo(W*.88,H*.65); ctx.closePath(); ctx.fill();
+        // Label
+        ctx.fillStyle='rgba(15,24,37,.72)'; ctx.fillRect(0,H*.85,W,H*.15);
+        ctx.fillStyle='#fff'; ctx.font=`600 ${W*.04}px 'Source Sans 3',sans-serif`;
+        ctx.textAlign='center'; ctx.fillText('Classrooms & Lecture Halls', W*.5, H*.95);
+      }
+    };
+
+    const sceneMap = { c1:'main', c2:'lab', c3:'library', c4:'sports', c5:'hostel', c6:'classroom' };
+    scenes[sceneMap[id]]();
+  }
+
+  /* ── Hero Management Slider ─────────────────────────── */
+  const slideCaptions = [
+    "Sanstha Leadership & Governing Council",
+    "Inauguration Ceremony · Law College, Ichalkaranji",
+    "Sanstha Management on Stage · Tarabai Park Dignitaries"
+  ];
+  let currentSlide = 0;
+  let slideInterval = null;
+
+  function setSlide(idx) {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.slider-dot');
+    const captionEl = document.getElementById('slideCaption');
+    if (!slides.length) return;
+
+    currentSlide = (idx + slides.length) % slides.length;
+
+    slides.forEach((s, i) => {
+      s.classList.toggle('active', i === currentSlide);
+    });
+    dots.forEach((d, i) => {
+      d.classList.toggle('active', i === currentSlide);
+    });
+    if (captionEl) {
+      captionEl.textContent = slideCaptions[currentSlide] || "";
+    }
+  }
+
+  function nextSlide() {
+    setSlide(currentSlide + 1);
+    resetAutoSlide();
+  }
+
+  function prevSlide() {
+    setSlide(currentSlide - 1);
+    resetAutoSlide();
+  }
+
+  function goToSlide(idx) {
+    setSlide(idx);
+    resetAutoSlide();
+  }
+
+  function startAutoSlide() {
+    stopAutoSlide();
+    slideInterval = setInterval(() => {
+      setSlide(currentSlide + 1);
+    }, 4500);
+  }
+
+  function stopAutoSlide() {
+    if (slideInterval) {
+      clearInterval(slideInterval);
+      slideInterval = null;
+    }
+  }
+
+  function resetAutoSlide() {
+    startAutoSlide();
+  }
+
+  function initCanvases() {
+    initPortraits();
+  }
+
+  function initAll() {
+    initCanvases();
+    startAutoSlide();
+
+    const heroEl = document.getElementById('heroSection');
+    if (heroEl) {
+      heroEl.addEventListener('mouseenter', stopAutoSlide);
+      heroEl.addEventListener('mouseleave', startAutoSlide);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAll);
+  } else {
+    requestAnimationFrame(initAll);
+  }
+
+  /* Smooth scroll for anchor links */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
