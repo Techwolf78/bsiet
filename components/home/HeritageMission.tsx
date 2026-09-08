@@ -57,25 +57,25 @@ export default function HeritageMission({ onOpenEnquiry }: HeritageMissionProps)
   ];
 
   return (
-    <section className="py-20 px-4 bg-slate-50/60 relative overflow-hidden" id="about">
+    <section className="py-14 sm:py-16 px-4 bg-slate-50/60 relative overflow-hidden" id="about">
       {/* Subtle decorative background gradients */}
       <div className="absolute top-1/4 -left-48 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 -right-48 w-96 h-96 bg-amber-100/30 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4 shadow-xs">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+          <div className="inline-flex items-center gap-2 bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-widest px-3.5 py-1 rounded-full mb-3 shadow-xs">
             <span className="w-2 h-2 rounded-full bg-red-600 animate-pulse" />
             Our Heritage &amp; Mission
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-3">
             Rooted in Tradition,{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#002b66] via-blue-700 to-indigo-600">
               Driven by Technology
             </span>
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
             Founded under the banner of{" "}
             <strong className="text-slate-900 font-semibold">Shri Swami Vivekanand Shikshan Sanstha</strong>, Dr. Bapuji
             Salunkhe Institute of Engineering &amp; Technology (BSIET) is dedicated to delivering industry-ready
@@ -83,78 +83,80 @@ export default function HeritageMission({ onOpenEnquiry }: HeritageMissionProps)
           </p>
         </div>
 
-        {/* Vision & Mission Cards Grid (Light Theme) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        {/* Vision & Mission Cards Grid (Compact & Clean Light Theme) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-10">
           {/* Vision Card */}
-          <div className="relative rounded-3xl p-8 sm:p-10 bg-white text-slate-900 border-2 border-red-100/90 shadow-md overflow-hidden flex flex-col justify-between group hover:border-red-300 transition-all">
+          <div className="rounded-2xl p-5 sm:p-6 bg-white border border-slate-200 shadow-xs hover:border-red-300 hover:shadow-md transition-all flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between gap-4 mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-red-50 border border-red-200 flex items-center justify-center text-red-600 shrink-0 shadow-xs">
-                  <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
-                  </svg>
+              <div className="flex items-center justify-between gap-3 mb-2.5">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-red-50 border border-red-200/60 flex items-center justify-center text-red-600 shrink-0">
+                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900">
+                    Our Vision
+                  </h3>
                 </div>
-                <span className="text-[11px] font-extrabold uppercase tracking-widest bg-red-50 text-red-700 border border-red-200 px-3.5 py-1 rounded-full">
-                  Institutional Vision
+                <span className="text-[10px] font-bold uppercase tracking-wider text-red-700 bg-red-50 border border-red-200/70 px-2.5 py-0.5 rounded-full">
+                  Vision
                 </span>
               </div>
 
-              <h3 className="text-2xl font-extrabold text-slate-900 mb-3 flex items-center gap-2">
-                Our Vision
-              </h3>
-
-              <blockquote className="text-slate-700 text-sm sm:text-base leading-relaxed italic border-l-4 border-red-600 pl-4 py-2 mb-6 bg-red-50/40 rounded-r-xl">
+              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed italic border-l-2 border-red-600 pl-3 py-1 my-3 bg-slate-50/70 rounded-r-lg">
                 &ldquo;To be the institute of quality engineering education and research for producing capable industry
                 professionals with responsibilities towards nation building.&rdquo;
-              </blockquote>
+              </p>
             </div>
 
-            <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
-              <span className="text-[11px] font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-lg">
+            <div className="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100">
+              <span className="text-[11px] font-medium text-slate-600 bg-slate-50 border border-slate-200/60 px-2.5 py-0.5 rounded-md">
                 ✓ Quality Technical Education
               </span>
-              <span className="text-[11px] font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-lg">
+              <span className="text-[11px] font-medium text-slate-600 bg-slate-50 border border-slate-200/60 px-2.5 py-0.5 rounded-md">
                 ✓ Applied Research
               </span>
-              <span className="text-[11px] font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-lg">
+              <span className="text-[11px] font-medium text-slate-600 bg-slate-50 border border-slate-200/60 px-2.5 py-0.5 rounded-md">
                 ✓ Nation Building
               </span>
             </div>
           </div>
 
           {/* Mission Card */}
-          <div className="relative rounded-3xl p-8 sm:p-10 bg-white text-slate-900 border-2 border-blue-100/90 shadow-md overflow-hidden flex flex-col justify-between group hover:border-blue-300 transition-all">
+          <div className="rounded-2xl p-5 sm:p-6 bg-white border border-slate-200 shadow-xs hover:border-blue-300 hover:shadow-md transition-all flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between gap-4 mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center text-[#002b66] shrink-0 shadow-xs">
-                  <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
-                  </svg>
+              <div className="flex items-center justify-between gap-3 mb-2.5">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200/60 flex items-center justify-center text-[#002b66] shrink-0">
+                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900">
+                    Our Mission
+                  </h3>
                 </div>
-                <span className="text-[11px] font-extrabold uppercase tracking-widest bg-blue-50 text-[#002b66] border border-blue-200 px-3.5 py-1 rounded-full">
-                  Core Mission
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#002b66] bg-blue-50 border border-blue-200/70 px-2.5 py-0.5 rounded-full">
+                  Mission
                 </span>
               </div>
 
-              <h3 className="text-2xl font-extrabold text-slate-900 mb-3 flex items-center gap-2">
-                Our Mission
-              </h3>
-
-              <blockquote className="text-slate-700 text-sm sm:text-base leading-relaxed italic border-l-4 border-blue-600 pl-4 py-2 mb-6 bg-blue-50/40 rounded-r-xl">
+              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed italic border-l-2 border-blue-600 pl-3 py-1 my-3 bg-slate-50/70 rounded-r-lg">
                 &ldquo;To imbibe and implement outcome-based education for effective teaching-learning process, bridging
                 industrial demands through hands-on practical competencies, technical ethics, and collaborative
                 research.&rdquo;
-              </blockquote>
+              </p>
             </div>
 
-            <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
-              <span className="text-[11px] font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-lg">
+            <div className="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100">
+              <span className="text-[11px] font-medium text-slate-600 bg-slate-50 border border-slate-200/60 px-2.5 py-0.5 rounded-md">
                 ✓ Outcome-Based Education (OBE)
               </span>
-              <span className="text-[11px] font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-lg">
+              <span className="text-[11px] font-medium text-slate-600 bg-slate-50 border border-slate-200/60 px-2.5 py-0.5 rounded-md">
                 ✓ Hands-on Competency
               </span>
-              <span className="text-[11px] font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-lg">
+              <span className="text-[11px] font-medium text-slate-600 bg-slate-50 border border-slate-200/60 px-2.5 py-0.5 rounded-md">
                 ✓ Industry-Ready Ethics
               </span>
             </div>
