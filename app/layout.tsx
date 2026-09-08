@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import HeaderContainer from "@/components/layout/HeaderContainer";
 import Footer from "@/components/layout/Footer";
+import FloatingActions from "@/components/layout/FloatingActions";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -48,6 +49,7 @@ export default function RootLayout({
         <HeaderContainer />
         <main className="flex-1">{children}</main>
         <Footer />
+        <FloatingActions />
       </body>
     </html>
   );
