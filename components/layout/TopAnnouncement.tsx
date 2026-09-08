@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function TopAnnouncement() {
   return (
-    <div className="bg-[#0f172a] text-white py-2 px-4 border-b border-slate-800 text-xs relative z-50">
+    <div className="bg-slate-100 text-slate-700 py-2 px-4 border-b border-slate-200 text-xs relative z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         <div className="flex items-center gap-3 overflow-hidden whitespace-nowrap">
-          <span className="text-slate-400 font-semibold uppercase tracking-wider hidden sm:inline">
+          <span className="text-slate-500 font-bold uppercase tracking-wider hidden sm:inline">
             Notice Board:
           </span>
           <a
@@ -16,26 +16,26 @@ export default function TopAnnouncement() {
           >
             Mock Test
           </a>
-          <span className="text-slate-600 hidden sm:inline">|</span>
-          <span className="text-slate-200 font-medium truncate">
-            Admissions Open 2026-27 for B.Tech Degree (DBATU) & Polytechnic Diploma (MSBTE) — DTE Code: 6468
+          <span className="text-slate-300 hidden sm:inline">|</span>
+          <span className="text-slate-800 font-semibold truncate">
+            Admissions Open 2026-27 for B.Tech Degree (DBATU) &amp; Polytechnic Diploma (MSBTE) — DTE Code: 6468
           </span>
         </div>
 
-        <div className="hidden md:flex items-center gap-4 text-slate-400 shrink-0">
-          <Link href="/admissions#fra" className="hover:text-white transition-colors">
+        <div className="hidden md:flex items-center gap-4 text-slate-600 font-medium shrink-0">
+          <Link href="/admissions#fra" className="hover:text-[#002b66] transition-colors">
             FRA Fees
           </Link>
-          <span className="text-slate-700">•</span>
-          <Link href="/about#disclosures" className="hover:text-white transition-colors">
+          <span className="text-slate-300">•</span>
+          <Link href="/about#disclosures" className="hover:text-[#002b66] transition-colors">
             Mandatory Disclosure
           </Link>
-          <span className="text-slate-700">•</span>
+          <span className="text-slate-300">•</span>
           <a
             href="https://mahadbt.maharashtra.gov.in"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-amber-400 transition-colors"
+            className="text-blue-700 hover:text-blue-900 font-semibold transition-colors"
           >
             MahaDBT Portal ↗
           </a>

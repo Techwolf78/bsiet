@@ -40,23 +40,24 @@ export default async function DepartmentDetailPage({
           <span className="text-slate-900 font-semibold">{dept.name}</span>
         </div>
 
-        {/* Hero Banner */}
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-12 bg-slate-950 text-white min-h-[360px] flex items-end p-6 sm:p-12">
+        {/* Hero Banner (Clean Light Theme) */}
+        <div className="relative rounded-3xl overflow-hidden shadow-md mb-12 bg-gradient-to-r from-blue-50/80 via-slate-50 to-indigo-50/60 border border-slate-200 min-h-[320px] flex items-end p-6 sm:p-12">
           <Image
             src={dept.image}
             alt={dept.name}
             fill
             priority
-            className="object-cover opacity-35"
+            className="object-cover opacity-20"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
           <div className="relative z-10 max-w-3xl">
-            <span className="bg-[#ffcc00] text-slate-950 text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full inline-block mb-3">
+            <span className="bg-[#ffcc00] text-[#002b66] border border-amber-400 font-extrabold text-xs uppercase tracking-wider px-3.5 py-1 rounded-full inline-block mb-3 shadow-xs">
               Department of {dept.shortName}
             </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 mb-3">
               {dept.name}
             </h1>
-            <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
+            <p className="text-slate-700 text-sm sm:text-base leading-relaxed font-medium">
               {dept.overview}
             </p>
           </div>
@@ -138,20 +139,20 @@ export default async function DepartmentDetailPage({
               </p>
             </div>
 
-            {/* Quick Apply Card */}
-            <div className="bg-gradient-to-br from-[#002b66] to-[#07172e] text-white p-6 rounded-3xl border border-blue-900 shadow-md">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-[#ffcc00] bg-amber-400/20 px-2 py-0.5 rounded">
-                DTE: 6468
+            {/* Quick Apply Card (Light Theme) */}
+            <div className="bg-gradient-to-br from-amber-50/80 via-yellow-50/50 to-white text-slate-900 p-6 rounded-3xl border-2 border-amber-300/80 shadow-sm">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100 border border-amber-300 px-2.5 py-1 rounded font-bold">
+                DTE Code: 6468
               </span>
-              <h4 className="text-lg font-bold text-white mt-2 mb-2">
+              <h4 className="text-lg font-bold text-slate-900 mt-3 mb-2">
                 Join {dept.shortName} at BSIET
               </h4>
-              <p className="text-slate-300 text-xs leading-relaxed mb-5">
+              <p className="text-slate-600 text-xs leading-relaxed mb-5">
                 Limited seats available for Academic Year 2026-27. Apply through CAP or institutional quota.
               </p>
               <Link
                 href="/admissions"
-                className="block text-center bg-[#ffcc00] hover:bg-amber-400 text-slate-950 font-bold text-xs py-3 px-4 rounded-xl shadow transition-all"
+                className="block text-center bg-[#002b66] hover:bg-blue-900 text-[#ffcc00] font-bold text-xs py-3 px-4 rounded-xl shadow transition-all"
               >
                 Admission Guidance &raquo;
               </Link>

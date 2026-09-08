@@ -44,10 +44,10 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                   )}
                 </Link>
 
-                {/* Regular Dropdown */}
+                {/* Regular Dropdown (Light Theme) */}
                 {item.sections && !item.isMega && (
                   <div
-                    className={`absolute top-full left-0 min-w-[270px] bg-[#001737] border border-amber-400/30 border-t-2 border-t-[#ffcc00] rounded-b-lg shadow-2xl p-2 z-50 transition-all duration-200 ${
+                    className={`absolute top-full left-0 min-w-[270px] bg-white border border-slate-200 border-t-2 border-t-amber-400 rounded-b-xl shadow-2xl p-2 z-50 transition-all duration-200 ${
                       activeDropdown === item.label
                         ? "opacity-100 visible translate-y-0"
                         : "opacity-0 invisible translate-y-2 pointer-events-none"
@@ -56,7 +56,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                     {item.sections.map((sec, sIdx) => (
                       <div key={sIdx}>
                         {sec.sectionLabel && (
-                          <div className="text-[10px] font-extrabold uppercase tracking-widest text-sky-300 px-3 pt-2 pb-1">
+                          <div className="text-[10px] font-extrabold uppercase tracking-widest text-slate-400 px-3 pt-2 pb-1">
                             {sec.sectionLabel}
                           </div>
                         )}
@@ -64,23 +64,23 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                           <Link
                             key={sub.label}
                             href={sub.href}
-                            className="block px-3 py-1.5 text-slate-200 hover:text-[#ffcc00] hover:bg-[#002b66] text-xs font-medium rounded transition-all"
+                            className="block px-3 py-1.5 text-slate-700 hover:text-[#002b66] hover:bg-blue-50 text-xs font-semibold rounded-lg transition-all"
                           >
                             {sub.label}
                           </Link>
                         ))}
                         {sIdx < (item.sections?.length || 0) - 1 && (
-                          <div className="h-px bg-white/10 my-1 mx-2" />
+                          <div className="h-px bg-slate-100 my-1 mx-2" />
                         )}
                       </div>
                     ))}
                   </div>
                 )}
 
-                {/* Mega Dropdown for Departments */}
+                {/* Mega Dropdown for Departments (Light Theme) */}
                 {item.isMega && item.columns && (
                   <div
-                    className={`absolute top-full left-0 min-w-[540px] bg-[#001737] border border-amber-400/30 border-t-2 border-t-[#ffcc00] rounded-b-lg shadow-2xl p-4 grid grid-cols-2 gap-4 z-50 transition-all duration-200 ${
+                    className={`absolute top-full left-0 min-w-[540px] bg-white border border-slate-200 border-t-2 border-t-amber-400 rounded-b-xl shadow-2xl p-4 grid grid-cols-2 gap-4 z-50 transition-all duration-200 ${
                       activeDropdown === item.label
                         ? "opacity-100 visible translate-y-0"
                         : "opacity-0 invisible translate-y-2 pointer-events-none"
@@ -88,14 +88,14 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                   >
                     {item.columns.map((col, cIdx) => (
                       <div key={cIdx} className="flex flex-col">
-                        <div className="text-[11px] font-extrabold uppercase tracking-widest text-sky-300 pb-1.5 border-b border-white/10 mb-1.5">
+                        <div className="text-[11px] font-extrabold uppercase tracking-widest text-[#002b66] pb-1.5 border-b border-slate-100 mb-1.5">
                           {col.title}
                         </div>
                         {col.links.map((sub) => (
                           <Link
                             key={sub.label}
                             href={sub.href}
-                            className="px-2.5 py-1.5 text-slate-200 hover:text-[#ffcc00] hover:bg-[#002b66] text-xs font-medium rounded transition-all"
+                            className="px-2.5 py-1.5 text-slate-700 hover:text-[#002b66] hover:bg-blue-50 text-xs font-semibold rounded-lg transition-all"
                           >
                             {sub.label}
                           </Link>
@@ -137,16 +137,16 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer (Light Theme) */}
       {mobileOpen && (
-        <div className="lg:hidden bg-[#001737] border-b-2 border-[#ffcc00] py-3 px-4 shadow-xl">
+        <div className="lg:hidden bg-white border-b-2 border-[#002b66] py-3 px-4 shadow-2xl">
           <div className="flex flex-col gap-1">
             {NAV_ITEMS.map((item) => (
-              <div key={item.label} className="border-b border-white/5 pb-1">
+              <div key={item.label} className="border-b border-slate-100 pb-1">
                 <Link
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block py-2 text-sm font-semibold text-white hover:text-[#ffcc00]"
+                  className="block py-2 text-sm font-bold text-slate-900 hover:text-blue-900"
                 >
                   {item.label}
                 </Link>
@@ -157,7 +157,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                         key={sub.label}
                         href={sub.href}
                         onClick={() => setMobileOpen(false)}
-                        className="text-xs text-slate-300 hover:text-[#ffcc00] py-0.5"
+                        className="text-xs text-slate-600 hover:text-[#002b66] py-0.5 font-medium"
                       >
                         • {sub.label}
                       </Link>
@@ -171,7 +171,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                         key={sub.label}
                         href={sub.href}
                         onClick={() => setMobileOpen(false)}
-                        className="text-xs text-slate-300 hover:text-[#ffcc00] py-0.5"
+                        className="text-xs text-slate-600 hover:text-[#002b66] py-0.5 font-medium"
                       >
                         • {sub.label}
                       </Link>

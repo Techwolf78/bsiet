@@ -103,16 +103,16 @@ export default function AdmissionsPage() {
           </div>
         </div>
 
-        {/* FRA Fees & Concessions */}
-        <div className="bg-[#07172e] text-white rounded-3xl p-8 sm:p-10 mb-16" id="fra">
+        {/* FRA Fees & Concessions (Light Theme) */}
+        <div className="bg-gradient-to-r from-blue-50/90 via-indigo-50/40 to-slate-50 border-2 border-blue-200/80 text-slate-900 rounded-3xl p-8 sm:p-10 mb-16 shadow-sm" id="fra">
           <div className="max-w-2xl">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-[#ffcc00] bg-amber-400/20 px-2.5 py-1 rounded">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-blue-900 bg-blue-100 border border-blue-200 px-2.5 py-1 rounded">
               Government Regulated
             </span>
-            <h2 className="text-2xl font-extrabold text-white mt-3 mb-3">
+            <h2 className="text-2xl font-extrabold text-slate-900 mt-3 mb-3">
               Fee Regulating Authority (FRA) Approved Fees
             </h2>
-            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
               All tuition and development fees at Dr. Bapuji Salunkhe Institute of Engineering &amp; Technology are strictly
               fixed by the Maharashtra Fee Regulating Authority (FRA), Mumbai, ensuring transparent, non-capitation
               education.
@@ -120,7 +120,7 @@ export default function AdmissionsPage() {
             <div className="flex flex-wrap gap-4">
               <button
                 onClick={() => setEnquiryOpen(true)}
-                className="bg-[#ffcc00] hover:bg-amber-400 text-slate-950 font-bold text-xs px-5 py-2.5 rounded-lg shadow cursor-pointer"
+                className="bg-[#002b66] hover:bg-blue-900 text-[#ffcc00] font-bold text-xs px-5 py-2.5 rounded-lg shadow cursor-pointer transition-all"
               >
                 Request Current Year Fee Structure
               </button>
@@ -128,7 +128,7 @@ export default function AdmissionsPage() {
                 href="https://sssamiti.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-white/20 hover:border-white/50 text-white font-semibold text-xs px-5 py-2.5 rounded-lg transition-colors inline-flex items-center gap-1.5"
+                className="border border-slate-300 hover:border-slate-400 bg-white text-slate-800 font-semibold text-xs px-5 py-2.5 rounded-lg transition-colors inline-flex items-center gap-1.5 shadow-xs"
               >
                 <span>Visit Official FRA Portal</span>
                 <span>↗</span>

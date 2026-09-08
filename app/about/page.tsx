@@ -49,25 +49,25 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Vision & Mission */}
+        {/* Vision & Mission (Light Theme) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16" id="vision">
-          <div className="bg-[#002b66] text-white p-8 rounded-3xl border border-blue-900 shadow-md">
-            <div className="w-12 h-12 rounded-xl bg-amber-400/20 text-[#ffcc00] flex items-center justify-center font-bold text-xl mb-4">
+          <div className="bg-white text-slate-900 p-8 rounded-3xl border-2 border-amber-200/90 shadow-sm hover:border-amber-400 transition-all">
+            <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 border border-amber-200 flex items-center justify-center font-bold text-xl mb-4">
               🎯
             </div>
-            <h3 className="text-xl font-extrabold mb-3 text-[#ffcc00]">Our Vision</h3>
-            <p className="text-slate-200 text-sm leading-relaxed">
+            <h3 className="text-xl font-extrabold mb-3 text-slate-900">Our Vision</h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
               To be a globally recognized institution of technical education fostering intellectual competence,
               sustainable innovation, ethical values, and social responsiveness among engineering graduates.
             </p>
           </div>
 
-          <div className="bg-[#07172e] text-white p-8 rounded-3xl border border-slate-800 shadow-md">
-            <div className="w-12 h-12 rounded-xl bg-red-600/20 text-red-400 flex items-center justify-center font-bold text-xl mb-4">
+          <div className="bg-white text-slate-900 p-8 rounded-3xl border-2 border-red-100 shadow-sm hover:border-red-300 transition-all">
+            <div className="w-12 h-12 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center font-bold text-xl mb-4">
               🚀
             </div>
-            <h3 className="text-xl font-extrabold mb-3 text-red-400">Our Mission</h3>
-            <ul className="text-slate-200 text-sm space-y-2.5 leading-relaxed">
+            <h3 className="text-xl font-extrabold mb-3 text-red-700">Our Mission</h3>
+            <ul className="text-slate-600 text-sm space-y-2.5 leading-relaxed">
               <li>• Deliver learner-centric curricula with deep practical laboratory immersion.</li>
               <li>• Foster industry collaboration, entrepreneurship, and applied scientific research.</li>
               <li>• Instill moral and ethical values echoing the philosophy of Swami Vivekananda.</li>

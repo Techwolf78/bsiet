@@ -41,22 +41,22 @@ export default function PlacementsPage() {
         {/* Full Placement Section with Marquee */}
         <PlacementRecruiters />
 
-        {/* Alumni Portal Notice */}
-        <div className="mt-16 bg-[#002b66] text-white rounded-3xl p-8 sm:p-10 border border-blue-900" id="alumni">
+        {/* Alumni Portal Notice (Light Theme) */}
+        <div className="mt-16 bg-gradient-to-r from-amber-50/80 via-yellow-50/40 to-slate-50 border-2 border-amber-200/90 text-slate-900 rounded-3xl p-8 sm:p-10 shadow-sm" id="alumni">
           <div className="max-w-2xl">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-[#ffcc00] bg-amber-400/20 px-2.5 py-1 rounded">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100 border border-amber-300 px-2.5 py-1 rounded font-bold">
               Global Network
             </span>
-            <h3 className="text-2xl font-extrabold text-white mt-3 mb-3">
+            <h3 className="text-2xl font-extrabold text-slate-900 mt-3 mb-3">
               BSIET Alumni Association
             </h3>
-            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
               Our alumni network spans top technology firms, automotive leaders, government services, and successful
               startup founders across India and abroad. Stay connected and mentor the next generation.
             </p>
             <a
               href="mailto:tpo@bsiet.org?subject=Alumni%20Registration"
-              className="inline-flex items-center gap-2 bg-[#ffcc00] hover:bg-amber-400 text-slate-950 font-bold text-xs px-6 py-3 rounded-xl shadow transition-all"
+              className="inline-flex items-center gap-2 bg-[#002b66] hover:bg-blue-900 text-[#ffcc00] font-bold text-xs px-6 py-3 rounded-xl shadow transition-all cursor-pointer"
             >
               Register on Alumni Portal &raquo;
             </a>
