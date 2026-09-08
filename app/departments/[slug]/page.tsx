@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DEPARTMENTS } from "@/data/departments";
+import ComputerEngineeringShowcase from "@/components/departments/ComputerEngineeringShowcase";
 
 export function generateStaticParams() {
   return DEPARTMENTS.map((d) => ({
@@ -19,6 +20,10 @@ export default async function DepartmentDetailPage({
 
   if (!dept) {
     notFound();
+  }
+
+  if (slug === "computer-engineering") {
+    return <ComputerEngineeringShowcase />;
   }
 
   const labsList = dept.keyLabs.split(",").map((l) => l.trim());
