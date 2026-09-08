@@ -1376,6 +1376,30 @@
         background: var(--slate-200);
       }
 
+      
+      .dept-badge {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background: rgba(15, 23, 42, 0.75);
+        backdrop-filter: blur(8px);
+        color: #fff;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 0.25rem 0.55rem;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        z-index: 2;
+      }
+      .dept-img-wrap::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.5) 100%);
+        pointer-events: none;
+      }
       .dept-img-wrap img {
         width: 100%;
         height: 100%;
@@ -3621,9 +3645,11 @@
           <div class="dept-card">
             <div class="dept-img-wrap">
               <img
-                src="images/Computer-561x841.png"
+                src="images/lab-computer.jpg"
                 alt="Computer Engineering Lab"
+                loading="lazy"
               />
+              <span class="dept-badge">Cloud & HPC</span>
             </div>
             <div class="dept-content">
               <h4 class="dept-name">Computer Engineering</h4>
@@ -3638,7 +3664,12 @@
           <!-- 2. AI & ML -->
           <div class="dept-card">
             <div class="dept-img-wrap">
-              <img src="images/AIML-561x841.png" alt="AI & ML Department" />
+              <img
+                src="images/lab-aiml.jpg"
+                alt="AI & ML Department"
+                loading="lazy"
+              />
+              <span class="dept-badge">AI & GPU Labs</span>
             </div>
             <div class="dept-content">
               <h4 class="dept-name">AI & Machine Learning</h4>
@@ -3654,9 +3685,11 @@
           <div class="dept-card">
             <div class="dept-img-wrap">
               <img
-                src="images/Mechanical-2-561x701.jpeg"
+                src="images/lab-mechanical.jpg"
                 alt="Mechanical Engineering Workshop"
+                loading="lazy"
               />
+              <span class="dept-badge">CNC & CAD/CAM</span>
             </div>
             <div class="dept-content">
               <h4 class="dept-name">Mechanical Engineering</h4>
@@ -3672,9 +3705,11 @@
           <div class="dept-card">
             <div class="dept-img-wrap">
               <img
-                src="images/Electrical-4-561x701.jpeg"
+                src="images/lab-electrical.jpg"
                 alt="Electrical Engineering Labs"
+                loading="lazy"
               />
+              <span class="dept-badge">Power & EV Lab</span>
             </div>
             <div class="dept-content">
               <h4 class="dept-name">Electrical Engineering</h4>
@@ -3690,9 +3725,11 @@
           <div class="dept-card">
             <div class="dept-img-wrap">
               <img
-                src="images/Civil-561x704.jpeg"
+                src="images/lab-civil.jpg"
                 alt="Civil Engineering Labs"
+                loading="lazy"
               />
+              <span class="dept-badge">Materials & Survey</span>
             </div>
             <div class="dept-content">
               <h4 class="dept-name">Civil Engineering</h4>
