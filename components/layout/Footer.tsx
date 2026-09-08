@@ -143,7 +143,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
-          <div>
+          <div suppressHydrationWarning>
             &copy; {new Date().getFullYear()} Dr. Bapuji Salunkhe Institute of Engineering & Technology (BSIET), Kolhapur.
           </div>
           <div className="flex items-center gap-4">

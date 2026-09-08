@@ -43,8 +43,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${inter.variable} scroll-smooth`}>
-      <body className="min-h-screen flex flex-col antialiased bg-white text-slate-900">
+    <html lang="en" className={`${jakarta.variable} ${inter.variable} scroll-smooth`} suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col antialiased bg-white text-slate-900" suppressHydrationWarning>
         <HeaderContainer />
         <main className="flex-1">{children}</main>
         <Footer />
