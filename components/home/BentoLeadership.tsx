@@ -96,14 +96,14 @@ export default function BentoLeadership() {
         {/* 3. PRINCIPAL'S DESK & SANSTHA HERITAGE METRICS (Compact Row — Zero Negative Space) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
           {/* Principal's Desk */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-5 sm:p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col sm:flex-row items-center sm:items-start gap-4">
-            <div className="relative w-24 sm:w-28 aspect-[6/5] rounded-2xl overflow-hidden border-2 border-blue-600/30 shrink-0 bg-slate-100 shadow-sm">
+          <div className="lg:col-span-7 bg-white rounded-3xl p-5 sm:p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col sm:flex-row items-center sm:items-start gap-5">
+            <div className="relative w-44 sm:w-52 aspect-[6/5] rounded-2xl overflow-hidden border border-slate-200 shrink-0 bg-slate-50 shadow-sm">
               <Image
                 src={PRINCIPAL_DATA.image}
                 alt={PRINCIPAL_DATA.name}
                 fill
                 className="object-contain object-center"
-                sizes="112px"
+                sizes="208px"
               />
             </div>
             <div className="flex-1 text-center sm:text-left">
