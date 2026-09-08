@@ -19,7 +19,7 @@ export const HERO_LEADER: Leader = {
   organization: "Shri Swami Vivekanand Shikshan Sanstha",
   image: "/images/chandrakant-dada-patil-362x310-1-360x300.png",
   quote:
-    "Our commitment is to empower every young engineering aspirant with world-class technical education, innovative mindset, and ethical values to drive India's industrial and economic resurgence.",
+    "Our commitment is to empower every young engineering aspirant with quality technical education, innovative mindset, and ethical values to drive India's industrial and economic resurgence.",
   isHero: true,
 };
 

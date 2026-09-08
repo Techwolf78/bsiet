@@ -25,7 +25,7 @@ export default function HeroSection({ onOpenEnquiry, onOpenBrochure }: HeroSecti
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight mb-5">
               Empowering Next-Gen Engineers with{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#002b66] via-blue-700 to-indigo-600">
-                World-Class Innovation
+                Practical Innovation
               </span>{" "}
               &amp; Values.
             </h1>
