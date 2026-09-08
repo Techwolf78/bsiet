@@ -36,19 +36,19 @@ export default function PlacementRecruiters() {
         </div>
 
         {/* Infinite Marquee of Recruiters */}
-        <div className="relative overflow-hidden py-4 border-y border-white/10">
-          <div className="flex animate-marquee gap-8 items-center">
-            {[...CAMPUS_RECRUITERS, ...CAMPUS_RECRUITERS].map((rec, idx) => (
+        <div className="relative overflow-hidden py-6 border-y border-white/10">
+          <div className="flex animate-marquee gap-6 items-center">
+            {[...CAMPUS_RECRUITERS, ...CAMPUS_RECRUITERS, ...CAMPUS_RECRUITERS].map((rec, idx) => (
               <div
                 key={idx}
-                className="shrink-0 bg-white/10 hover:bg-white/20 border border-white/15 px-6 py-3 rounded-xl flex flex-col items-center justify-center min-w-[170px] transition-all"
+                className="shrink-0 bg-white rounded-xl shadow-md p-3 flex items-center justify-center w-[145px] h-[82px] hover:scale-105 transition-all"
+                title={`${rec.name} - ${rec.category}`}
               >
-                <span className="font-extrabold text-sm tracking-wider text-white font-mono">
-                  {rec.logoText}
-                </span>
-                <span className="text-[10px] text-amber-300 font-semibold mt-0.5">
-                  {rec.category}
-                </span>
+                <img
+                  src={rec.logo}
+                  alt={rec.name}
+                  className="max-h-full max-w-full object-contain"
+                />
               </div>
             ))}
           </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import HeroSection from "@/components/home/HeroSection";
+import AccreditationBar from "@/components/home/AccreditationBar";
 import StatStrip from "@/components/home/StatStrip";
 import AcademicPrograms from "@/components/home/AcademicPrograms";
 import DepartmentLabs from "@/components/home/DepartmentLabs";
@@ -25,6 +26,7 @@ export default function HomePage() {
         onOpenEnquiry={() => setEnquiryOpen(true)}
         onOpenBrochure={() => setBrochureOpen(true)}
       />
+      <AccreditationBar />
       <StatStrip />
       <AcademicPrograms
         onOpenEnquiry={() => setEnquiryOpen(true)}

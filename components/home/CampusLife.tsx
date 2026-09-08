@@ -1,4 +1,22 @@
 export default function CampusLife() {
+  const photoCards = [
+    {
+      img: "/images/DSC06540-561x315.jpg",
+      title: "Central Library & E-Resource Hub",
+      desc: "Extensive collection of engineering volumes, national & international journals, DELNET e-resources, and air-conditioned reading halls.",
+    },
+    {
+      img: "/images/Mechanical-2-561x701.jpeg",
+      title: "Advanced Workshops & CNC Centers",
+      desc: "Fully equipped machine shop, precision CNC lathes, milling machines, foundry, welding, and state-of-the-art metallurgy testing facilities.",
+    },
+    {
+      img: "/images/Award--561x467.png",
+      title: "Sports, Gymkhana & Cultural Clubs",
+      desc: "Spacious sports grounds, indoor badminton, robotics club, annual technical festivals, and vibrant student extracurricular achievements.",
+    },
+  ];
+
   const facilities = [
     {
       title: "Central Digital Library",
@@ -48,6 +66,29 @@ export default function CampusLife() {
           </p>
         </div>
 
+        {/* 3 Prominent Facility Photo Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {photoCards.map((card, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition-all group"
+            >
+              <div className="h-52 overflow-hidden bg-slate-100 relative">
+                <img
+                  src={card.img}
+                  alt={card.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="font-bold text-slate-900 text-base mb-2">{card.title}</h3>
+                <p className="text-slate-600 text-xs leading-relaxed">{card.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* 6 Core Facilities Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {facilities.map((fac, idx) => (
             <div
