@@ -18,96 +18,89 @@ export default function BentoLeadership() {
           </p>
         </div>
 
-        {/* BENTO GRID (Inspired by Modern Keynote Bento Design) */}
+        {/* BENTO GRID (Clean Light Aesthetic — No Text Over Photos) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {/* 1. HERO BENTO: Hon. Chandrakant (Dada) Patil (2 cols x 2 rows) */}
-          <div className="md:col-span-2 lg:col-span-2 lg:row-span-2 relative rounded-3xl overflow-hidden border-2 border-amber-300/90 shadow-xl group bg-slate-100 min-h-[480px] lg:min-h-[580px] flex items-end">
-            {/* Whole Photo covering the Bento card */}
-            <Image
-              src={HERO_LEADER.image}
-              alt={HERO_LEADER.name}
-              fill
-              priority
-              className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
+          <div className="md:col-span-2 lg:col-span-2 lg:row-span-2 bg-gradient-to-br from-white via-amber-50/20 to-slate-50 rounded-3xl border-2 border-amber-300/80 shadow-md hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between p-5 sm:p-7 group">
+            <div>
+              {/* Header Pill & Organization */}
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <span className="bg-amber-100 text-amber-900 border border-amber-300 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
+                  👑 Hon&apos;ble President
+                </span>
+                <span className="text-xs text-slate-500 font-bold tracking-wide">
+                  Shri Swami Vivekanand Shikshan Sanstha
+                </span>
+              </div>
 
-            {/* Vignette Scrim for depth and contrast */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent pointer-events-none" />
+              {/* Dedicated Photo Frame — 100% Clean & Unobstructed */}
+              <div className="relative w-full h-[270px] sm:h-[300px] rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm bg-slate-100 mb-5">
+                <Image
+                  src={HERO_LEADER.image}
+                  alt={HERO_LEADER.name}
+                  fill
+                  priority
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
 
-            {/* Top Floating Pill Badge */}
-            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 z-10 flex flex-wrap items-center gap-2">
-              <span className="bg-amber-400 text-slate-950 font-extrabold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-md border border-amber-300">
-                👑 Hon&apos;ble President
-              </span>
-              <span className="bg-white/95 backdrop-blur-md text-slate-800 font-bold text-xs px-3.5 py-1.5 rounded-full shadow-sm hidden sm:inline-block border border-slate-200">
-                Shri Swami Vivekanand Shikshan Sanstha, Kolhapur
-              </span>
+              {/* Leader Info Below Photo */}
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-1">
+                {HERO_LEADER.name}
+              </h3>
+              <p className="text-xs sm:text-sm font-bold text-amber-800 mb-4">
+                {HERO_LEADER.role}
+              </p>
             </div>
 
-            {/* Over That Photo: The Message Card */}
-            <div className="relative z-10 w-full p-4 sm:p-6">
-              <div className="bg-white/95 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-amber-300/80 shadow-2xl">
-                <span className="text-[11px] font-bold text-amber-800 uppercase tracking-wider block mb-1 sm:hidden">
-                  Shri Swami Vivekanand Shikshan Sanstha, Kolhapur
-                </span>
-
-                <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight mb-1">
-                  {HERO_LEADER.name}
-                </h3>
-                <p className="text-xs sm:text-sm font-bold text-blue-900 mb-2.5">
-                  {HERO_LEADER.role}
-                </p>
-
-                {/* Quote */}
-                <div className="bg-amber-50/70 border-l-4 border-amber-500 rounded-r-xl p-3 sm:p-3.5 shadow-xs">
-                  <p className="text-slate-700 text-xs sm:text-[13px] leading-relaxed italic">
-                    &ldquo;{HERO_LEADER.quote}&rdquo;
-                  </p>
-                </div>
-              </div>
+            {/* Quote Box Cleanly Below Photo */}
+            <div className="bg-white border border-slate-200 border-l-4 border-l-amber-500 rounded-r-xl p-4 shadow-xs">
+              <p className="text-slate-700 text-xs sm:text-[13px] leading-relaxed italic">
+                &ldquo;{HERO_LEADER.quote}&rdquo;
+              </p>
             </div>
           </div>
 
-          {/* 2 - 5. THE 4 SANSTHA LEADERS (2x2 Grid with Full Photo & Floating Labels) */}
+          {/* 2 - 5. THE 4 SANSTHA LEADERS (2x2 Grid — Clean Photo + Info Below) */}
           {SANSTHA_LEADERS.map((ldr) => (
             <div
               key={ldr.id}
-              className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 transition-all group bg-slate-100 min-h-[260px] lg:min-h-[275px] flex items-end"
+              className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 transition-all flex flex-col justify-between overflow-hidden group"
             >
-              {/* Full photo filling card */}
-              <Image
-                src={ldr.image}
-                alt={ldr.name}
-                fill
-                className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              />
-
-              {/* Scrim */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/15 to-transparent pointer-events-none" />
-
-              {/* Floating Pill Tag at Top */}
-              {ldr.tag && (
-                <div className="absolute top-3.5 left-3.5 z-10">
-                  <span
-                    className="text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-xs border border-white/20"
-                    style={{ backgroundColor: ldr.tagBg, color: ldr.tagColor }}
-                  >
-                    {ldr.tag}
-                  </span>
+              <div>
+                {/* Dedicated Photo Frame — 100% Clean & Unobstructed */}
+                <div className="relative w-full h-[180px] sm:h-[195px] bg-slate-100 overflow-hidden">
+                  <Image
+                    src={ldr.image}
+                    alt={ldr.name}
+                    fill
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                  {ldr.tag && (
+                    <div className="absolute top-3 left-3">
+                      <span
+                        className="text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-xs border border-white/40"
+                        style={{ backgroundColor: ldr.tagBg, color: ldr.tagColor }}
+                      >
+                        {ldr.tag}
+                      </span>
+                    </div>
+                  )}
                 </div>
-              )}
 
-              {/* Floating White Pill Card at Bottom */}
-              <div className="relative z-10 w-full p-3.5">
-                <div className="bg-white/95 backdrop-blur-md rounded-xl p-3 border border-slate-200 shadow-lg">
-                  <h4 className="font-bold text-slate-900 text-sm leading-snug">
+                {/* Content Cleanly Below Photo */}
+                <div className="p-4 sm:p-5">
+                  <h4 className="font-bold text-slate-900 text-sm leading-snug mb-0.5">
                     {ldr.name}
                   </h4>
-                  <span className="text-[11px] text-blue-700 font-bold block mt-0.5">
+                  <span className="text-xs text-blue-700 font-bold block mb-2">
                     {ldr.role}
                   </span>
+                  <p className="text-slate-500 text-xs leading-relaxed line-clamp-2">
+                    {ldr.desc}
+                  </p>
                 </div>
               </div>
             </div>
