@@ -33,15 +33,15 @@ export default function BentoLeadership() {
                 </span>
               </div>
 
-              {/* Dedicated Photo Frame — 100% Clean & Unobstructed */}
-              <div className="relative w-full h-[270px] sm:h-[300px] rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm bg-slate-100 mb-5">
+              {/* Dedicated Photo Frame — 100% Clean & Unobstructed (Exact 6:5 Aspect Ratio, ZERO Cropping) */}
+              <div className="relative w-full max-w-[380px] mx-auto aspect-[6/5] rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm bg-slate-100 mb-5">
                 <Image
                   src={HERO_LEADER.image}
                   alt={HERO_LEADER.name}
                   fill
                   priority
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain object-center"
+                  sizes="(max-width: 1024px) 100vw, 380px"
                 />
               </div>
 
@@ -62,24 +62,24 @@ export default function BentoLeadership() {
             </div>
           </div>
 
-          {/* 2 - 5. THE 4 SANSTHA LEADERS (2x2 Grid — Clean Photo + Info Below) */}
+          {/* 2 - 5. THE 4 SANSTHA LEADERS (2x2 Grid — Exact 6:5 Aspect Ratio, ZERO Cropping) */}
           {SANSTHA_LEADERS.map((ldr) => (
             <div
               key={ldr.id}
               className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 transition-all flex flex-col justify-between overflow-hidden group"
             >
               <div>
-                {/* Dedicated Photo Frame — 100% Clean & Unobstructed */}
-                <div className="relative w-full h-[180px] sm:h-[195px] bg-slate-100 overflow-hidden">
+                {/* Dedicated Photo Frame — Exact 6:5 Proportions (360x300) with ZERO Cropping */}
+                <div className="relative w-full aspect-[6/5] bg-slate-100 overflow-hidden border-b border-slate-100">
                   <Image
                     src={ldr.image}
                     alt={ldr.name}
                     fill
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain object-center transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                   {ldr.tag && (
-                    <div className="absolute top-3 left-3">
+                    <div className="absolute top-2.5 left-2.5">
                       <span
                         className="text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-xs border border-white/40"
                         style={{ backgroundColor: ldr.tagBg, color: ldr.tagColor }}
@@ -111,12 +111,12 @@ export default function BentoLeadership() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Principal's Desk */}
           <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col sm:flex-row items-center sm:items-start gap-5">
-            <div className="relative w-28 h-32 sm:w-32 sm:h-36 rounded-2xl overflow-hidden border-2 border-blue-600/30 shrink-0 bg-slate-100 shadow-sm">
+            <div className="relative w-28 sm:w-32 aspect-[6/5] rounded-2xl overflow-hidden border-2 border-blue-600/30 shrink-0 bg-slate-100 shadow-sm">
               <Image
                 src={PRINCIPAL_DATA.image}
                 alt={PRINCIPAL_DATA.name}
                 fill
-                className="object-cover object-top"
+                className="object-contain object-center"
                 sizes="128px"
               />
             </div>
