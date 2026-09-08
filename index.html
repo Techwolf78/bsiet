@@ -1173,31 +1173,112 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        gap: 1rem;
-        margin-bottom: 1.25rem;
+        gap: 1.25rem;
+        margin-bottom: 1.35rem;
       }
 
-      .program-icon {
-        width: 52px;
-        height: 52px;
-        border-radius: var(--radius-md);
-        background: var(--blue-50);
-        color: var(--blue-600);
+      /* Next-Level Program Icon Box */
+      .program-icon-box {
+        width: 62px;
+        height: 62px;
+        border-radius: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.6rem;
         flex-shrink: 0;
+        position: relative;
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .program-card:hover .program-icon-box {
+        transform: scale(1.1) rotate(-3deg);
+      }
+
+      .program-icon-box svg {
+        width: 32px;
+        height: 32px;
+        transition: transform 0.3s ease;
+      }
+
+      /* 1. Computer Science & Engg (Electric Blue & Cyan) */
+      .icon-cse {
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(6, 182, 212, 0.22) 100%);
+        border: 1.5px solid rgba(37, 99, 235, 0.4);
+        color: #2563eb;
+        box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+      }
+      .program-card:hover .icon-cse {
+        box-shadow: 0 14px 30px -4px rgba(37, 99, 235, 0.45);
+        border-color: #2563eb;
+      }
+
+      /* 2. Artificial Intelligence & ML (Neural Violet & Magenta) */
+      .icon-aiml {
+        background: linear-gradient(135deg, rgba(124, 58, 237, 0.15) 0%, rgba(217, 70, 239, 0.22) 100%);
+        border: 1.5px solid rgba(124, 58, 237, 0.4);
+        color: #7c3aed;
+        box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.3);
+      }
+      .program-card:hover .icon-aiml {
+        box-shadow: 0 14px 30px -4px rgba(124, 58, 237, 0.45);
+        border-color: #7c3aed;
+      }
+
+      /* 3. Mechanical Engineering (Industrial Crimson & Orange) */
+      .icon-mech {
+        background: linear-gradient(135deg, rgba(192, 30, 46, 0.15) 0%, rgba(234, 88, 12, 0.22) 100%);
+        border: 1.5px solid rgba(192, 30, 46, 0.4);
+        color: #c01e2e;
+        box-shadow: 0 10px 25px -5px rgba(192, 30, 46, 0.3);
+      }
+      .program-card:hover .icon-mech {
+        box-shadow: 0 14px 30px -4px rgba(192, 30, 46, 0.45);
+        border-color: #c01e2e;
+      }
+
+      /* 4. Electrical Engineering (Electric Gold & Amber) */
+      .icon-elec {
+        background: linear-gradient(135deg, rgba(217, 119, 6, 0.15) 0%, rgba(234, 179, 8, 0.25) 100%);
+        border: 1.5px solid rgba(217, 119, 6, 0.45);
+        color: #d97706;
+        box-shadow: 0 10px 25px -5px rgba(217, 119, 6, 0.3);
+      }
+      .program-card:hover .icon-elec {
+        box-shadow: 0 14px 30px -4px rgba(217, 119, 6, 0.45);
+        border-color: #d97706;
+      }
+
+      /* 5. Civil Engineering (Structural Emerald & Marine Teal) */
+      .icon-civil {
+        background: linear-gradient(135deg, rgba(5, 150, 105, 0.15) 0%, rgba(13, 148, 136, 0.22) 100%);
+        border: 1.5px solid rgba(5, 150, 105, 0.4);
+        color: #059669;
+        box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.3);
+      }
+      .program-card:hover .icon-civil {
+        box-shadow: 0 14px 30px -4px rgba(5, 150, 105, 0.45);
+        border-color: #059669;
       }
 
       .program-badge {
         font-family: var(--font-mono);
-        font-size: 0.72rem;
+        font-size: 0.74rem;
         font-weight: 700;
-        padding: 0.2rem 0.6rem;
-        border-radius: var(--radius-sm);
-        background: var(--slate-100);
-        color: var(--slate-700);
+        padding: 0.25rem 0.75rem;
+        border-radius: var(--radius-full);
+        background: #f1f5f9;
+        color: #334155;
+        border: 1px solid #e2e8f0;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .badge-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        display: inline-block;
       }
 
       .program-title {
@@ -3105,14 +3186,23 @@
           <!-- 1. CSE -->
           <div class="program-card">
             <div class="program-header">
-              <div class="program-icon">💻</div>
-              <span class="program-badge">DTE: 646824210</span>
+              <div class="program-icon-box icon-cse">
+                <!-- High-tech CPU Microchip & Circuit Lines -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="3"></rect>
+                  <rect x="9" y="9" width="6" height="6" fill="rgba(37, 99, 235, 0.25)"></rect>
+                  <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"></path>
+                  <circle cx="12" cy="12" r="1.5" fill="currentColor"></circle>
+                </svg>
+              </div>
+              <span class="program-badge">
+                <span class="badge-dot" style="background:#2563eb;"></span>
+                DTE: 646824210
+              </span>
             </div>
             <h3 class="program-title">Computer Science & Engineering</h3>
             <p class="program-desc">
-              Comprehensive curriculum spanning Data Structures, Algorithms,
-              Cloud Computing, Full-Stack Development, Cyber Security, and
-              Software Engineering.
+              Comprehensive curriculum spanning Data Structures, Algorithms, Cloud Computing, Full-Stack Software Development, Cyber Security, and DevOps Engineering.
             </p>
             <div class="program-meta-list">
               <div class="meta-item">
@@ -3129,47 +3219,38 @@
               </div>
             </div>
             <div class="program-footer">
-              <button
-                class="btn btn-sm btn-electric"
-                onclick="openModal('enquiryModal')"
-              >
+              <button class="btn btn-sm btn-electric" onclick="openModal('enquiryModal')">
                 Apply Now
               </button>
               <a
                 href="javascript:void(0)"
-                onclick="
-                  openProgramDetails(
-                    'Computer Science & Engineering',
-                    'Degree',
-                    '60',
-                    'DBATU Lonere',
-                    '12th Science with PCM and valid MHT-CET or JEE score. Direct 2nd Year for Diploma holders.',
-                  )
-                "
+                onclick="openProgramDetails('Computer Science & Engineering', 'Degree', '60', 'DBATU Lonere', '12th Science with PCM and valid MHT-CET or JEE score. Direct 2nd Year for Diploma holders.')"
                 class="program-details-link"
-                >Details &raquo;</a
-              >
+              >Details &raquo;</a>
             </div>
           </div>
 
           <!-- 2. AI & ML -->
           <div class="program-card">
             <div class="program-header">
-              <div
-                class="program-icon"
-                style="background: #fef3c7; color: #d97706"
-              >
-                🤖
+              <div class="program-icon-box icon-aiml">
+                <!-- Neural Network AI Brain & Synaptic Nodes -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a4 4 0 0 1 4 4c0 1.1-.5 2.1-1.2 2.8L16 11a4 4 0 0 1 3 3.9c0 1.2-.5 2.3-1.4 3.1l.4 2A2 2 0 0 1 16 22h-1a2 2 0 0 1-2-2v-1h-2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2l.4-2A4.1 4.1 0 0 1 5 14.9C5 12.7 6.7 11 8.8 11l1.2-2.2C9.3 8.1 8.8 7.1 8.8 6a4 4 0 0 1 4-4z"></path>
+                  <circle cx="12" cy="6" r="1.5" fill="currentColor"></circle>
+                  <circle cx="9" cy="15" r="1.5" fill="currentColor"></circle>
+                  <circle cx="15" cy="15" r="1.5" fill="currentColor"></circle>
+                  <path d="M12 7.5v4M9 15l3-2.5 3 2.5"></path>
+                </svg>
               </div>
-              <span class="program-badge">DTE: 646891110</span>
+              <span class="program-badge">
+                <span class="badge-dot" style="background:#7c3aed;"></span>
+                DTE: 646891110
+              </span>
             </div>
-            <h3 class="program-title">
-              Artificial Intelligence & Machine Learning
-            </h3>
+            <h3 class="program-title">Artificial Intelligence & Machine Learning</h3>
             <p class="program-desc">
-              Cutting-edge specialization in Neural Networks, Deep Learning,
-              Natural Language Processing, Computer Vision, Robotics, and
-              Generative AI.
+              Cutting-edge specialization in Deep Neural Networks, Natural Language Processing (NLP), Computer Vision, Robotics, Autonomous Systems, and Generative AI.
             </p>
             <div class="program-meta-list">
               <div class="meta-item">
@@ -3186,45 +3267,35 @@
               </div>
             </div>
             <div class="program-footer">
-              <button
-                class="btn btn-sm btn-electric"
-                onclick="openModal('enquiryModal')"
-              >
+              <button class="btn btn-sm btn-electric" onclick="openModal('enquiryModal')">
                 Apply Now
               </button>
               <a
                 href="javascript:void(0)"
-                onclick="
-                  openProgramDetails(
-                    'AI & Machine Learning (AI & ML)',
-                    'Degree',
-                    '60',
-                    'DBATU Lonere',
-                    '12th Science with PCM and valid MHT-CET or JEE score. Specialization in intelligent systems.',
-                  )
-                "
+                onclick="openProgramDetails('AI & Machine Learning (AI & ML)', 'Degree', '60', 'DBATU Lonere', '12th Science with PCM and valid MHT-CET or JEE score. Specialization in intelligent systems.')"
                 class="program-details-link"
-                >Details &raquo;</a
-              >
+              >Details &raquo;</a>
             </div>
           </div>
 
           <!-- 3. Mechanical -->
           <div class="program-card">
             <div class="program-header">
-              <div
-                class="program-icon"
-                style="background: #fee2e2; color: #c01e2e"
-              >
-                ⚙️
+              <div class="program-icon-box icon-mech">
+                <!-- Precision Interlocking Dual Gears -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3" fill="rgba(192, 30, 46, 0.25)"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
               </div>
-              <span class="program-badge">DTE: 646861210</span>
+              <span class="program-badge">
+                <span class="badge-dot" style="background:#c01e2e;"></span>
+                DTE: 646861210
+              </span>
             </div>
             <h3 class="program-title">Mechanical Engineering</h3>
             <p class="program-desc">
-              Strong fundamentals in Thermodynamics, CAD/CAM/CAE, CNC Machining,
-              Robotics, Mechatronics, and Electric Vehicle (EV) Powertrain
-              Engineering.
+              Strong fundamentals in Thermodynamics, CAD/CAM/CAE, CNC Machining Centers, Robotics, Mechatronics, and Electric Vehicle (EV) Powertrain Engineering.
             </p>
             <div class="program-meta-list">
               <div class="meta-item">
@@ -3241,45 +3312,36 @@
               </div>
             </div>
             <div class="program-footer">
-              <button
-                class="btn btn-sm btn-electric"
-                onclick="openModal('enquiryModal')"
-              >
+              <button class="btn btn-sm btn-electric" onclick="openModal('enquiryModal')">
                 Apply Now
               </button>
               <a
                 href="javascript:void(0)"
-                onclick="
-                  openProgramDetails(
-                    'Mechanical Engineering',
-                    'Degree',
-                    '60',
-                    'DBATU Lonere',
-                    '12th Science with PCM and valid MHT-CET/JEE. Extensive workshop training & heavy industry tie-ups.',
-                  )
-                "
+                onclick="openProgramDetails('Mechanical Engineering', 'Degree', '60', 'DBATU Lonere', '12th Science with PCM and valid MHT-CET/JEE. Extensive workshop training & heavy industry tie-ups.')"
                 class="program-details-link"
-                >Details &raquo;</a
-              >
+              >Details &raquo;</a>
             </div>
           </div>
 
           <!-- 4. Electrical -->
           <div class="program-card">
             <div class="program-header">
-              <div
-                class="program-icon"
-                style="background: #eff6ff; color: #2563eb"
-              >
-                ⚡
+              <div class="program-icon-box icon-elec">
+                <!-- High-Voltage Energy Lightning & Circuit Nodes -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="rgba(217, 119, 6, 0.25)"></polygon>
+                  <circle cx="5" cy="5" r="1.5" fill="currentColor"></circle>
+                  <circle cx="19" cy="19" r="1.5" fill="currentColor"></circle>
+                </svg>
               </div>
-              <span class="program-badge">DTE: 646829310</span>
+              <span class="program-badge">
+                <span class="badge-dot" style="background:#d97706;"></span>
+                DTE: 646829310
+              </span>
             </div>
             <h3 class="program-title">Electrical Engineering</h3>
             <p class="program-desc">
-              Focusing on Power Systems, Smart Grid Technology, Renewable Solar
-              & Wind Energy, Electric Vehicles, and Industrial PLC & SCADA
-              Automation.
+              Focusing on High-Voltage Power Systems, Smart Grid Infrastructure, Renewable Solar & Wind Energy, Electric Vehicles, and Industrial PLC/SCADA Automation.
             </p>
             <div class="program-meta-list">
               <div class="meta-item">
@@ -3296,45 +3358,35 @@
               </div>
             </div>
             <div class="program-footer">
-              <button
-                class="btn btn-sm btn-electric"
-                onclick="openModal('enquiryModal')"
-              >
+              <button class="btn btn-sm btn-electric" onclick="openModal('enquiryModal')">
                 Apply Now
               </button>
               <a
                 href="javascript:void(0)"
-                onclick="
-                  openProgramDetails(
-                    'Electrical Engineering',
-                    'Degree',
-                    '60',
-                    'DBATU Lonere',
-                    '12th Science with PCM and valid CET score. Power electronics, EV technology & smart grid systems.',
-                  )
-                "
+                onclick="openProgramDetails('Electrical Engineering', 'Degree', '60', 'DBATU Lonere', '12th Science with PCM and valid CET score. Power electronics, EV technology & smart grid systems.')"
                 class="program-details-link"
-                >Details &raquo;</a
-              >
+              >Details &raquo;</a>
             </div>
           </div>
 
           <!-- 5. Civil -->
           <div class="program-card">
             <div class="program-header">
-              <div
-                class="program-icon"
-                style="background: #d1fae5; color: #059669"
-              >
-                🏗️
+              <div class="program-icon-box icon-civil">
+                <!-- Architectural Geodesic Skyscraper & Truss Structure -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 9h6M9 13h6M9 17h6"></path>
+                  <path d="M12 3v18"></path>
+                </svg>
               </div>
-              <span class="program-badge">DTE: 646819110</span>
+              <span class="program-badge">
+                <span class="badge-dot" style="background:#059669;"></span>
+                DTE: 646819110
+              </span>
             </div>
             <h3 class="program-title">Civil Engineering</h3>
             <p class="program-desc">
-              Rigorous training in Structural Design, Surveying, Concrete
-              Technology, Geotechnical Engineering, Transportation Systems, and
-              Smart City Planning.
+              Rigorous professional training in Structural Engineering, Total Station Surveying, Advanced Concrete Technology, Transportation Networks, and Smart Cities.
             </p>
             <div class="program-meta-list">
               <div class="meta-item">
@@ -3351,43 +3403,39 @@
               </div>
             </div>
             <div class="program-footer">
-              <button
-                class="btn btn-sm btn-electric"
-                onclick="openModal('enquiryModal')"
-              >
+              <button class="btn btn-sm btn-electric" onclick="openModal('enquiryModal')">
                 Apply Now
               </button>
               <a
                 href="javascript:void(0)"
-                onclick="
-                  openProgramDetails(
-                    'Civil Engineering',
-                    'Degree',
-                    '60',
-                    'DBATU Lonere',
-                    '12th Science with PCM and valid CET score. Structural engineering, surveying & AutoCAD expertise.',
-                  )
-                "
+                onclick="openProgramDetails('Civil Engineering', 'Degree', '60', 'DBATU Lonere', '12th Science with PCM and valid CET score. Structural engineering, surveying & AutoCAD expertise.')"
                 class="program-details-link"
-                >Details &raquo;</a
-              >
+              >Details &raquo;</a>
             </div>
           </div>
         </div>
 
-        <!-- Diploma Grid (Initially hidden) -->
+        <!-- Diploma Grid (Polytechnic MSBTE) -->
         <div class="programs-grid" id="diplomaGrid" style="display: none">
           <!-- 1. Diploma CSE -->
           <div class="program-card">
             <div class="program-header">
-              <div class="program-icon">💻</div>
-              <span class="program-badge">MSBTE Polytechnic</span>
+              <div class="program-icon-box icon-cse">
+                <!-- High-tech CPU Microchip -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="3"></rect>
+                  <rect x="9" y="9" width="6" height="6" fill="rgba(37, 99, 235, 0.25)"></rect>
+                  <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"></path>
+                </svg>
+              </div>
+              <span class="program-badge">
+                <span class="badge-dot" style="background:#2563eb;"></span>
+                MSBTE Polytechnic
+              </span>
             </div>
             <h3 class="program-title">Diploma in Computer Engineering</h3>
             <p class="program-desc">
-              Practical hands-on training for 10th pass students in Programming
-              (Python, C++, Java), Web Technologies, Database Systems, and
-              Hardware Networking.
+              Practical technician training for 10th pass students in Programming (Python, C++, Java), Web Technologies, Database Administration, and Networking.
             </p>
             <div class="program-meta-list">
               <div class="meta-item">
@@ -3404,45 +3452,35 @@
               </div>
             </div>
             <div class="program-footer">
-              <button
-                class="btn btn-sm btn-electric"
-                onclick="openModal('enquiryModal')"
-              >
+              <button class="btn btn-sm btn-electric" onclick="openModal('enquiryModal')">
                 Apply Now
               </button>
               <a
                 href="javascript:void(0)"
-                onclick="
-                  openProgramDetails(
-                    'Diploma in Computer Engineering',
-                    'Diploma',
-                    '60',
-                    'MSBTE Mumbai',
-                    'Passed 10th Standard (SSC) examination with minimum 35% marks. Direct 2nd year for 12th Sci or ITI.',
-                  )
-                "
+                onclick="openProgramDetails('Diploma in Computer Engineering', 'Diploma', '60', 'MSBTE Mumbai', 'Passed 10th Standard (SSC) examination with minimum 35% marks. Direct 2nd year for 12th Sci or ITI.')"
                 class="program-details-link"
-                >Details &raquo;</a
-              >
+              >Details &raquo;</a>
             </div>
           </div>
 
           <!-- 2. Diploma Mechanical -->
           <div class="program-card">
             <div class="program-header">
-              <div
-                class="program-icon"
-                style="background: #fee2e2; color: #c01e2e"
-              >
-                ⚙️
+              <div class="program-icon-box icon-mech">
+                <!-- Precision Dual Gears -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3" fill="rgba(192, 30, 46, 0.25)"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
               </div>
-              <span class="program-badge">MSBTE Polytechnic</span>
+              <span class="program-badge">
+                <span class="badge-dot" style="background:#c01e2e;"></span>
+                MSBTE Polytechnic
+              </span>
             </div>
             <h3 class="program-title">Diploma in Mechanical Engineering</h3>
             <p class="program-desc">
-              Industry-ready technician training in Lathe, Milling, CNC, Auto
-              CAD, Fluid Mechanics, Automotive Systems, and Production Quality
-              Control.
+              Industry-ready technician training in Lathe, Milling, CNC Programming, Auto CAD, Fluid Mechanics, Automobile Systems, and Quality Assurance.
             </p>
             <div class="program-meta-list">
               <div class="meta-item">
@@ -3459,44 +3497,35 @@
               </div>
             </div>
             <div class="program-footer">
-              <button
-                class="btn btn-sm btn-electric"
-                onclick="openModal('enquiryModal')"
-              >
+              <button class="btn btn-sm btn-electric" onclick="openModal('enquiryModal')">
                 Apply Now
               </button>
               <a
                 href="javascript:void(0)"
-                onclick="
-                  openProgramDetails(
-                    'Diploma in Mechanical Engineering',
-                    'Diploma',
-                    '60',
-                    'MSBTE Mumbai',
-                    'Passed 10th Standard (SSC) with minimum 35%. Excellent placement in Kolhapur & Pune industrial zones.',
-                  )
-                "
+                onclick="openProgramDetails('Diploma in Mechanical Engineering', 'Diploma', '60', 'MSBTE Mumbai', 'Passed 10th Standard (SSC) with minimum 35%. Excellent placement in Kolhapur & Pune industrial zones.')"
                 class="program-details-link"
-                >Details &raquo;</a
-              >
+              >Details &raquo;</a>
             </div>
           </div>
 
           <!-- 3. Diploma Civil -->
           <div class="program-card">
             <div class="program-header">
-              <div
-                class="program-icon"
-                style="background: #d1fae5; color: #059669"
-              >
-                🏗️
+              <div class="program-icon-box icon-civil">
+                <!-- Architectural Skyscraper & Structural Framing -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 9h6M9 13h6M9 17h6"></path>
+                  <path d="M12 3v18"></path>
+                </svg>
               </div>
-              <span class="program-badge">MSBTE Polytechnic</span>
+              <span class="program-badge">
+                <span class="badge-dot" style="background:#059669;"></span>
+                MSBTE Polytechnic
+              </span>
             </div>
             <h3 class="program-title">Diploma in Civil Engineering</h3>
             <p class="program-desc">
-              Building materials, Construction Management, Surveying, Total
-              Station training, Estimation & Costing, and Highway Engineering.
+              Building materials testing, Construction Project Management, Total Station Surveying camps, Estimation & Costing, and Highway CAD drafting.
             </p>
             <div class="program-meta-list">
               <div class="meta-item">
@@ -3513,44 +3542,36 @@
               </div>
             </div>
             <div class="program-footer">
-              <button
-                class="btn btn-sm btn-electric"
-                onclick="openModal('enquiryModal')"
-              >
+              <button class="btn btn-sm btn-electric" onclick="openModal('enquiryModal')">
                 Apply Now
               </button>
               <a
                 href="javascript:void(0)"
-                onclick="
-                  openProgramDetails(
-                    'Diploma in Civil Engineering',
-                    'Diploma',
-                    '60',
-                    'MSBTE Mumbai',
-                    'Passed 10th Standard (SSC). Practical site visits, surveying camps, and CAD drafting.',
-                  )
-                "
+                onclick="openProgramDetails('Diploma in Civil Engineering', 'Diploma', '60', 'MSBTE Mumbai', 'Passed 10th Standard (SSC). Practical site visits, surveying camps, and CAD drafting.')"
                 class="program-details-link"
-                >Details &raquo;</a
-              >
+              >Details &raquo;</a>
             </div>
           </div>
 
           <!-- 4. Diploma Electrical -->
           <div class="program-card">
             <div class="program-header">
-              <div
-                class="program-icon"
-                style="background: #eff6ff; color: #2563eb"
-              >
-                ⚡
+              <div class="program-icon-box icon-elec">
+                <!-- Voltage Energy Lightning -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="rgba(217, 119, 6, 0.25)"></polygon>
+                  <circle cx="5" cy="5" r="1.5" fill="currentColor"></circle>
+                  <circle cx="19" cy="19" r="1.5" fill="currentColor"></circle>
+                </svg>
               </div>
-              <span class="program-badge">MSBTE Polytechnic</span>
+              <span class="program-badge">
+                <span class="badge-dot" style="background:#d97706;"></span>
+                MSBTE Polytechnic
+              </span>
             </div>
             <h3 class="program-title">Diploma in Electrical Engineering</h3>
             <p class="program-desc">
-              Circuit Design, Transformer Maintenance, Industrial Wiring, Motors
-              & Generators, Solar Installations, and Substation Operations.
+              Circuit Design, Transformer Maintenance, Industrial Wiring, AC/DC Motors & Generators, Solar Plant Installation, and Substation Operations.
             </p>
             <div class="program-meta-list">
               <div class="meta-item">
@@ -3567,26 +3588,14 @@
               </div>
             </div>
             <div class="program-footer">
-              <button
-                class="btn btn-sm btn-electric"
-                onclick="openModal('enquiryModal')"
-              >
+              <button class="btn btn-sm btn-electric" onclick="openModal('enquiryModal')">
                 Apply Now
               </button>
               <a
                 href="javascript:void(0)"
-                onclick="
-                  openProgramDetails(
-                    'Diploma in Electrical Engineering',
-                    'Diploma',
-                    '60',
-                    'MSBTE Mumbai',
-                    'Passed 10th Standard (SSC). High demand in power generation, distribution, and solar sectors.',
-                  )
-                "
+                onclick="openProgramDetails('Diploma in Electrical Engineering', 'Diploma', '60', 'MSBTE Mumbai', 'Passed 10th Standard (SSC). High demand in power generation, distribution, and solar sectors.')"
                 class="program-details-link"
-                >Details &raquo;</a
-              >
+              >Details &raquo;</a>
             </div>
           </div>
         </div>
