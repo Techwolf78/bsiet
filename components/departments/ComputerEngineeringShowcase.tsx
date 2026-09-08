@@ -166,45 +166,44 @@ export default function ComputerEngineeringShowcase() {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-white text-slate-900">
       {/* ══════════════════════════════════════════════
-          1. HERO SHOWCASE SECTION
+          1. HERO SHOWCASE SECTION (Light Theme)
          ══════════════════════════════════════════════ */}
-      <section className="relative bg-gradient-to-br from-[#020914] via-[#07172e] to-[#0a2540] text-white py-16 lg:py-24 px-4 overflow-hidden">
-        {/* Glow rings */}
-        <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+      <section className="relative bg-gradient-to-b from-blue-50/70 via-slate-50 to-white text-slate-900 py-16 lg:py-24 px-4 overflow-hidden border-b border-slate-200/80">
+        <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-blue-100/40 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-amber-100/30 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Breadcrumb */}
-          <div className="mb-6 flex items-center gap-2 text-xs text-slate-400 font-medium">
-            <Link href="/" className="hover:text-white transition-colors">
+          <div className="mb-6 flex items-center gap-2 text-xs text-slate-500 font-medium">
+            <Link href="/" className="hover:text-blue-900 transition-colors">
               Home
             </Link>
             <span>/</span>
-            <Link href="/departments" className="hover:text-white transition-colors">
+            <Link href="/departments" className="hover:text-blue-900 transition-colors">
               Departments
             </Link>
             <span>/</span>
-            <span className="text-[#ffcc00] font-semibold">Computer Engineering</span>
+            <span className="text-slate-900 font-bold">Computer Engineering</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-400/30 text-blue-300 text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+              <div className="inline-flex items-center gap-2 bg-blue-100/80 border border-blue-300 text-blue-900 text-xs font-bold px-3.5 py-1.5 rounded-full mb-5 shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
                 DTE Code: 646824210 · Affiliated to DBATU Lonere &amp; MSBTE Mumbai
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-5">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-5">
                 Department of{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#002b66] via-blue-700 to-indigo-600">
                   Computer Science &amp; Engineering
                 </span>
               </h1>
 
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
+              <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
                 Empowering the next generation of software engineers, cloud architects, and AI pioneers.
                 BSIET CSE pairs rigorous mathematical algorithmic mastery with hands-on enterprise software
                 development, high-speed fiber-backed computing labs, and premier placement partnerships.
@@ -213,16 +212,16 @@ export default function ComputerEngineeringShowcase() {
               <div className="flex flex-wrap items-center gap-3.5 mb-10">
                 <button
                   onClick={() => setEnquiryOpen(true)}
-                  className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold text-sm px-6 py-3 rounded-lg shadow-lg hover:shadow-red-600/30 transition-all cursor-pointer"
+                  className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold text-sm px-6 py-3 rounded-lg shadow-md hover:shadow-lg hover:shadow-red-600/20 transition-all cursor-pointer"
                 >
                   Apply for CSE Admission 2026
                 </button>
 
                 <button
                   onClick={() => setBrochureOpen(true)}
-                  className="inline-flex items-center gap-2 border border-amber-400/40 hover:border-amber-400 bg-amber-400/10 hover:bg-amber-400/20 text-amber-300 font-semibold text-sm px-5 py-3 rounded-lg transition-all cursor-pointer"
+                  className="inline-flex items-center gap-2 border border-amber-400 hover:border-amber-500 bg-amber-50 hover:bg-amber-100 text-amber-900 font-bold text-sm px-5 py-3 rounded-lg shadow-xs transition-all cursor-pointer"
                 >
-                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-amber-700 fill-current" viewBox="0 0 24 24">
                     <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z" />
                   </svg>
                   <span>Download CSE Syllabus</span>
@@ -230,54 +229,54 @@ export default function ComputerEngineeringShowcase() {
 
                 <a
                   href="#labs"
-                  className="border border-white/20 hover:border-white/50 text-white text-sm font-semibold px-4 py-3 rounded-lg transition-all"
+                  className="border border-slate-300 hover:border-slate-400 bg-white text-slate-800 text-sm font-bold px-4 py-3 rounded-lg shadow-xs transition-all"
                 >
                   Explore Labs ↓
                 </a>
               </div>
 
               {/* 4 Key Specs */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-white/10">
-                <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
-                  <span className="block text-xl sm:text-2xl font-black text-[#ffcc00] font-mono">60 Seats</span>
-                  <span className="text-[11px] text-slate-300 font-medium">B.Tech (DBATU)</span>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-200">
+                <div className="bg-white border border-slate-200 shadow-sm rounded-xl p-3 text-center">
+                  <span className="block text-xl sm:text-2xl font-black text-[#002b66] font-mono">60 Seats</span>
+                  <span className="text-[11px] text-slate-600 font-semibold">B.Tech (DBATU)</span>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
-                  <span className="block text-xl sm:text-2xl font-black text-white font-mono">60 Seats</span>
-                  <span className="text-[11px] text-slate-300 font-medium">Polytechnic (MSBTE)</span>
+                <div className="bg-white border border-slate-200 shadow-sm rounded-xl p-3 text-center">
+                  <span className="block text-xl sm:text-2xl font-black text-[#002b66] font-mono">60 Seats</span>
+                  <span className="text-[11px] text-slate-600 font-semibold">Polytechnic (MSBTE)</span>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
-                  <span className="block text-xl sm:text-2xl font-black text-emerald-400 font-mono">12 LPA</span>
-                  <span className="text-[11px] text-slate-300 font-medium">Highest Tech Package</span>
+                <div className="bg-white border border-slate-200 shadow-sm rounded-xl p-3 text-center">
+                  <span className="block text-xl sm:text-2xl font-black text-emerald-600 font-mono">12 LPA</span>
+                  <span className="text-[11px] text-slate-600 font-semibold">Highest Tech Package</span>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
-                  <span className="block text-xl sm:text-2xl font-black text-white font-mono">100+</span>
-                  <span className="text-[11px] text-slate-300 font-medium">Computing Workstations</span>
+                <div className="bg-white border border-slate-200 shadow-sm rounded-xl p-3 text-center">
+                  <span className="block text-xl sm:text-2xl font-black text-amber-600 font-mono">100+</span>
+                  <span className="text-[11px] text-slate-600 font-semibold">Computing Workstations</span>
                 </div>
               </div>
             </div>
 
             {/* Right Visual Photo Card */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-3xl overflow-hidden border-2 border-amber-400/30 shadow-2xl bg-slate-950 group">
+              <div className="relative rounded-3xl overflow-hidden border-2 border-slate-200 shadow-2xl bg-white group">
                 <img
                   src="/images/lab-computer.jpg"
                   alt="BSIET Computer Engineering Laboratory"
                   className="w-full h-[380px] sm:h-[440px] object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#020914] via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
 
                 {/* Floating Badge */}
-                <div className="absolute bottom-5 left-5 right-5 bg-slate-900/90 backdrop-blur-md border border-white/20 p-4 rounded-2xl">
+                <div className="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-md border border-slate-200 p-4 rounded-2xl shadow-xl">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-lg shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center font-bold text-lg shrink-0">
                       ⚡
                     </div>
                     <div>
-                      <strong className="block text-white text-sm font-bold">
+                      <strong className="block text-slate-900 text-sm font-bold">
                         Cloud &amp; High-Performance Computing Lab
                       </strong>
-                      <span className="text-slate-300 text-xs">
+                      <span className="text-slate-600 text-xs font-medium">
                         1 Gbps High-Speed Dedicated Fiber Backbone
                       </span>
                     </div>
@@ -304,13 +303,13 @@ export default function ComputerEngineeringShowcase() {
                 <h3 className="text-xl font-extrabold text-slate-900 mb-3">
                   Pioneering Global Technical Excellence
                 </h3>
-                <blockquote className="text-slate-700 text-sm leading-relaxed italic border-l-4 border-red-600 pl-4 py-1">
+                <blockquote className="text-slate-700 text-sm leading-relaxed italic border-l-4 border-red-600 pl-4 py-2 bg-red-50/40 rounded-r-xl">
                   &ldquo;To emerge as a premier center of excellence in computer engineering education and applied
                   research, transforming aspiring students into globally competent software professionals, ethical coders,
                   and innovative entrepreneurs dedicated to nation building.&rdquo;
                 </blockquote>
               </div>
-              <div className="flex items-center gap-2 pt-4 mt-4 border-t border-slate-100 text-xs font-semibold text-slate-500">
+              <div className="flex items-center gap-2 pt-4 mt-4 border-t border-slate-100 text-xs font-semibold text-slate-600">
                 <span>🎯 Goal: 100% Industry Readiness &amp; Applied Innovation</span>
               </div>
             </div>
@@ -339,7 +338,7 @@ export default function ComputerEngineeringShowcase() {
                   </li>
                 </ul>
               </div>
-              <div className="flex items-center gap-2 pt-4 mt-4 border-t border-slate-100 text-xs font-semibold text-slate-500">
+              <div className="flex items-center gap-2 pt-4 mt-4 border-t border-slate-100 text-xs font-semibold text-slate-600">
                 <span>🚀 Mission: Bridge Academia to Fortune 500 Careers</span>
               </div>
             </div>
@@ -406,16 +405,16 @@ export default function ComputerEngineeringShowcase() {
               </div>
             ))}
 
-            {/* Virtual Lab Tour Box */}
-            <div className="bg-gradient-to-br from-[#002b66] to-[#040d1a] rounded-3xl p-6 text-white flex flex-col justify-between shadow-xl">
+            {/* Virtual Lab Tour Box (Light Theme) */}
+            <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-50 border-2 border-blue-200 rounded-3xl p-6 text-slate-900 flex flex-col justify-between shadow-sm">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-[#ffcc00] bg-amber-400/20 px-2.5 py-1 rounded-full inline-block mb-3">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-blue-900 bg-blue-100 border border-blue-200 px-2.5 py-1 rounded-full inline-block mb-3">
                   Hardware &amp; Connectivity
                 </span>
-                <h3 className="text-xl font-bold mb-3 text-white">
+                <h3 className="text-xl font-bold mb-3 text-slate-900">
                   Campus-Wide Gigabit Fiber Backbone
                 </h3>
-                <p className="text-slate-300 text-xs leading-relaxed mb-4">
+                <p className="text-slate-600 text-xs leading-relaxed mb-4">
                   100% networked campus with 1 Gbps leased line, dedicated server rooms hosting virtualization
                   hypervisors, and 24/7 power backup through central generators and UPS arrays.
                 </p>
@@ -423,7 +422,7 @@ export default function ComputerEngineeringShowcase() {
 
               <button
                 onClick={() => setEnquiryOpen(true)}
-                className="w-full bg-[#ffcc00] hover:bg-amber-300 text-slate-950 font-bold text-xs py-3 rounded-xl transition-all cursor-pointer text-center"
+                className="w-full bg-[#002b66] hover:bg-blue-900 text-white font-bold text-xs py-3 rounded-xl transition-all cursor-pointer text-center shadow-sm"
               >
                 Schedule an In-Person Lab Visit →
               </button>
@@ -543,52 +542,52 @@ export default function ComputerEngineeringShowcase() {
       </section>
 
       {/* ══════════════════════════════════════════════
-          6. PLACEMENT RECORD & TECH RECRUITERS
+          6. PLACEMENT RECORD & TECH RECRUITERS (Light Theme)
          ══════════════════════════════════════════════ */}
-      <section className="py-20 px-4 bg-gradient-to-b from-slate-900 to-[#07172e] text-white">
+      <section className="py-20 px-4 bg-slate-50 border-y border-slate-200 text-slate-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="bg-amber-400/20 text-[#ffcc00] border border-amber-400/40 text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full">
+            <span className="bg-amber-100 text-amber-900 border border-amber-300 text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full">
               TPO Career Track Record
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-3">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-3">
               Direct On-Campus Placements for CSE Graduates
             </h2>
-            <p className="text-slate-300 text-sm">
+            <p className="text-slate-600 text-sm">
               Our active Training &amp; Placement Cell liaises directly with Tier-1 IT corporations and fast-growing tech product startups.
             </p>
           </div>
 
-          {/* Placement Metrics */}
+          {/* Placement Metrics (Light Theme) */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-14">
-            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl text-center backdrop-blur-sm">
-              <div className="text-3xl sm:text-4xl font-black text-[#ffcc00] font-mono mb-1">92%+</div>
-              <div className="text-xs text-slate-300 font-medium">CSE Placement Rate</div>
+            <div className="bg-white border border-slate-200 p-6 rounded-2xl text-center shadow-sm">
+              <div className="text-3xl sm:text-4xl font-black text-[#002b66] font-mono mb-1">92%+</div>
+              <div className="text-xs text-slate-600 font-semibold">CSE Placement Rate</div>
             </div>
-            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl text-center backdrop-blur-sm">
-              <div className="text-3xl sm:text-4xl font-black text-white font-mono mb-1">12 LPA</div>
-              <div className="text-xs text-slate-300 font-medium">Highest Package Offered</div>
+            <div className="bg-white border border-slate-200 p-6 rounded-2xl text-center shadow-sm">
+              <div className="text-3xl sm:text-4xl font-black text-amber-600 font-mono mb-1">12 LPA</div>
+              <div className="text-xs text-slate-600 font-semibold">Highest Package Offered</div>
             </div>
-            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl text-center backdrop-blur-sm">
-              <div className="text-3xl sm:text-4xl font-black text-emerald-400 font-mono mb-1">4.8 LPA</div>
-              <div className="text-xs text-slate-300 font-medium">Average Package</div>
+            <div className="bg-white border border-slate-200 p-6 rounded-2xl text-center shadow-sm">
+              <div className="text-3xl sm:text-4xl font-black text-emerald-600 font-mono mb-1">4.8 LPA</div>
+              <div className="text-xs text-slate-600 font-semibold">Average Package</div>
             </div>
-            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl text-center backdrop-blur-sm">
-              <div className="text-3xl sm:text-4xl font-black text-white font-mono mb-1">100%</div>
-              <div className="text-xs text-slate-300 font-medium">Internship Placement Assistance</div>
+            <div className="bg-white border border-slate-200 p-6 rounded-2xl text-center shadow-sm">
+              <div className="text-3xl sm:text-4xl font-black text-[#002b66] font-mono mb-1">100%</div>
+              <div className="text-xs text-slate-600 font-semibold">Internship Placement Assistance</div>
             </div>
           </div>
 
-          {/* Recruiters Badges */}
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
-            <h3 className="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">
+          {/* Recruiters Badges (Light Theme) */}
+          <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm">
+            <h3 className="text-center text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">
               Major IT &amp; Core Corporates Hiring CSE Engineers
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-3">
               {techRecruiters.map((rec, idx) => (
                 <span
                   key={idx}
-                  className="bg-white/10 hover:bg-white/20 border border-white/15 text-white text-xs font-bold px-4 py-2 rounded-xl transition-all"
+                  className="bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-800 text-xs font-bold px-4 py-2 rounded-xl transition-all shadow-2xs"
                 >
                   {rec}
                 </span>
@@ -639,14 +638,14 @@ export default function ComputerEngineeringShowcase() {
       </section>
 
       {/* ══════════════════════════════════════════════
-          8. HOD PROFILE & ADMISSION CTA
+          8. HOD PROFILE & ADMISSION CTA (Light Theme)
          ══════════════════════════════════════════════ */}
       <section className="py-16 px-4 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* HOD Profile */}
             <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center gap-6">
-              <div className="relative w-28 h-32 sm:w-36 sm:h-40 rounded-2xl overflow-hidden border-2 border-blue-600/30 shrink-0 bg-slate-100 shadow-md">
+              <div className="relative w-28 h-32 sm:w-36 sm:h-40 rounded-2xl overflow-hidden border-2 border-blue-600/30 shrink-0 bg-slate-100 shadow-sm">
                 <img
                   src="/images/management-1.jpg"
                   alt="Dr. S. K. Patil - HOD Computer Engineering"
@@ -667,30 +666,30 @@ export default function ComputerEngineeringShowcase() {
               </div>
             </div>
 
-            {/* Admission Summary Box */}
-            <div className="lg:col-span-5 bg-gradient-to-br from-[#002b66] to-[#001737] text-white rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between">
+            {/* Admission Summary Box (Light Theme) */}
+            <div className="lg:col-span-5 bg-gradient-to-br from-blue-50/80 via-indigo-50/50 to-white text-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-blue-200 shadow-sm flex flex-col justify-between">
               <div>
-                <span className="text-[11px] font-extrabold text-[#ffcc00] uppercase tracking-wider block mb-1">
+                <span className="text-[11px] font-extrabold text-blue-900 uppercase tracking-wider block mb-1">
                   Admissions 2026-27 · DTE: 646824210
                 </span>
-                <h3 className="text-xl sm:text-2xl font-black text-white mb-2">
+                <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-2">
                   Join Computer Science &amp; Engineering
                 </h3>
-                <p className="text-slate-300 text-xs leading-relaxed mb-4">
+                <p className="text-slate-600 text-xs leading-relaxed mb-4">
                   12th Science (PCM with MHT-CET/JEE) for 4-Year B.Tech or Direct 2nd Year for Polytechnic Diploma holders.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 pt-3 border-t border-white/10">
+              <div className="flex flex-col sm:flex-row gap-3 pt-3 border-t border-blue-200">
                 <button
                   onClick={() => setEnquiryOpen(true)}
-                  className="flex-1 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold text-xs py-3 rounded-lg shadow transition-all cursor-pointer text-center"
+                  className="flex-1 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold text-xs py-3 rounded-lg shadow-md transition-all cursor-pointer text-center"
                 >
                   Enquire Now via WhatsApp
                 </button>
                 <Link
                   href="/admissions"
-                  className="bg-white/10 hover:bg-white/20 border border-white/25 text-white font-semibold text-xs py-3 px-4 rounded-lg transition-all text-center"
+                  className="bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 font-bold text-xs py-3 px-4 rounded-lg shadow-xs transition-all text-center"
                 >
                   Fees &amp; Scholarships →
                 </Link>

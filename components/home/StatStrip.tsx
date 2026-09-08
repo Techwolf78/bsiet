@@ -7,17 +7,17 @@ export default function StatStrip() {
   ];
 
   return (
-    <div className="bg-[#001f4d] border-y border-amber-400/30 py-6 px-4">
+    <div className="bg-gradient-to-r from-amber-50/70 via-yellow-50/80 to-amber-50/70 border-y border-amber-200/90 py-6 px-4 shadow-xs">
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         {stats.map((item, idx) => (
           <div key={idx} className="flex flex-col items-center">
-            <span className="text-2xl sm:text-3xl font-extrabold text-[#ffcc00] font-mono tracking-tight">
+            <span className="text-2xl sm:text-3xl font-black text-[#002b66] font-mono tracking-tight">
               {item.value}
             </span>
-            <span className="text-white text-xs sm:text-sm font-bold mt-1">
+            <span className="text-slate-900 text-xs sm:text-sm font-extrabold mt-1">
               {item.label}
             </span>
-            <span className="text-slate-400 text-[11px]">
+            <span className="text-slate-600 text-[11px] font-medium">
               {item.sub}
             </span>
           </div>
