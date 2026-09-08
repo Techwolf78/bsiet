@@ -544,13 +544,20 @@
       align-items: center;
       justify-content: space-between;
       height: 52px;
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
     }
 
     .nav-links-list {
       display: flex;
       align-items: center;
       height: 100%;
-      gap: 0.15rem;
+      gap: 0.1rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
     }
 
     .nav-item {
@@ -565,13 +572,14 @@
       font-family: var(--font-display);
       font-size: 0.855rem;
       font-weight: 600;
-      padding: 0 0.85rem;
+      padding: 0 0.75rem;
       height: 100%;
       display: inline-flex;
       align-items: center;
       gap: 0.25rem;
       transition: background var(--transition-fast), color var(--transition-fast);
       white-space: nowrap;
+      text-decoration: none;
     }
 
     .nav-item-link:hover,
@@ -582,10 +590,10 @@
     }
 
     .nav-caret {
-      width: 10px;
-      height: 10px;
+      width: 9px;
+      height: 9px;
       fill: currentColor;
-      opacity: 0.7;
+      opacity: 0.75;
       transition: transform var(--transition-fast);
     }
 
@@ -599,13 +607,13 @@
       position: absolute;
       top: 100%;
       left: 0;
-      min-width: 250px;
+      min-width: 270px;
       background: #001f4d;
       border: 1px solid rgba(255, 204, 0, 0.3);
-      border-top: 2px solid #ffcc00;
+      border-top: 2.5px solid #ffcc00;
       border-radius: 0 0 var(--radius-md) var(--radius-md);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-      padding: 0.6rem 0.4rem;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+      padding: 0.6rem 0.45rem;
       opacity: 0;
       visibility: hidden;
       transform: translateY(8px);
@@ -621,28 +629,30 @@
 
     .sub-link {
       display: block;
-      padding: 0.55rem 0.85rem;
+      padding: 0.52rem 0.85rem;
       color: #e2e8f0;
-      font-size: 0.84rem;
+      font-size: 0.835rem;
       font-weight: 500;
       border-radius: var(--radius-sm);
       transition: all var(--transition-fast);
+      text-decoration: none;
+      line-height: 1.4;
     }
 
     .sub-link:hover {
       background: #002b66;
       color: #ffcc00;
-      padding-left: 1.1rem;
+      padding-left: 1.15rem;
     }
 
     .sub-menu-divider {
       height: 1px;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.12);
       margin: 0.4rem 0.5rem;
     }
 
     .sub-menu-label {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -652,20 +662,22 @@
 
     /* Mega Dept Menu */
     .mega-dept-menu {
-      min-width: 480px;
-      display: flex;
-      gap: 1rem;
+      min-width: 520px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
       padding: 0.85rem;
     }
 
     .mega-dept-col {
-      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .nav-cta-box {
       display: flex;
       align-items: center;
-      gap: 0.65rem;
+      gap: 0.75rem;
     }
 
     .btn-royal-apply {
@@ -679,6 +691,8 @@
       box-shadow: 0 2px 8px rgba(192, 30, 46, 0.4);
       transition: all var(--transition-base);
       white-space: nowrap;
+      cursor: pointer;
+      border: none;
     }
 
     .btn-royal-apply:hover {
@@ -691,9 +705,24 @@
       display: none;
       color: #ffffff;
       padding: 0.4rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
     }
 
-    @media (max-width: 1180px) {
+    @media (max-width: 1200px) {
+      .nav-item-link {
+        font-size: 0.81rem;
+        padding: 0 0.55rem;
+        gap: 0.2rem;
+      }
+      .btn-royal-apply {
+        padding: 0.38rem 0.9rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 992px) {
       .nav-links-list {
         display: none;
       }
@@ -1710,9 +1739,61 @@
       transform: scale(1.05);
     }
 
+    .hero-patil-top-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-patil-top-meta .bento-badge-pill {
+      margin-bottom: 0;
+    }
+
+    .hero-patil-sanstha-tag {
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+    }
+
+    .hero-patil-content-split {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 2rem;
+      align-items: center;
+      flex: 1;
+    }
+
+    .hero-patil-img-frame {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+      border: 2px solid rgba(255, 204, 0, 0.35);
+      aspect-ratio: 1 / 1.15;
+      background: #000;
+    }
+
+    .hero-patil-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 65%, rgba(4, 13, 26, 0.6) 100%);
+      pointer-events: none;
+    }
+
+    .hero-patil-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .hero-patil-info h3 {
       font-family: var(--font-display);
-      font-size: 2rem;
+      font-size: 2.05rem;
       font-weight: 800;
       color: #ffffff;
       line-height: 1.2;
@@ -1723,27 +1804,37 @@
     .hero-patil-role {
       font-size: 0.95rem;
       font-weight: 700;
-      color: #fbbf24;
-      margin-bottom: 1.1rem;
+      color: #ffcc00;
+      margin-bottom: 1.25rem;
       display: block;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
     }
 
-    .hero-patil-quote {
-      font-size: 0.95rem;
-      color: #cbd5e1;
-      line-height: 1.65;
-      font-style: italic;
-      margin-bottom: 1.5rem;
+    .hero-patil-quote-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-left: 3.5px solid #ffcc00;
+      border-radius: 0 16px 16px 0;
+      padding: 1.25rem 1.4rem;
       position: relative;
-      padding-left: 1.1rem;
-      border-left: 3.5px solid #f59e0b;
+      backdrop-filter: blur(10px);
     }
 
-    .hero-patil-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .quote-svg-icon {
+      color: rgba(255, 204, 0, 0.3);
+      position: absolute;
+      top: 10px;
+      right: 12px;
+    }
+
+    .hero-patil-quote-text {
+      font-size: 0.98rem;
+      color: #e2e8f0;
+      line-height: 1.7;
+      font-style: italic;
+      margin: 0;
+      position: relative;
+      z-index: 1;
     }
 
     .mini-tag {
@@ -2681,54 +2772,54 @@
        4. ROYAL BLUE MAIN NAVBAR (STICKY WITH COMPLETE SUB-MENUS)
        ═════════════════════════════════════════════════════════════════ -->
   <nav class="main-site-navbar">
-    <div class="container navbar-inner-wrap">
+    <div class="navbar-inner-wrap">
       <ul class="nav-links-list">
+        <!-- 1. Home -->
         <li class="nav-item">
           <a href="#hero" class="nav-item-link active">Home</a>
         </li>
 
-        <!-- About Us -->
+        <!-- 2. About Us -->
         <li class="nav-item">
           <a href="#about" class="nav-item-link">
             About Us
             <svg class="nav-caret" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
           </a>
           <div class="nav-sub-menu">
-            <a href="#about" class="sub-link">Vision Mission</a>
-            <a href="#about" class="sub-link">About Founder</a>
-            <a href="#about" class="sub-link">About BSiET</a>
+            <div class="sub-menu-label">Institute Heritage</div>
+            <a href="#about" class="sub-link">About Sanstha (1954 Legacy)</a>
+            <a href="#about" class="sub-link">About BSIET Kolhapur</a>
+            <a href="#about" class="sub-link">Vision, Mission & Goals</a>
+            <a href="#leadership" class="sub-link">About Founder Dr. Bapuji Salunkhe</a>
             <div class="sub-menu-divider"></div>
-            <div class="sub-menu-label">Messages</div>
-            <a href="#leadership" class="sub-link">President's Message</a>
-            <a href="#leadership" class="sub-link">Chairman's Thoughts</a>
-            <a href="#leadership" class="sub-link">Word from Secretary</a>
-            <a href="#leadership" class="sub-link">CEO's Desk</a>
-            <a href="#leadership" class="sub-link">Director's Message</a>
-            <a href="#leadership" class="sub-link">Principal's Message</a>
+            <div class="sub-menu-label">Leadership & Messages</div>
+            <a href="#leadership" class="sub-link">President's Message (Hon. Chandrakant Dada Patil)</a>
+            <a href="#leadership" class="sub-link">Executive Chairman's Thoughts</a>
+            <a href="#leadership" class="sub-link">Word from Secretary & CEO</a>
+            <a href="#leadership" class="sub-link">Principal's Desk</a>
+            <div class="sub-menu-divider"></div>
+            <div class="sub-menu-label">Administration & Governance</div>
+            <a href="#leadership" class="sub-link">Governing Body & Administration</a>
+            <a href="#mandatory" class="sub-link">Mandatory Disclosure & AICTE Reports</a>
           </div>
         </li>
 
-        <!-- Administration -->
+        <!-- 3. Academics -->
         <li class="nav-item">
-          <a href="#leadership" class="nav-item-link">
-            Administration
+          <a href="#programs" class="nav-item-link">
+            Academics
             <svg class="nav-caret" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
           </a>
           <div class="nav-sub-menu">
-            <a href="#leadership" class="sub-link">Governing Body</a>
-            <a href="#leadership" class="sub-link">Administration Team</a>
-            <a href="#departments" class="sub-link">Head Of Department</a>
-            <div class="sub-menu-divider"></div>
-            <a href="#mandatory" class="sub-link">AICTE Reports</a>
-            <a href="#mandatory" class="sub-link">Budget Audit Reports</a>
-            <a href="#mandatory" class="sub-link">Mandatory Disclosure</a>
-            <a href="#mandatory" class="sub-link">Student Code of Conduct</a>
-            <a href="#mandatory" class="sub-link">Faculty Code of Conduct</a>
-            <a href="#mandatory" class="sub-link">HR Policy</a>
+            <a href="#programs" class="sub-link">Programs Offered (Degree & Diploma)</a>
+            <a href="#programs" class="sub-link">Academic Calendar & Curriculum</a>
+            <a href="#admissions" class="sub-link">Merit Lists & Cutoffs</a>
+            <a href="#mandatory" class="sub-link">Academic Committees & Best Practices</a>
+            <a href="#mandatory" class="sub-link">Academic Audit Reports</a>
           </div>
         </li>
 
-        <!-- Departments -->
+        <!-- 4. Departments -->
         <li class="nav-item">
           <a href="#departments" class="nav-item-link">
             Departments
@@ -2736,7 +2827,7 @@
           </a>
           <div class="nav-sub-menu mega-dept-menu">
             <div class="mega-dept-col">
-              <div class="sub-menu-label">Degree (B.Tech)</div>
+              <div class="sub-menu-label">Degree Programs (DBATU)</div>
               <a href="#departments" onclick="switchProgramTab('degree')" class="sub-link">Computer Science & Engineering</a>
               <a href="#departments" onclick="switchProgramTab('degree')" class="sub-link">Artificial Intelligence & ML</a>
               <a href="#departments" onclick="switchProgramTab('degree')" class="sub-link">Mechanical Engineering</a>
@@ -2744,7 +2835,7 @@
               <a href="#departments" onclick="switchProgramTab('degree')" class="sub-link">Civil Engineering</a>
             </div>
             <div class="mega-dept-col">
-              <div class="sub-menu-label">Diploma (MSBTE)</div>
+              <div class="sub-menu-label">Diploma Programs (MSBTE)</div>
               <a href="#departments" onclick="switchProgramTab('diploma')" class="sub-link">Diploma in Computer Engg</a>
               <a href="#departments" onclick="switchProgramTab('diploma')" class="sub-link">Diploma in Mechanical Engg</a>
               <a href="#departments" onclick="switchProgramTab('diploma')" class="sub-link">Diploma in Civil Engg</a>
@@ -2753,87 +2844,59 @@
           </div>
         </li>
 
-        <!-- Admission -->
+        <!-- 5. Admissions -->
         <li class="nav-item">
           <a href="#admissions" class="nav-item-link">
-            Admission
+            Admissions
             <svg class="nav-caret" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
           </a>
           <div class="nav-sub-menu">
-            <a href="#programs" class="sub-link">Programs Offered</a>
+            <a href="#admissions" class="sub-link">Admission Process 2026-27</a>
+            <a href="#admissions" class="sub-link">Eligibility & Choice Codes (DTE: 6468)</a>
             <a href="#admissions" class="sub-link">Fees Structure</a>
-            <a href="#admissions" class="sub-link">Eligibility Criteria</a>
-            <a href="#admissions" class="sub-link">Scholarship</a>
-            <a href="#admissions" class="sub-link">FRA-Fees</a>
+            <a href="#admissions" class="sub-link">FRA-Fees Approved Sheets</a>
+            <a href="#admissions" class="sub-link">MahaDBT Scholarships & Concessions</a>
             <div class="sub-menu-divider"></div>
             <a href="javascript:void(0)" onclick="openModal('enquiryModal')" class="sub-link" style="color:#ffcc00; font-weight:700;">Online Admission Enquiry &raquo;</a>
           </div>
         </li>
 
-        <!-- FRA-Fees -->
-        <li class="nav-item">
-          <a href="#admissions" class="nav-item-link">FRA-Fees</a>
-        </li>
-
-        <!-- Academics -->
-        <li class="nav-item">
-          <a href="#programs" class="nav-item-link">
-            Academics
-            <svg class="nav-caret" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
-          </a>
-          <div class="nav-sub-menu">
-            <a href="#programs" class="sub-link">Academic Calender</a>
-            <a href="#admissions" class="sub-link">Merit List</a>
-            <a href="#mandatory" class="sub-link">Committees</a>
-            <a href="#about" class="sub-link">Best Practices</a>
-            <a href="#mandatory" class="sub-link">Academic Audit Reports</a>
-          </div>
-        </li>
-
-        <!-- Facilities -->
-        <li class="nav-item">
-          <a href="#facilities" class="nav-item-link">Facilities</a>
-        </li>
-
-        <!-- TPO -->
+        <!-- 6. Placements & Alumni -->
         <li class="nav-item">
           <a href="#placements" class="nav-item-link">
-            TPO
+            Placements & Alumni
             <svg class="nav-caret" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
           </a>
           <div class="nav-sub-menu">
-            <a href="#placements" class="sub-link">Message From TPO</a>
-            <a href="#placements" class="sub-link">Training & Placement Cell</a>
-            <a href="#placements" class="sub-link">Our Recruiters</a>
-            <a href="#placements" class="sub-link">Major Activities</a>
-            <a href="#placements" class="sub-link">Placement Statistics</a>
+            <div class="sub-menu-label">Training & Placement (TPO)</div>
+            <a href="#placements" class="sub-link">Message from TPO</a>
+            <a href="#placements" class="sub-link">Placement Track Record & Stats</a>
+            <a href="#placements" class="sub-link">Our Prominent Recruiters</a>
+            <a href="#placements" class="sub-link">TPO Activities & Industrial Training</a>
+            <div class="sub-menu-divider"></div>
+            <div class="sub-menu-label">Alumni Network</div>
+            <a href="#placements" class="sub-link">Alumni Association & Portal</a>
+            <a href="#placements" class="sub-link">Notable Alumni Success Stories</a>
           </div>
         </li>
 
-        <!-- Alumni -->
+        <!-- 7. Campus Life -->
         <li class="nav-item">
-          <a href="#placements" class="nav-item-link">
-            Alumni
+          <a href="#facilities" class="nav-item-link">
+            Campus Life
             <svg class="nav-caret" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
           </a>
           <div class="nav-sub-menu">
-            <a href="#placements" class="sub-link">Register</a>
-            <a href="#placements" class="sub-link">Notable Alumni</a>
-            <a href="#placements" class="sub-link">Alumni Gallery</a>
+            <a href="#departments" class="sub-link">Modern Labs & Workshops</a>
+            <a href="#facilities" class="sub-link">Library, Sports & Hostel</a>
+            <a href="#facilities" class="sub-link">Life@BSIET Student Activities</a>
+            <a href="#facilities" class="sub-link">News, Circulars & Events</a>
+            <div class="sub-menu-divider"></div>
+            <a href="#mandatory" class="sub-link">Code of Conduct & Anti-Ragging</a>
           </div>
         </li>
 
-        <!-- News and Events -->
-        <li class="nav-item">
-          <a href="#facilities" class="nav-item-link">News and Events</a>
-        </li>
-
-        <!-- Life@BSIET -->
-        <li class="nav-item">
-          <a href="#facilities" class="nav-item-link">Life@BSIET</a>
-        </li>
-
-        <!-- Contact -->
+        <!-- 8. Contact -->
         <li class="nav-item">
           <a href="#contact" class="nav-item-link">Contact</a>
         </li>
@@ -2854,17 +2917,13 @@
     <div class="mobile-drawer" id="mobileDrawer">
       <div class="mobile-nav-list">
         <a href="#hero" class="mobile-nav-link" onclick="toggleMobileMenu()">Home</a>
-        <a href="#about" class="mobile-nav-link" onclick="toggleMobileMenu()">About Us</a>
-        <a href="#leadership" class="mobile-nav-link" onclick="toggleMobileMenu()">Administration</a>
-        <a href="#departments" class="mobile-nav-link" onclick="toggleMobileMenu()">Departments</a>
-        <a href="#admissions" class="mobile-nav-link" onclick="toggleMobileMenu()">Admission 2026-27</a>
-        <a href="#admissions" class="mobile-nav-link" onclick="toggleMobileMenu()">FRA-Fees</a>
+        <a href="#about" class="mobile-nav-link" onclick="toggleMobileMenu()">About Us & Leadership</a>
         <a href="#programs" class="mobile-nav-link" onclick="toggleMobileMenu()">Academics</a>
-        <a href="#facilities" class="mobile-nav-link" onclick="toggleMobileMenu()">Facilities</a>
-        <a href="#placements" class="mobile-nav-link" onclick="toggleMobileMenu()">TPO & Placements</a>
-        <a href="#placements" class="mobile-nav-link" onclick="toggleMobileMenu()">Alumni</a>
-        <a href="#facilities" class="mobile-nav-link" onclick="toggleMobileMenu()">News and Events</a>
-        <a href="#facilities" class="mobile-nav-link" onclick="toggleMobileMenu()">Life@BSIET</a>
+        <a href="#departments" class="mobile-nav-link" onclick="toggleMobileMenu()">Departments & Labs</a>
+        <a href="#admissions" class="mobile-nav-link" onclick="toggleMobileMenu()">Admissions 2026-27</a>
+        <a href="#admissions" class="mobile-nav-link" onclick="toggleMobileMenu()">FRA-Fees</a>
+        <a href="#placements" class="mobile-nav-link" onclick="toggleMobileMenu()">Placements & Alumni</a>
+        <a href="#facilities" class="mobile-nav-link" onclick="toggleMobileMenu()">Campus Life & Facilities</a>
         <a href="#contact" class="mobile-nav-link" onclick="toggleMobileMenu()">Contact</a>
       </div>
     </div>
@@ -3924,9 +3983,12 @@
           <div class="bento-hero-patil">
             <div class="hero-patil-glow"></div>
             <div class="hero-patil-body">
-              <span class="bento-badge-pill badge-gold">
-                👑 President & Visionary Leader
-              </span>
+              <div class="hero-patil-top-meta">
+                <span class="bento-badge-pill badge-gold">
+                  👑 Hon'ble President
+                </span>
+                <span class="hero-patil-sanstha-tag">Shri Swami Vivekanand Shikshan Sanstha</span>
+              </div>
               
               <div class="hero-patil-content-split">
                 <div class="hero-patil-img-frame">
@@ -3934,17 +3996,18 @@
                     src="images/chandrakant-dada-patil-362x310-1-360x300.png"
                     alt="Hon. Chandrakant (Dada) Patil - President, Sanstha"
                   />
+                  <div class="hero-patil-img-overlay"></div>
                 </div>
                 <div class="hero-patil-info">
                   <h3>Hon. Chandrakant (Dada) Patil</h3>
-                  <span class="hero-patil-role">President, Shri Swami Vivekanand Shikshan Sanstha</span>
-                  <p class="hero-patil-quote">
-                    "Our commitment is to empower every young engineering aspirant with world-class technical education, innovative mindset, and ethical values to drive India's industrial and economic resurgence."
-                  </p>
-                  <div class="hero-patil-tags">
-                    <span class="mini-tag">Cabinet Minister, Govt. of Maharashtra</span>
-                    <span class="mini-tag">Educational Reformer</span>
-                    <span class="mini-tag">Institutional Visionary</span>
+                  <span class="hero-patil-role">President, Shri Swami Vivekanand Shikshan Sanstha, Kolhapur</span>
+                  <div class="hero-patil-quote-box">
+                    <svg class="quote-svg-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    <p class="hero-patil-quote-text">
+                      "Our commitment is to empower every young engineering aspirant with world-class technical education, innovative mindset, and ethical values to drive India's industrial and economic resurgence."
+                    </p>
                   </div>
                 </div>
               </div>
