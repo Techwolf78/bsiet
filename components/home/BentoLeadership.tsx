@@ -3,9 +3,9 @@ import { HERO_LEADER, SANSTHA_LEADERS, PRINCIPAL_DATA, SANSTHA_METRICS } from "@
 
 export default function BentoLeadership() {
   return (
-    <section className="py-20 px-4 bg-white" id="leadership">
+    <section className="py-16 sm:py-20 px-4 bg-white" id="leadership">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full">
             Institutional Leadership
           </span>
@@ -18,17 +18,17 @@ export default function BentoLeadership() {
           </p>
         </div>
 
-        {/* 1. PRESIDENT EXECUTIVE SPOTLIGHT (Compact Horizontal Hero — Zero Negative Space, Clean Slate/Navy) */}
-        <div className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all p-5 sm:p-6 mb-6 flex flex-col sm:flex-row items-center gap-6">
-          {/* Photo Frame — Exact 6:5 Aspect Ratio, ZERO Cropping */}
-          <div className="relative w-44 sm:w-48 aspect-[6/5] rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50 shrink-0">
+        {/* 1. PRESIDENT EXECUTIVE SPOTLIGHT (Executive Hero — Balanced & Commanding) */}
+        <div className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all p-5 sm:p-7 mb-6 flex flex-col sm:flex-row items-center gap-6 sm:gap-8 max-w-6xl mx-auto">
+          {/* Photo Frame — Exact 6:5 Aspect Ratio, 288px wide on Desktop, ZERO Cropping */}
+          <div className="relative w-56 sm:w-72 aspect-[6/5] rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50 shrink-0">
             <Image
               src={HERO_LEADER.image}
               alt={HERO_LEADER.name}
               fill
               priority
               className="object-contain object-center"
-              sizes="192px"
+              sizes="(max-width: 640px) 224px, 288px"
             />
           </div>
 
@@ -52,26 +52,26 @@ export default function BentoLeadership() {
           </div>
         </div>
 
-        {/* 2. THE 4 SANSTHA LEADERS (4 Compact Cards — Zero Negative Space) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-6">
+        {/* 2. THE 4 SANSTHA LEADERS (Well-Proportioned Executive Cards) */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 max-w-6xl mx-auto mb-6">
           {SANSTHA_LEADERS.map((ldr) => (
             <div
               key={ldr.id}
-              className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-400 transition-all overflow-hidden group"
+              className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all overflow-hidden group flex flex-col"
             >
-              {/* Photo Frame — Exact 6:5 Aspect Ratio, ZERO Cropping */}
-              <div className="relative w-full aspect-[6/5] bg-slate-100 overflow-hidden border-b border-slate-100">
+              {/* Photo Frame — Exact 6:5 Aspect Ratio, Clean Edge-to-Edge */}
+              <div className="relative w-full aspect-[6/5] bg-slate-50 overflow-hidden border-b border-slate-100">
                 <Image
                   src={ldr.image}
                   alt={ldr.name}
                   fill
                   className="object-contain object-center transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 50vw, 25vw"
                 />
                 {ldr.tag && (
-                  <div className="absolute top-2.5 left-2.5">
+                  <div className="absolute top-2 left-2">
                     <span
-                      className="text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-xs border border-white/40"
+                      className="text-[9px] font-bold px-2 py-0.5 rounded-full shadow-xs border border-white/40"
                       style={{ backgroundColor: ldr.tagBg, color: ldr.tagColor }}
                     >
                       {ldr.tag}
@@ -80,12 +80,12 @@ export default function BentoLeadership() {
                 )}
               </div>
 
-              {/* Content Cleanly Below Photo — Compact & Tight */}
-              <div className="p-4">
-                <h4 className="font-bold text-slate-900 text-sm leading-snug">
+              {/* Content Cleanly Below Photo */}
+              <div className="p-3.5">
+                <h4 className="font-bold text-slate-900 text-xs sm:text-sm leading-snug">
                   {ldr.name}
                 </h4>
-                <span className="text-xs text-blue-700 font-bold block mt-0.5">
+                <span className="text-[11px] sm:text-xs text-blue-700 font-semibold block mt-0.5">
                   {ldr.role}
                 </span>
               </div>
@@ -93,17 +93,17 @@ export default function BentoLeadership() {
           ))}
         </div>
 
-        {/* 3. PRINCIPAL'S DESK & SANSTHA HERITAGE METRICS (Compact Row — Zero Negative Space) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
+        {/* 3. PRINCIPAL'S DESK & SANSTHA HERITAGE METRICS (Compact Row — Matching Width) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 max-w-6xl mx-auto">
           {/* Principal's Desk */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-5 sm:p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col sm:flex-row items-center sm:items-start gap-5">
-            <div className="relative w-44 sm:w-52 aspect-[6/5] rounded-2xl overflow-hidden border border-slate-200 shrink-0 bg-slate-50 shadow-sm">
+          <div className="lg:col-span-7 bg-white rounded-3xl p-5 sm:p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col sm:flex-row items-center sm:items-start gap-4">
+            <div className="relative w-36 sm:w-44 aspect-[6/5] rounded-2xl overflow-hidden border border-slate-200 shrink-0 bg-slate-50 shadow-sm">
               <Image
                 src={PRINCIPAL_DATA.image}
                 alt={PRINCIPAL_DATA.name}
                 fill
                 className="object-contain object-center"
-                sizes="208px"
+                sizes="176px"
               />
             </div>
             <div className="flex-1 text-center sm:text-left">
