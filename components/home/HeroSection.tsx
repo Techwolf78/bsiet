@@ -83,23 +83,10 @@ export default function HeroSection({ onOpenEnquiry, onOpenBrochure }: HeroSecti
             </div>
           </div>
 
-          {/* Right Column: Hero Visual Showcase with Campus Induction Image & Floating Badges */}
+          {/* Right Column: Hero Visual Showcase with Campus Induction Image */}
           <div className="lg:col-span-5 relative mt-8 lg:mt-0">
-            {/* Top Floating Badge */}
-            <div className="absolute -top-5 right-2 sm:-right-3 z-20 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-xl p-3 sm:px-4 sm:py-3 shadow-xl flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                  <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
-                </svg>
-              </div>
-              <div className="leading-tight">
-                <strong className="block text-xs sm:text-sm font-bold text-slate-900">DBATU &amp; MSBTE</strong>
-                <span className="text-[11px] text-slate-500 font-medium">Dual Accreditation Pathways</span>
-              </div>
-            </div>
-
             {/* Main Campus Induction Photo Stack */}
-            <div className="relative rounded-2xl overflow-hidden border-2 border-slate-200 shadow-2xl group bg-white">
+            <div className="relative rounded-2xl overflow-hidden border-2 border-slate-200 shadow-xl group bg-white">
               <img
                 src="/images/Induction-program-561x420.jpeg"
                 alt="BSIET College Induction & Campus Life"
@@ -108,19 +95,6 @@ export default function HeroSection({ onOpenEnquiry, onOpenBrochure }: HeroSecti
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-4 left-4 right-4 text-xs text-white font-semibold backdrop-blur-sm bg-black/60 px-3.5 py-2 rounded-lg border border-white/20">
                 📍 Induction Program &amp; Student Induction Ceremony @ BSIET Kolhapur
-              </div>
-            </div>
-
-            {/* Bottom Floating Badge */}
-            <div className="absolute -bottom-5 left-2 sm:-left-3 z-20 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-xl p-3 sm:px-4 sm:py-3 shadow-xl flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-              </div>
-              <div className="leading-tight">
-                <strong className="block text-xs sm:text-sm font-bold text-slate-900">Top MNC Recruiters</strong>
-                <span className="text-[11px] text-slate-500 font-medium">Tata, Bajaj, Cummins, Bharat Forge</span>
               </div>
             </div>
           </div>

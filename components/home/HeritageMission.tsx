@@ -83,82 +83,93 @@ export default function HeritageMission({ onOpenEnquiry }: HeritageMissionProps)
           </p>
         </div>
 
-        {/* Vision & Mission Cards Grid (Compact & Clean Light Theme) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-10">
-          {/* Vision Card */}
-          <div className="rounded-2xl p-5 sm:p-6 bg-white border border-slate-200 shadow-xs hover:border-red-300 hover:shadow-md transition-all flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between gap-3 mb-2.5">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-red-50 border border-red-200/60 flex items-center justify-center text-red-600 shrink-0">
-                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                      <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900">
-                    Our Vision
-                  </h3>
+        {/* Vision & Mission Container — Balanced & Zero Negative Space */}
+        <div className="space-y-6 mb-12">
+          {/* 1. Our Vision (Full-Width Executive Banner) */}
+          <div className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-md transition-all">
+            <div className="flex items-center justify-between gap-3 mb-3">
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-red-50 border border-red-200/60 flex items-center justify-center text-red-600 shrink-0">
+                  <svg className="w-4.5 h-4.5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                  </svg>
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-red-700 bg-red-50 border border-red-200/70 px-2.5 py-0.5 rounded-full">
-                  Vision
-                </span>
+                <h3 className="text-lg sm:text-xl font-extrabold text-slate-900">
+                  Our Vision
+                </h3>
               </div>
-
-              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed italic border-l-2 border-red-600 pl-3 py-1 my-3 bg-slate-50/70 rounded-r-lg">
-                &ldquo;To be the institute of quality engineering education and research for producing capable industry
-                professionals with responsibilities towards nation building.&rdquo;
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100">
-              <span className="text-[11px] font-medium text-slate-600 bg-slate-50 border border-slate-200/60 px-2.5 py-0.5 rounded-md">
-                ✓ Quality Technical Education
-              </span>
-              <span className="text-[11px] font-medium text-slate-600 bg-slate-50 border border-slate-200/60 px-2.5 py-0.5 rounded-md">
-                ✓ Applied Research
-              </span>
-              <span className="text-[11px] font-medium text-slate-600 bg-slate-50 border border-slate-200/60 px-2.5 py-0.5 rounded-md">
-                ✓ Nation Building
+              <span className="text-[10px] font-bold uppercase tracking-wider text-red-700 bg-red-50 border border-red-200/70 px-2.5 py-0.5 rounded-full">
+                Institutional Vision
               </span>
             </div>
+
+            <p className="text-slate-700 text-xs sm:text-sm leading-relaxed italic border-l-4 border-red-600 pl-4 py-2 bg-slate-50/80 rounded-r-xl font-medium">
+              &ldquo;To be the institute of quality engineering education and research for producing capable industry professionals with responsibilities towards nation building.&rdquo;
+            </p>
           </div>
 
-          {/* Mission Card */}
-          <div className="rounded-2xl p-5 sm:p-6 bg-white border border-slate-200 shadow-xs hover:border-blue-300 hover:shadow-md transition-all flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between gap-3 mb-2.5">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200/60 flex items-center justify-center text-[#002b66] shrink-0">
-                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                      <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900">
-                    Our Mission
-                  </h3>
+          {/* 2. Our Mission (Clean Header with 4 Balanced Columns) */}
+          <div className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-md transition-all">
+            <div className="flex items-center justify-between gap-3 mb-5 pb-3 border-b border-slate-100">
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-blue-50 border border-blue-200/60 flex items-center justify-center text-[#002b66] shrink-0">
+                  <svg className="w-4.5 h-4.5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
+                  </svg>
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#002b66] bg-blue-50 border border-blue-200/70 px-2.5 py-0.5 rounded-full">
-                  Mission
-                </span>
+                <h3 className="text-lg sm:text-xl font-extrabold text-slate-900">
+                  Our Mission Directives
+                </h3>
               </div>
-
-              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed italic border-l-2 border-blue-600 pl-3 py-1 my-3 bg-slate-50/70 rounded-r-lg">
-                &ldquo;To imbibe and implement outcome-based education for effective teaching-learning process, bridging
-                industrial demands through hands-on practical competencies, technical ethics, and collaborative
-                research.&rdquo;
-              </p>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-[#002b66] bg-blue-50 border border-blue-200/70 px-2.5 py-0.5 rounded-full">
+                Core Mission
+              </span>
             </div>
 
-            <div className="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100">
-              <span className="text-[11px] font-medium text-slate-600 bg-slate-50 border border-slate-200/60 px-2.5 py-0.5 rounded-md">
-                ✓ Outcome-Based Education (OBE)
-              </span>
-              <span className="text-[11px] font-medium text-slate-600 bg-slate-50 border border-slate-200/60 px-2.5 py-0.5 rounded-md">
-                ✓ Hands-on Competency
-              </span>
-              <span className="text-[11px] font-medium text-slate-600 bg-slate-50 border border-slate-200/60 px-2.5 py-0.5 rounded-md">
-                ✓ Industry-Ready Ethics
-              </span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 hover:bg-white hover:shadow-sm transition-all flex flex-col justify-between">
+                <div>
+                  <span className="inline-block bg-blue-100 text-[#002b66] text-xs font-black px-2.5 py-0.5 rounded-md mb-2">
+                    M1
+                  </span>
+                  <p className="text-slate-700 text-xs leading-relaxed">
+                    To imbibe and implement outcome-based education for effective teaching-learning process.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 hover:bg-white hover:shadow-sm transition-all flex flex-col justify-between">
+                <div>
+                  <span className="inline-block bg-indigo-100 text-indigo-900 text-xs font-black px-2.5 py-0.5 rounded-md mb-2">
+                    M2
+                  </span>
+                  <p className="text-slate-700 text-xs leading-relaxed">
+                    To upbring critical thinking, research aptitude and problem-solving attitude among the students &amp; teachers.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 hover:bg-white hover:shadow-sm transition-all flex flex-col justify-between">
+                <div>
+                  <span className="inline-block bg-cyan-100 text-cyan-900 text-xs font-black px-2.5 py-0.5 rounded-md mb-2">
+                    M3
+                  </span>
+                  <p className="text-slate-700 text-xs leading-relaxed">
+                    To strengthen industry interactions for upskilling and solving real world problems towards better internship &amp; job opportunities.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 hover:bg-white hover:shadow-sm transition-all flex flex-col justify-between">
+                <div>
+                  <span className="inline-block bg-emerald-100 text-emerald-900 text-xs font-black px-2.5 py-0.5 rounded-md mb-2">
+                    M4
+                  </span>
+                  <p className="text-slate-700 text-xs leading-relaxed">
+                    To sensitise all the stakeholders towards ethics, values, harmony, humanity &amp; environment and lifelong learning.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
