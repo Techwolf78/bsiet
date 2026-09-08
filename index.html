@@ -2253,11 +2253,67 @@
       }
 
       .map-frame-box {
+        position: relative;
         border-radius: var(--radius-xl);
         overflow: hidden;
         box-shadow: var(--shadow-lg);
         border: 1px solid var(--slate-200);
         height: 380px;
+      }
+      .map-floating-btn {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        background: var(--navy-900);
+        color: #ffffff !important;
+        padding: 0.6rem 1.1rem;
+        border-radius: var(--radius-full);
+        font-size: 0.825rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        transition: var(--transition-base);
+        z-index: 10;
+        text-decoration: none;
+      }
+      .map-floating-btn:hover {
+        background: var(--crimson-600);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(185, 28, 28, 0.4);
+        color: #ffffff !important;
+      }
+      .campus-map-link-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.825rem;
+        font-weight: 600;
+        color: var(--crimson-600);
+        margin-top: 0.5rem;
+        text-decoration: none;
+        transition: var(--transition-fast);
+      }
+      .campus-map-link-btn:hover {
+        color: var(--navy-900);
+        text-decoration: underline;
+      }
+      .footer-map-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        color: #ffcc00 !important;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-top: 0.85rem;
+        text-decoration: none;
+        transition: var(--transition-fast);
+      }
+      .footer-map-badge:hover {
+        color: #ffffff !important;
+        text-decoration: underline;
       }
 
       .map-frame-box iframe {
@@ -2549,7 +2605,19 @@
         </a>
       </div>
       <div class="contact-links-right">
-        <a href="mailto:principal@bsiet.org" class="gold-contact-item">
+        <a
+              href="https://www.google.com/maps/place/Dr.+Bapuji+Salunke+Institute+Of+Engineering+%26+Technology/data=!4m2!3m1!1s0x0:0xa3a0f0995523d6f1?sa=X&ved=1t:2428&ictx=111"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="gold-contact-item"
+              title="Dr. Bapuji Salunkhe Institute Of Engineering & Technology on Google Maps"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              <span>Tarabai Park, Kolhapur</span>
+            </a>
+            <a href="mailto:principal@bsiet.org" class="gold-contact-item">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           <span>principal@bsiet.org</span>
         </a>
@@ -4346,6 +4414,17 @@
                   Dr. Bapuji Salunkhe Institute of Engineering & Technology<br />2130,
                   E Ward, Tarabai Park, Kolhapur, Maharashtra — 416003
                 </p>
+                <a
+                  href="https://www.google.com/maps/place/Dr.+Bapuji+Salunke+Institute+Of+Engineering+%26+Technology/data=!4m2!3m1!1s0x0:0xa3a0f0995523d6f1?sa=X&ved=1t:2428&ictx=111"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="campus-map-link-btn"
+                >
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                  Get Directions on Google Maps &raquo;
+                </a>
               </div>
             </div>
 
@@ -4411,8 +4490,21 @@
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
+              title="Dr. Bapuji Salunkhe Institute of Engineering and Technology Google Maps Location"
             >
             </iframe>
+            <a
+              href="https://www.google.com/maps/place/Dr.+Bapuji+Salunke+Institute+Of+Engineering+%26+Technology/data=!4m2!3m1!1s0x0:0xa3a0f0995523d6f1?sa=X&ved=1t:2428&ictx=111"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="map-floating-btn"
+              title="Open Dr. Bapuji Salunke Institute Of Engineering & Technology in Google Maps"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              <span>Get Directions in Google Maps &nearr;</span>
+            </a>
           </div>
         </div>
       </div>
@@ -4436,6 +4528,19 @@
                 >DTE: 6468</span
               >
               <span class="dte-badge">TARABAI PARK, KOLHAPUR</span>
+            </div>
+            <div>
+              <a
+                href="https://www.google.com/maps/place/Dr.+Bapuji+Salunke+Institute+Of+Engineering+%26+Technology/data=!4m2!3m1!1s0x0:0xa3a0f0995523d6f1?sa=X&ved=1t:2428&ictx=111"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-map-badge"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <span>Find Us on Google Maps &raquo;</span>
+              </a>
             </div>
           </div>
 
