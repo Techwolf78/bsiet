@@ -18,40 +18,47 @@ export default function BentoLeadership() {
           </p>
         </div>
 
-        {/* 1. PRESIDENT EXECUTIVE SPOTLIGHT (Light Regal Theme) */}
-        <div className="bg-gradient-to-br from-white via-amber-50/20 to-slate-50 text-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-amber-300/80 shadow-md relative overflow-hidden mb-8 group">
-          <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 sm:gap-8">
-            {/* President Portrait */}
-            <div className="relative w-40 h-44 sm:w-48 sm:h-52 rounded-2xl overflow-hidden border-2 border-amber-400 shadow-lg shrink-0 bg-white">
-              <Image
-                src={HERO_LEADER.image}
-                alt={HERO_LEADER.name}
-                fill
-                className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 640px) 160px, 192px"
-              />
-            </div>
+        {/* 1. PRESIDENT HERO BENTO CARD (Full Photo with Overlaid Message) */}
+        <div className="relative rounded-3xl overflow-hidden border-2 border-amber-300/90 shadow-xl mb-8 group bg-gradient-to-br from-amber-50/40 via-white to-slate-100 min-h-[460px] sm:min-h-[500px] flex items-end">
+          {/* Whole Photo covering the Bento card */}
+          <Image
+            src={HERO_LEADER.image}
+            alt={HERO_LEADER.name}
+            fill
+            priority
+            className="object-cover object-top sm:object-right-top group-hover:scale-105 transition-transform duration-700"
+            sizes="(max-width: 1024px) 100vw, 1200px"
+          />
 
-            {/* Info & Quote */}
-            <div className="flex-1 text-center md:text-left">
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 mb-2.5">
-                <span className="bg-amber-100 text-amber-900 border border-amber-300 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-                  👑 Hon&apos;ble President
-                </span>
-                <span className="text-xs text-slate-600 font-bold tracking-wide">
-                  Shri Swami Vivekanand Shikshan Sanstha, Kolhapur
-                </span>
-              </div>
+          {/* Vignette Scrim for depth and contrast */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none" />
+
+          {/* Top Floating Badge */}
+          <div className="absolute top-4 sm:top-6 left-4 sm:left-6 z-10 flex flex-wrap items-center gap-2">
+            <span className="bg-amber-400 text-slate-950 font-extrabold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-md border border-amber-300">
+              👑 Hon&apos;ble President
+            </span>
+            <span className="bg-white/95 backdrop-blur-md text-slate-800 font-bold text-xs px-3.5 py-1.5 rounded-full shadow-sm hidden sm:inline-block border border-slate-200">
+              Shri Swami Vivekanand Shikshan Sanstha, Kolhapur
+            </span>
+          </div>
+
+          {/* Over That Photo: The Message Card */}
+          <div className="relative z-10 w-full p-4 sm:p-6 lg:p-8">
+            <div className="bg-white/95 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-amber-300/80 shadow-2xl max-w-2xl">
+              <span className="text-[11px] font-bold text-amber-800 uppercase tracking-wider block mb-1 sm:hidden">
+                Shri Swami Vivekanand Shikshan Sanstha, Kolhapur
+              </span>
 
               <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-1">
                 {HERO_LEADER.name}
               </h3>
-              <p className="text-xs text-amber-800 font-bold mb-4">
+              <p className="text-xs sm:text-sm font-bold text-blue-900 mb-3">
                 {HERO_LEADER.role}
               </p>
 
               {/* Quote */}
-              <div className="bg-white border border-slate-200 border-l-4 border-l-amber-500 rounded-r-xl p-4 shadow-xs text-left">
+              <div className="bg-amber-50/70 border-l-4 border-amber-500 rounded-r-xl p-3.5 sm:p-4 shadow-xs">
                 <p className="text-slate-700 text-xs sm:text-sm leading-relaxed italic">
                   &ldquo;{HERO_LEADER.quote}&rdquo;
                 </p>
