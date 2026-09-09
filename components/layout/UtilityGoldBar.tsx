@@ -2,7 +2,7 @@ import { GMAPS_URL } from "@/data/navigation";
 
 export default function UtilityGoldBar() {
   return (
-    <div className="bg-[#ffcc00] text-slate-900 py-1.5 px-4 text-xs font-semibold border-b border-amber-400/40">
+    <div className="hidden md:block bg-[#ffcc00] text-slate-900 py-1.5 px-4 text-xs font-semibold border-b border-amber-400/40">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
         {/* Left Social Icons */}
         <div className="flex items-center gap-4">

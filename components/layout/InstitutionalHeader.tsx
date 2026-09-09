@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function InstitutionalHeader() {
   return (
-    <header className="bg-white py-4 px-4 border-b border-slate-200">
+    <header className="hidden lg:block bg-white py-4 px-4 border-b border-slate-200">
       <div className="max-w-7xl mx-auto">
         {/* Top Sanstha Marathi Motto */}
         <div className="text-center mb-3 flex flex-col items-center gap-0.5">
