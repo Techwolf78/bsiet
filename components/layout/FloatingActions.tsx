@@ -1,13 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function FloatingActions() {
   const [showTopBtn, setShowTopBtn] = useState(false);
-  const [socialExpanded, setSocialExpanded] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-
-  const isVisible = socialExpanded || isHovered;
+  const [isOpen, setIsOpen] = useState(false);
+  const ribbonRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,49 +20,90 @@ export default function FloatingActions() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close when tapping/clicking outside on mobile
+  useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent | TouchEvent) => {
+      if (ribbonRef.current && !ribbonRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleOutsideClick);
+    document.addEventListener("touchstart", handleOutsideClick, { passive: true });
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+      document.removeEventListener("touchstart", handleOutsideClick);
+    };
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Hover handlers that ONLY activate on actual mouse cursor devices
+  const handleMouseEnter = () => {
+    if (typeof window !== "undefined" && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      setIsOpen(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (typeof window !== "undefined" && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      setIsOpen(false);
+    }
+  };
+
+  // Click toggle for mobile tap & manual toggle
+  const handleToggleClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIsOpen((prev) => !prev);
   };
 
   return (
     <>
       {/* ========================================================================= */}
       {/* 1. BOTTOM-LEFT FLOATING EXPANDABLE SOCIAL RIBBON                         */}
-      {/* Expands on HOVER on Desktop, Toggles on Tap on Mobile                     */}
+      {/* Expands on HOVER on Desktop, Toggles Open & Closed on Tap on Mobile       */}
       {/* ========================================================================= */}
       <aside
+        ref={ribbonRef}
         aria-label="Social connect ribbon"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => {
-          setIsHovered(false);
-          setSocialExpanded(false);
-        }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         className="fixed bottom-4 left-3 z-40 flex items-center select-none"
       >
-        <div className="bg-[#002b66] p-1 rounded-2xl shadow-2xl border border-white/20 flex items-center transition-all duration-300">
-          {/* Circular Toggle Button */}
+        <div
+          onClick={(e) => {
+            if (!isOpen) {
+              e.stopPropagation();
+              setIsOpen(true);
+            }
+          }}
+          className="bg-[#002b66] p-1 rounded-2xl shadow-2xl border border-white/20 flex items-center transition-all duration-300 cursor-pointer"
+        >
+          {/* Circular Toggle Button: Tap to open/close */}
           <button
-            onClick={() => setSocialExpanded(!socialExpanded)}
-            aria-label={isVisible ? "Collapse social links" : "Expand social links"}
+            type="button"
+            onClick={handleToggleClick}
+            aria-label={isOpen ? "Collapse social links" : "Expand social links"}
             title="Connect With BSIET"
-            className="w-8 h-8 rounded-full bg-[#001f4d] hover:bg-[#002b66] text-white flex items-center justify-center shrink-0 active:scale-95 transition-all cursor-pointer"
+            className="w-9 h-9 sm:w-8 sm:h-8 rounded-full bg-[#001f4d] hover:bg-[#002b66] text-white flex items-center justify-center shrink-0 active:scale-95 transition-all cursor-pointer"
           >
             <svg
               className={`w-4 h-4 fill-current transition-transform duration-300 ${
-                isVisible ? "rotate-0" : "rotate-180"
+                isOpen ? "rotate-0" : "rotate-180"
               }`}
               viewBox="0 0 24 24"
             >
-              {/* Left bookmark/arrow icon */}
               <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
             </svg>
           </button>
 
-          {/* Expandable Social Buttons: White squares with dark icons (Slide on Hover/Click) */}
+          {/* Expandable Social Buttons: White squares with dark icons */}
           <div
-            className={`flex items-center gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
-              isVisible
-                ? "max-w-[200px] opacity-100 pl-1 pr-1 pointer-events-auto"
+            className={`flex items-center flex-nowrap whitespace-nowrap gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
+              isOpen
+                ? "max-w-[220px] opacity-100 pl-1.5 pr-1.5 pointer-events-auto"
                 : "max-w-0 opacity-0 pl-0 pr-0 pointer-events-none"
             }`}
           >
@@ -74,6 +113,7 @@ export default function FloatingActions() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
+              onClick={(e) => e.stopPropagation()}
               className="w-7 h-7 bg-white hover:bg-slate-100 rounded text-slate-900 flex items-center justify-center font-bold text-xs shadow-xs hover:scale-105 active:scale-95 transition-all shrink-0"
             >
               <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -81,7 +121,7 @@ export default function FloatingActions() {
               </svg>
             </a>
 
-            <span className="text-white/30 text-[10px] font-thin shrink-0">|</span>
+            <span className="text-white/30 text-[10px] font-thin shrink-0 select-none">|</span>
 
             {/* LinkedIn */}
             <a
@@ -89,6 +129,7 @@ export default function FloatingActions() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
+              onClick={(e) => e.stopPropagation()}
               className="w-7 h-7 bg-white hover:bg-slate-100 rounded text-slate-900 flex items-center justify-center font-bold text-xs shadow-xs hover:scale-105 active:scale-95 transition-all shrink-0"
             >
               <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -96,12 +137,13 @@ export default function FloatingActions() {
               </svg>
             </a>
 
-            <span className="text-white/30 text-[10px] font-thin shrink-0">|</span>
+            <span className="text-white/30 text-[10px] font-thin shrink-0 select-none">|</span>
 
             {/* Email Envelope */}
             <a
               href="mailto:principal@bsiet.org"
               aria-label="Send Email to BSIET"
+              onClick={(e) => e.stopPropagation()}
               className="w-7 h-7 bg-white hover:bg-slate-100 rounded text-slate-900 flex items-center justify-center font-bold text-xs shadow-xs hover:scale-105 active:scale-95 transition-all shrink-0"
             >
               <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -109,7 +151,7 @@ export default function FloatingActions() {
               </svg>
             </a>
 
-            <span className="text-white/30 text-[10px] font-thin shrink-0">|</span>
+            <span className="text-white/30 text-[10px] font-thin shrink-0 select-none">|</span>
 
             {/* Instagram */}
             <a
@@ -117,6 +159,7 @@ export default function FloatingActions() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
+              onClick={(e) => e.stopPropagation()}
               className="w-7 h-7 bg-white hover:bg-slate-100 rounded text-slate-900 flex items-center justify-center font-bold text-xs shadow-xs hover:scale-105 active:scale-95 transition-all shrink-0"
             >
               <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
