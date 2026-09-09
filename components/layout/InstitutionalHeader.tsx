@@ -25,7 +25,7 @@ export default function InstitutionalHeader() {
               width={100}
               height={108}
               priority
-              className="object-contain drop-shadow-md rounded"
+              className="object-contain mix-blend-multiply"
             />
           </div>
 
@@ -68,7 +68,7 @@ export default function InstitutionalHeader() {
               width={150}
               height={57}
               priority
-              className="object-contain drop-shadow-sm"
+              className="object-contain mix-blend-multiply"
             />
           </div>
         </div>
