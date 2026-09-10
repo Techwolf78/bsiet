@@ -212,9 +212,14 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
               LEFT SIDE: INSTITUTION NAME & PROGRAM DETAILS
              ══════════════════════════════════════════════ */}
           <div className="lg:col-span-7 space-y-4 sm:space-y-5">
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight uppercase drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
-              Dr. Bapuji Salunkhe Institute of Engineering &amp; Technology
-            </h1>
+            <div>
+              <span className="block text-slate-200 text-sm sm:text-lg font-medium tracking-wide mb-1.5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                Explore Your Potential At
+              </span>
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
+                Dr. Bapuji Salunkhe Institute of Engineering &amp; Technology
+              </h1>
+            </div>
 
             <p className="text-slate-100 text-sm sm:text-base leading-relaxed max-w-xl font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
               Affiliated to <strong className="text-white font-semibold">DBATU, Lonere</strong> (B.Tech Degree) and{" "}
@@ -289,6 +294,16 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
              ══════════════════════════════════════════════ */}
           <div className="lg:col-span-5">
             <div className="bg-white/98 backdrop-blur-sm rounded-xl p-4 sm:p-5 shadow-2xl border border-slate-300 text-slate-900">
+              {/* Form Header */}
+              <div className="mb-3 pb-2.5 border-b border-slate-200">
+                <h3 className="text-base sm:text-lg font-bold text-[#002b66] leading-snug">
+                  Admission Enquiry 2026-27
+                </h3>
+                <p className="text-[11px] text-slate-500 font-medium mt-0.5">
+                  B.Tech Degree (DBATU) &amp; Polytechnic Diploma (MSBTE) · DTE: 6468
+                </p>
+              </div>
+
               {isSubmitted ? (
                 <div className="py-12 text-center text-[#002b66] font-bold text-sm bg-slate-50 border border-slate-200 rounded-xl p-6">
                   <div className="text-3xl mb-2 text-[#c01e2e]">✓</div>
