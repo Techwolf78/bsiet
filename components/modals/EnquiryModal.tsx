@@ -68,7 +68,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
         </button>
 
         <div className="mb-6">
-          <span className="text-[11px] font-extrabold uppercase tracking-wider text-red-700 bg-red-50 px-2.5 py-0.5 rounded">
+          <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#c01e2e] bg-red-50 px-2.5 py-0.5 rounded">
             Admissions 2026-27 (DTE: 6468)
           </span>
           <h3 className="text-xl font-extrabold text-slate-900 mt-2">
@@ -80,7 +80,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
         </div>
 
         {isSubmitted ? (
-          <div className="py-8 text-center text-emerald-600 font-bold text-sm bg-emerald-50 rounded-2xl p-4">
+          <div className="py-8 text-center text-[#002b66] font-bold text-sm bg-blue-50/80 border border-blue-200 rounded-2xl p-4">
             ✓ Enquiry Submitted Successfully! Redirecting to admissions officer...
           </div>
         ) : (
@@ -95,7 +95,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="e.g. Rahul Sharma"
-                className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:border-blue-600 focus:outline-none bg-slate-50"
+                className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:border-[#002b66] focus:outline-none bg-slate-50"
               />
             </div>
 
@@ -110,7 +110,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                 value={mobile}
                 onChange={(e) => setMobile(e.target.value)}
                 placeholder="10-digit mobile number"
-                className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:border-blue-600 focus:outline-none bg-slate-50"
+                className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:border-[#002b66] focus:outline-none bg-slate-50"
               />
             </div>
 
@@ -130,7 +130,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                         : "Diploma in Computer Engineering"
                     );
                   }}
-                  className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:border-blue-600 focus:outline-none bg-slate-50"
+                  className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:border-[#002b66] focus:outline-none bg-slate-50"
                 >
                   <option value="degree">B.Tech Degree</option>
                   <option value="diploma">Polytechnic Diploma</option>
@@ -144,7 +144,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                 <select
                   value={branch}
                   onChange={(e) => setBranch(e.target.value)}
-                  className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:border-blue-600 focus:outline-none bg-slate-50"
+                  className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:border-[#002b66] focus:outline-none bg-slate-50"
                 >
                   {branches.map((b) => (
                     <option key={b} value={b}>
@@ -157,7 +157,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
 
             <button
               type="submit"
-              className="w-full bg-[#002b66] hover:bg-[#001737] text-[#ffcc00] font-bold text-xs sm:text-sm py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer mt-2"
+              className="w-full bg-[#c01e2e] hover:bg-[#9e1423] text-white font-bold text-xs sm:text-sm py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer mt-2"
             >
               Submit Admission Enquiry
             </button>

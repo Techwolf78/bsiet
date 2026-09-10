@@ -6,10 +6,7 @@ export default function PlacementRecruiters() {
     <section className="py-10 sm:py-20 px-3.5 sm:px-6 bg-slate-50 border-y border-slate-200 text-slate-900" id="placements">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-12">
-          <span className="bg-amber-100 text-amber-900 border border-amber-300 text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-0.5 rounded-full">
-            Training &amp; Placement Cell (TPO)
-          </span>
-          <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mt-2 sm:mt-3 mb-1 sm:mb-3">
+          <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-1 sm:mb-3">
             Industry Connections &amp; Placements
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm">

@@ -41,7 +41,7 @@ export default async function DepartmentDetailPage({
         </div>
 
         {/* Hero Banner (Clean Light Theme) */}
-        <div className="relative rounded-3xl overflow-hidden shadow-md mb-12 bg-gradient-to-r from-blue-50/80 via-slate-50 to-indigo-50/60 border border-slate-200 min-h-[320px] flex items-end p-6 sm:p-12">
+        <div className="relative rounded-3xl overflow-hidden shadow-md mb-12 bg-blue-50/40 border border-slate-200 min-h-[320px] flex items-end p-6 sm:p-12">
           <Image
             src={dept.image}
             alt={dept.name}
@@ -51,9 +51,6 @@ export default async function DepartmentDetailPage({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
           <div className="relative z-10 max-w-3xl">
-            <span className="bg-[#ffcc00] text-[#002b66] border border-amber-400 font-extrabold text-xs uppercase tracking-wider px-3.5 py-1 rounded-full inline-block mb-3 shadow-xs">
-              Department of {dept.shortName}
-            </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 mb-3">
               {dept.name}
             </h1>
@@ -69,7 +66,7 @@ export default async function DepartmentDetailPage({
           <div className="lg:col-span-8 space-y-10">
             {/* Laboratory Infrastructure */}
             <div>
-              <h2 className="text-2xl font-extrabold text-slate-900 mb-4 border-l-4 border-red-700 pl-3">
+              <h2 className="text-2xl font-extrabold text-slate-900 mb-4 border-l-4 border-[#c01e2e] pl-3">
                 Key Laboratory Facilities &amp; Equipment
               </h2>
               <p className="text-slate-600 text-sm mb-6 leading-relaxed">
@@ -83,7 +80,7 @@ export default async function DepartmentDetailPage({
                     key={idx}
                     className="p-4 bg-slate-50 border border-slate-200 rounded-2xl flex items-start gap-3"
                   >
-                    <span className="w-7 h-7 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                    <span className="w-7 h-7 rounded-lg bg-blue-50 text-[#002b66] border border-blue-100 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                       0{idx + 1}
                     </span>
                     <div>
@@ -126,7 +123,7 @@ export default async function DepartmentDetailPage({
           <div className="lg:col-span-4 space-y-6">
             {/* HOD Card */}
             <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm text-center">
-              <div className="w-20 h-20 rounded-full bg-slate-100 border-2 border-amber-400 mx-auto mb-4 flex items-center justify-center text-2xl font-bold text-slate-700">
+              <div className="w-20 h-20 rounded-full bg-slate-100 border-2 border-slate-200 mx-auto mb-4 flex items-center justify-center text-2xl font-bold text-slate-700">
                 👨‍🏫
               </div>
               <h3 className="font-bold text-slate-900 text-base">{dept.hodName}</h3>
@@ -140,8 +137,8 @@ export default async function DepartmentDetailPage({
             </div>
 
             {/* Quick Apply Card (Light Theme) */}
-            <div className="bg-gradient-to-br from-amber-50/80 via-yellow-50/50 to-white text-slate-900 p-6 rounded-3xl border-2 border-amber-300/80 shadow-sm">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100 border border-amber-300 px-2.5 py-1 rounded font-bold">
+            <div className="bg-blue-50/60 text-slate-900 p-6 rounded-3xl border-2 border-blue-200/80 shadow-sm">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-[#002b66] bg-blue-100/70 border border-blue-200 px-2.5 py-1 rounded font-bold">
                 DTE Code: 6468
               </span>
               <h4 className="text-lg font-bold text-slate-900 mt-3 mb-2">
@@ -152,7 +149,7 @@ export default async function DepartmentDetailPage({
               </p>
               <Link
                 href="/admissions"
-                className="block text-center bg-[#002b66] hover:bg-blue-900 text-[#ffcc00] font-bold text-xs py-3 px-4 rounded-xl shadow transition-all"
+                className="block text-center bg-[#c01e2e] hover:bg-[#9e1423] text-white font-bold text-xs py-3 px-4 rounded-xl shadow transition-all"
               >
                 Admission Guidance &raquo;
               </Link>

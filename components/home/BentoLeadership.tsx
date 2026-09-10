@@ -6,10 +6,7 @@ export default function BentoLeadership() {
     <section className="py-10 sm:py-20 px-3.5 sm:px-6 bg-white" id="leadership">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-10">
-          <span className="bg-red-100 text-red-700 text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-0.5 rounded-full">
-            Institutional Leadership
-          </span>
-          <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mt-2 sm:mt-3 mb-1 sm:mb-3">
+          <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-1 sm:mb-3">
             Visionary Minds Guiding BSIET
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm">
@@ -34,7 +31,7 @@ export default function BentoLeadership() {
           {/* Info */}
           <div className="flex-1 text-center sm:text-left">
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 sm:gap-2 mb-1 sm:mb-2">
-              <span className="bg-blue-50 text-blue-800 border border-blue-200 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-xs">
+              <span className="bg-blue-50 text-[#002b66] border border-blue-200 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-xs">
                 Hon&apos;ble President
               </span>
               <span className="text-[11px] sm:text-xs text-slate-500 font-semibold tracking-wide">
@@ -56,7 +53,7 @@ export default function BentoLeadership() {
           {SANSTHA_LEADERS.map((ldr) => (
             <div
               key={ldr.id}
-              className="bg-white rounded-xl sm:rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-blue-300 transition-all overflow-hidden group flex flex-col"
+              className="bg-white rounded-xl sm:rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-[#002b66] transition-all overflow-hidden group flex flex-col"
             >
               {/* Photo Frame */}
               <div className="relative w-full aspect-[6/5] bg-slate-50 overflow-hidden border-b border-slate-100">
@@ -84,7 +81,7 @@ export default function BentoLeadership() {
                 <h4 className="font-bold text-slate-900 text-[11px] sm:text-sm leading-snug">
                   {ldr.name}
                 </h4>
-                <span className="text-[10px] sm:text-xs text-blue-700 font-semibold block mt-0.5 truncate">
+                <span className="text-[10px] sm:text-xs text-[#002b66] font-semibold block mt-0.5 truncate">
                   {ldr.role}
                 </span>
               </div>
@@ -106,7 +103,7 @@ export default function BentoLeadership() {
               />
             </div>
             <div className="flex-1 text-center sm:text-left">
-              <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-2 py-0.5 rounded mb-1 inline-block">
+              <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-[#002b66] bg-blue-50 px-2 py-0.5 rounded mb-1 inline-block">
                 Principal&apos;s Message
               </span>
               <h4 className="font-bold text-slate-900 text-sm sm:text-base">
@@ -115,16 +112,16 @@ export default function BentoLeadership() {
               <span className="text-[11px] sm:text-xs font-semibold text-slate-500 block mb-1.5 sm:mb-2">
                 {PRINCIPAL_DATA.title}
               </span>
-              <p className="text-slate-600 text-[11px] sm:text-xs leading-relaxed italic border-l-2 border-blue-600 pl-2.5 sm:pl-3 text-left">
+              <p className="text-slate-600 text-[11px] sm:text-xs leading-relaxed italic border-l-2 border-[#002b66] pl-2.5 sm:pl-3 text-left">
                 &ldquo;{PRINCIPAL_DATA.message}&rdquo;
               </p>
             </div>
           </div>
 
           {/* Sanstha Legacy & Impact Metrics */}
-          <div className="lg:col-span-5 bg-gradient-to-br from-blue-50/70 via-indigo-50/40 to-white text-slate-900 rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-blue-200/80 shadow-xs flex flex-col justify-between">
+          <div className="lg:col-span-5 bg-gradient-to-br from-blue-50/70 to-white text-slate-900 rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-blue-200/80 shadow-xs flex flex-col justify-between">
             <div>
-              <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-blue-900 bg-blue-100 px-2 py-0.5 rounded mb-1 inline-block">
+              <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-[#002b66] bg-blue-100 px-2 py-0.5 rounded mb-1 inline-block">
                 Sanstha Legacy (Since 1954)
               </span>
               <h4 className="font-bold text-slate-900 text-sm sm:text-base mb-0.5 sm:mb-1">

@@ -7,7 +7,7 @@ export default function InstitutionalHeader() {
       <div className="max-w-7xl mx-auto">
         {/* Top Sanstha Marathi Motto */}
         <div className="text-center mb-3 flex flex-col items-center gap-0.5">
-          <span className="text-red-700 font-bold text-sm sm:text-base tracking-wide">
+          <span className="text-[#c01e2e] font-bold text-sm sm:text-base tracking-wide">
             &ldquo;ज्ञान, विज्ञान आणि सुसंस्कार यासाठी शिक्षणप्रसार&rdquo; — शिक्षणमहर्षी डॉ. बापूजी साळुंखे
           </span>
           <span className="text-slate-500 text-[11px] font-bold tracking-wider uppercase">
@@ -32,7 +32,7 @@ export default function InstitutionalHeader() {
           {/* Center: College Name & Affiliations */}
           <div className="flex-1 text-center flex flex-col items-center">
             <Link href="/" className="group">
-              <h1 className="text-xl sm:text-2xl lg:text-[1.7rem] font-extrabold text-slate-900 tracking-tight uppercase leading-tight group-hover:text-blue-900 transition-colors">
+              <h1 className="text-xl sm:text-2xl lg:text-[1.7rem] font-extrabold text-slate-900 tracking-tight uppercase leading-tight group-hover:text-[#002b66] transition-colors">
                 DR. BAPUJI SALUNKHE INSTITUTE OF ENGINEERING AND TECHNOLOGY
               </h1>
             </Link>
@@ -40,12 +40,12 @@ export default function InstitutionalHeader() {
             {/* Dual Affiliation Strip */}
             <div className="mt-2.5 inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 bg-slate-50 border border-slate-200 py-1 px-4 rounded-full text-xs">
               <div className="flex items-center gap-1.5">
-                <span className="text-red-700 font-extrabold tracking-wide">DEGREE</span>
+                <span className="text-[#c01e2e] font-extrabold tracking-wide">DEGREE</span>
                 <span className="text-slate-600 font-medium">(Affiliated to DBATU, Lonere)</span>
               </div>
               <span className="text-slate-300 hidden sm:inline">|</span>
               <div className="flex items-center gap-1.5">
-                <span className="text-red-700 font-extrabold tracking-wide">DIPLOMA</span>
+                <span className="text-[#c01e2e] font-extrabold tracking-wide">DIPLOMA</span>
                 <span className="text-slate-600 font-medium">(Affiliated to MSBTE, Mumbai)</span>
               </div>
             </div>

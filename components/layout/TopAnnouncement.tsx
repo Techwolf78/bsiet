@@ -12,7 +12,7 @@ export default function TopAnnouncement() {
             href="https://bsiet.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-red-600 hover:bg-red-700 text-white font-bold px-2.5 py-0.5 rounded text-[11px] uppercase tracking-wider inline-flex items-center gap-1 animate-pulse-alert"
+            className="bg-[#c01e2e] hover:bg-[#9e1423] text-white font-bold px-2.5 py-0.5 rounded text-[11px] uppercase tracking-wider inline-flex items-center gap-1 animate-pulse-alert"
           >
             Mock Test
           </a>
@@ -35,7 +35,7 @@ export default function TopAnnouncement() {
             href="https://mahadbt.maharashtra.gov.in"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-700 hover:text-blue-900 font-semibold transition-colors"
+            className="text-[#002b66] hover:text-[#001f4d] font-semibold transition-colors"
           >
             MahaDBT Portal ↗
           </a>

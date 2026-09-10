@@ -32,7 +32,7 @@ export const SANSTHA_LEADERS: Leader[] = [
     desc: "Leading the Sanstha with profound devotion, carrying forward Dr. Bapuji Salunkhe's mission of selfless service and educational dissemination across Maharashtra.",
     tag: "Sanstha Executive",
     tagBg: "#eff6ff",
-    tagColor: "#2563eb",
+    tagColor: "#002b66",
   },
   {
     id: "gawade-s",
@@ -51,8 +51,8 @@ export const SANSTHA_LEADERS: Leader[] = [
     image: "/images/CEO2-362x310-1-360x300.png",
     desc: "Spearheading modern digital governance, high-tech campus infrastructure, AI innovation hubs, and cutting-edge corporate collaborations.",
     tag: "Digital Transformation",
-    tagBg: "#f0fdf4",
-    tagColor: "#16a34a",
+    tagBg: "#eff6ff",
+    tagColor: "#002b66",
   },
   {
     id: "bhirdi",
@@ -61,8 +61,8 @@ export const SANSTHA_LEADERS: Leader[] = [
     image: "/images/sir-360x300.png",
     desc: "Ensuring robust institutional governance, continuous quality audits, modern workshop expansions, and holistic student career development.",
     tag: "Institutional Growth",
-    tagBg: "#fefce8",
-    tagColor: "#ca8a04",
+    tagBg: "#eff6ff",
+    tagColor: "#002b66",
   },
 ];
 

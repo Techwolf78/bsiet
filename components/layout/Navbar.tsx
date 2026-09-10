@@ -89,7 +89,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             SPOTLIGHT
           </span>
           <div className="overflow-hidden whitespace-nowrap flex-1 relative mask-fade">
-            <div className="animate-ticker flex items-center gap-8 text-red-700 font-bold text-[11px] tracking-wide">
+            <div className="animate-ticker flex items-center gap-8 text-[#c01e2e] font-bold text-[11px] tracking-wide">
               <span>ADMISSIONS OPEN 2026-27: B.Tech Degree (DBATU) &amp; Polytechnic Diploma (MSBTE) — DTE Code: 6468</span>
               <span className="text-slate-400 font-normal">✦</span>
               <span>100% Government Scholarships Assistance via MahaDBT</span>
@@ -106,7 +106,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
       {/* ========================================================================= */}
       {/* 2. DESKTOP NAVIGATION BAR (Preserved exactly for Desktop View)            */}
       {/* ========================================================================= */}
-      <nav className="hidden lg:block sticky top-0 z-40 bg-[#002b66] border-b-[2.5px] border-[#ffcc00] shadow-md">
+      <nav className="hidden lg:block sticky top-0 z-40 bg-[#002b66] border-b-2 border-[#c01e2e] shadow-md">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-[52px]">
           {/* Desktop Navigation Links */}
           <ul className="flex items-center h-full gap-0.5 m-0 p-0 list-none">
@@ -122,7 +122,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                 >
                   <Link
                     href={item.href}
-                    className="text-white hover:text-[#ffcc00] hover:bg-[#001f4d] px-3.5 py-0 h-full inline-flex items-center gap-1 text-[13.5px] font-semibold tracking-wide transition-all whitespace-nowrap"
+                    className="text-white hover:text-white hover:bg-[#001f4d] px-3.5 py-0 h-full inline-flex items-center gap-1 text-[13.5px] font-semibold tracking-wide transition-all whitespace-nowrap"
                   >
                     {item.label}
                     {hasSub && (
@@ -138,7 +138,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                   {/* Regular Dropdown */}
                   {item.sections && !item.isMega && (
                     <div
-                      className={`absolute top-full left-0 min-w-[270px] bg-white border border-slate-200 border-t-2 border-t-amber-400 rounded-b-xl shadow-2xl p-2 z-50 transition-all duration-200 ${
+                      className={`absolute top-full left-0 min-w-[270px] bg-white border border-slate-200 border-t-2 border-t-[#c01e2e] rounded-b-xl shadow-2xl p-2 z-50 transition-all duration-200 ${
                         activeDropdown === item.label
                           ? "opacity-100 visible translate-y-0"
                           : "opacity-0 invisible translate-y-2 pointer-events-none"
@@ -171,7 +171,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                   {/* Mega Dropdown for Departments */}
                   {item.isMega && item.columns && (
                     <div
-                      className={`absolute top-full left-0 min-w-[540px] bg-white border border-slate-200 border-t-2 border-t-amber-400 rounded-b-xl shadow-2xl p-4 grid grid-cols-2 gap-4 z-50 transition-all duration-200 ${
+                      className={`absolute top-full left-0 min-w-[540px] bg-white border border-slate-200 border-t-2 border-t-[#c01e2e] rounded-b-xl shadow-2xl p-4 grid grid-cols-2 gap-4 z-50 transition-all duration-200 ${
                         activeDropdown === item.label
                           ? "opacity-100 visible translate-y-0"
                           : "opacity-0 invisible translate-y-2 pointer-events-none"
@@ -203,7 +203,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
           {/* Desktop Action Button: Apply Now */}
           <button
             onClick={onOpenEnquiry}
-            className="bg-gradient-to-r from-[#ffcc00] to-amber-500 hover:from-amber-300 hover:to-[#ffcc00] text-slate-950 font-bold text-sm px-4 py-1.5 rounded shadow hover:shadow-lg active:scale-95 transition-all whitespace-nowrap cursor-pointer"
+            className="bg-[#c01e2e] hover:bg-[#9e1423] text-white font-bold text-sm px-5 py-2 rounded-xl shadow-md hover:shadow-lg active:scale-95 transition-all whitespace-nowrap cursor-pointer"
           >
             Apply Now
           </button>
@@ -266,7 +266,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                   onClick={() => setMobileOpen(false)}
                   className="group bg-white hover:bg-slate-50 border border-slate-200/90 hover:border-slate-300 rounded-xl p-2.5 flex items-center gap-2.5 transition-all duration-200 shadow-xs hover:shadow-sm active:scale-[0.98]"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-rose-50 text-rose-600 border border-rose-100 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <div className="w-8 h-8 rounded-lg bg-red-50 text-[#c01e2e] border border-red-100 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                     <svg
                       className="w-4 h-4 stroke-current"
                       viewBox="0 0 24 24"
@@ -280,11 +280,11 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                     </svg>
                   </div>
                   <div className="text-left min-w-0">
-                    <span className="text-[11.5px] font-bold text-slate-900 block leading-tight truncate group-hover:text-rose-600 transition-colors">
+                    <span className="text-[11.5px] font-bold text-slate-900 block leading-tight truncate group-hover:text-[#c01e2e] transition-colors">
                       Admissions
                     </span>
-                    <span className="inline-flex items-center gap-1 text-[9px] text-rose-600 font-semibold mt-0.5 leading-none">
-                      <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse shrink-0" />
+                    <span className="inline-flex items-center gap-1 text-[9px] text-[#c01e2e] font-semibold mt-0.5 leading-none">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#c01e2e] animate-pulse shrink-0" />
                       2026-27 Open
                     </span>
                   </div>
@@ -296,7 +296,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                   onClick={() => setMobileOpen(false)}
                   className="group bg-white hover:bg-slate-50 border border-slate-200/90 hover:border-slate-300 rounded-xl p-2.5 flex items-center gap-2.5 transition-all duration-200 shadow-xs hover:shadow-sm active:scale-[0.98]"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <div className="w-8 h-8 rounded-lg bg-blue-50 text-[#002b66] border border-blue-100 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                     <svg
                       className="w-4 h-4 stroke-current"
                       viewBox="0 0 24 24"
@@ -311,7 +311,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                     </svg>
                   </div>
                   <div className="text-left min-w-0">
-                    <span className="text-[11.5px] font-bold text-slate-900 block leading-tight truncate group-hover:text-blue-600 transition-colors">
+                    <span className="text-[11.5px] font-bold text-slate-900 block leading-tight truncate group-hover:text-[#002b66] transition-colors">
                       Programs
                     </span>
                     <span className="text-[9px] text-slate-500 font-medium block truncate mt-0.5 leading-none">
@@ -326,7 +326,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                   onClick={() => setMobileOpen(false)}
                   className="group bg-white hover:bg-slate-50 border border-slate-200/90 hover:border-slate-300 rounded-xl p-2.5 flex items-center gap-2.5 transition-all duration-200 shadow-xs hover:shadow-sm active:scale-[0.98]"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <div className="w-8 h-8 rounded-lg bg-blue-50 text-[#002b66] border border-blue-100 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                     <svg
                       className="w-4 h-4 stroke-current"
                       viewBox="0 0 24 24"
@@ -341,10 +341,10 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                     </svg>
                   </div>
                   <div className="text-left min-w-0">
-                    <span className="text-[11.5px] font-bold text-slate-900 block leading-tight truncate group-hover:text-emerald-600 transition-colors">
+                    <span className="text-[11.5px] font-bold text-slate-900 block leading-tight truncate group-hover:text-[#002b66] transition-colors">
                       Placements
                     </span>
-                    <span className="text-[9px] text-emerald-700 font-bold block truncate mt-0.5 leading-none">
+                    <span className="text-[9px] text-[#002b66] font-bold block truncate mt-0.5 leading-none">
                       12 LPA Highest
                     </span>
                   </div>
@@ -357,7 +357,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                   rel="noopener noreferrer"
                   className="group bg-white hover:bg-slate-50 border border-slate-200/90 hover:border-slate-300 rounded-xl p-2.5 flex items-center gap-2.5 transition-all duration-200 shadow-xs hover:shadow-sm active:scale-[0.98]"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 border border-indigo-100 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <div className="w-8 h-8 rounded-lg bg-blue-50 text-[#002b66] border border-blue-100 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                     <svg
                       className="w-4 h-4 stroke-current"
                       viewBox="0 0 24 24"
@@ -371,7 +371,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                     </svg>
                   </div>
                   <div className="text-left min-w-0">
-                    <span className="text-[11.5px] font-bold text-slate-900 block leading-tight truncate group-hover:text-indigo-600 transition-colors">
+                    <span className="text-[11.5px] font-bold text-slate-900 block leading-tight truncate group-hover:text-[#002b66] transition-colors">
                       Directions
                     </span>
                     <span className="text-[9px] text-slate-500 font-medium block truncate mt-0.5 leading-none">
@@ -579,7 +579,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                   setMobileOpen(false);
                   if (onOpenEnquiry) onOpenEnquiry();
                 }}
-                className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 active:scale-[0.99] text-white font-bold text-xs py-2.5 rounded-xl shadow-sm cursor-pointer flex items-center justify-center gap-1.5 transition-all"
+                className="w-full bg-[#c01e2e] hover:bg-[#9e1423] active:scale-[0.99] text-white font-bold text-xs py-2.5 rounded-xl shadow-sm cursor-pointer flex items-center justify-center gap-1.5 transition-all"
               >
                 <span>Enquire for Admission 2026</span>
                 <svg className="w-3.5 h-3.5 stroke-current" viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -592,7 +592,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                   href="tel:+917507515656"
                   className="flex-1 py-2 bg-white hover:bg-slate-100 text-slate-800 rounded-xl text-center font-bold text-[11px] border border-slate-200/90 flex items-center justify-center gap-1.5 shadow-2xs transition-colors"
                 >
-                  <svg className="w-3.5 h-3.5 text-blue-700 stroke-current" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg className="w-3.5 h-3.5 text-[#002b66] stroke-current" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                   </svg>
                   <span>Call Desk</span>
@@ -601,9 +601,9 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                   href="https://wa.me/917507515656"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 rounded-xl text-center font-bold text-[11px] border border-emerald-200 flex items-center justify-center gap-1.5 shadow-2xs transition-colors"
+                  className="flex-1 py-2 bg-white hover:bg-slate-100 text-slate-800 rounded-xl text-center font-bold text-[11px] border border-slate-200/90 flex items-center justify-center gap-1.5 shadow-2xs transition-colors"
                 >
-                  <svg className="w-3.5 h-3.5 fill-[#25d366]" viewBox="0 0 24 24">
+                  <svg className="w-3.5 h-3.5 fill-[#002b66]" viewBox="0 0 24 24">
                     <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.02 17.79c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 01-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 012.41 5.83c.01 4.54-3.69 8.23-8.23 8.23z"/>
                   </svg>
                   <span>WhatsApp</span>

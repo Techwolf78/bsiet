@@ -128,25 +128,25 @@ export default function ComputerEngineeringShowcase() {
       title: "CodeX — Algorithmic Coding Club",
       desc: "Weekly competitive coding contests, LeetCode sprints, and peer-to-peer DSA mentorship preparing students for Tier-1 coding interviews.",
       tag: "Competitive Coding",
-      color: "border-blue-200 bg-blue-50/50",
+      color: "border-slate-200 bg-slate-50",
     },
     {
       title: "Hackathon & Open-Source Wing",
       desc: "Active teams participating in Smart India Hackathon (SIH), Google Summer of Code (GSoC), and developing community open-source utilities.",
       tag: "Product Innovation",
-      color: "border-amber-200 bg-amber-50/50",
+      color: "border-slate-200 bg-slate-50",
     },
     {
       title: "CyberShield — Ethical Hacking Chapter",
       desc: "Hands-on workshops on vulnerability assessment, penetration testing, CTF competitions, and zero-day defense drills.",
       tag: "Cyber Security",
-      color: "border-red-200 bg-red-50/50",
+      color: "border-slate-200 bg-slate-50",
     },
     {
       title: "Cloud & AI Developers Society",
       desc: "Workshops on building LLM agents, cloud-native deployments, and hosting tech talks with alumni engineers working at Silicon Valley firms.",
       tag: "Emerging Tech",
-      color: "border-emerald-200 bg-emerald-50/50",
+      color: "border-slate-200 bg-slate-50",
     },
   ];
 
@@ -171,17 +171,16 @@ export default function ComputerEngineeringShowcase() {
           1. HERO SHOWCASE SECTION (Light Theme)
          ══════════════════════════════════════════════ */}
       <section className="relative bg-gradient-to-b from-blue-50/70 via-slate-50 to-white text-slate-900 py-16 lg:py-24 px-4 overflow-hidden border-b border-slate-200/80">
-        <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-blue-100/40 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-amber-100/30 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-blue-100/30 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Breadcrumb */}
           <div className="mb-6 flex items-center gap-2 text-xs text-slate-500 font-medium">
-            <Link href="/" className="hover:text-blue-900 transition-colors">
+            <Link href="/" className="hover:text-[#002b66] transition-colors">
               Home
             </Link>
             <span>/</span>
-            <Link href="/departments" className="hover:text-blue-900 transition-colors">
+            <Link href="/departments" className="hover:text-[#002b66] transition-colors">
               Departments
             </Link>
             <span>/</span>
@@ -191,14 +190,14 @@ export default function ComputerEngineeringShowcase() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2 bg-blue-100/80 border border-blue-300 text-blue-900 text-xs font-bold px-3.5 py-1.5 rounded-full mb-5 shadow-xs">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+              <div className="inline-flex items-center gap-2 bg-blue-50/80 border border-blue-200 text-[#002b66] text-xs font-bold px-3.5 py-1.5 rounded-full mb-5 shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-[#c01e2e]" />
                 DTE Code: 646824210 · Affiliated to DBATU Lonere &amp; MSBTE Mumbai
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-5">
                 Department of{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#002b66] via-blue-700 to-indigo-600">
+                <span className="text-[#002b66]">
                   Computer Science &amp; Engineering
                 </span>
               </h1>
@@ -212,16 +211,16 @@ export default function ComputerEngineeringShowcase() {
               <div className="flex flex-wrap items-center gap-3.5 mb-10">
                 <button
                   onClick={() => setEnquiryOpen(true)}
-                  className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold text-sm px-6 py-3 rounded-lg shadow-md hover:shadow-lg hover:shadow-red-600/20 transition-all cursor-pointer"
+                  className="bg-[#c01e2e] hover:bg-[#9e1423] text-white font-bold text-sm px-6 py-3 rounded-lg shadow-md transition-all cursor-pointer"
                 >
                   Apply for CSE Admission 2026
                 </button>
 
                 <button
                   onClick={() => setBrochureOpen(true)}
-                  className="inline-flex items-center gap-2 border border-amber-400 hover:border-amber-500 bg-amber-50 hover:bg-amber-100 text-amber-900 font-bold text-sm px-5 py-3 rounded-lg shadow-xs transition-all cursor-pointer"
+                  className="inline-flex items-center gap-2 border border-[#002b66] bg-white hover:bg-blue-50 text-[#002b66] font-bold text-sm px-5 py-3 rounded-lg shadow-xs transition-all cursor-pointer"
                 >
-                  <svg className="w-4 h-4 text-amber-700 fill-current" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-[#002b66] fill-current" viewBox="0 0 24 24">
                     <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z" />
                   </svg>
                   <span>Download CSE Syllabus</span>
@@ -246,11 +245,11 @@ export default function ComputerEngineeringShowcase() {
                   <span className="text-[11px] text-slate-600 font-semibold">Polytechnic (MSBTE)</span>
                 </div>
                 <div className="bg-white border border-slate-200 shadow-sm rounded-xl p-3 text-center">
-                  <span className="block text-xl sm:text-2xl font-black text-emerald-600 font-mono">12 LPA</span>
+                  <span className="block text-xl sm:text-2xl font-black text-[#c01e2e] font-mono">12 LPA</span>
                   <span className="text-[11px] text-slate-600 font-semibold">Highest Tech Package</span>
                 </div>
                 <div className="bg-white border border-slate-200 shadow-sm rounded-xl p-3 text-center">
-                  <span className="block text-xl sm:text-2xl font-black text-amber-600 font-mono">100+</span>
+                  <span className="block text-xl sm:text-2xl font-black text-[#002b66] font-mono">100+</span>
                   <span className="text-[11px] text-slate-600 font-semibold">Computing Workstations</span>
                 </div>
               </div>
@@ -297,13 +296,13 @@ export default function ComputerEngineeringShowcase() {
             {/* Vision Card */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-red-700 bg-red-50 px-3 py-1 rounded-full inline-block mb-4">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#c01e2e] bg-red-50 px-3 py-1 rounded-full inline-block mb-4">
                   Department Vision
                 </span>
                 <h3 className="text-xl font-extrabold text-slate-900 mb-3">
                   Pioneering Global Technical Excellence
                 </h3>
-                <blockquote className="text-slate-700 text-sm leading-relaxed italic border-l-4 border-red-600 pl-4 py-2 bg-red-50/40 rounded-r-xl">
+                <blockquote className="text-slate-700 text-sm leading-relaxed italic border-l-4 border-[#c01e2e] pl-4 py-2 bg-red-50/30 rounded-r-xl">
                   &ldquo;To emerge as a premier center of excellence in computer engineering education and applied
                   research, transforming aspiring students into globally competent software professionals, ethical coders,
                   and innovative entrepreneurs dedicated to nation building.&rdquo;
@@ -317,7 +316,7 @@ export default function ComputerEngineeringShowcase() {
             {/* Mission Card */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full inline-block mb-4">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#002b66] bg-blue-50/70 border border-blue-100 px-3 py-1 rounded-full inline-block mb-4">
                   Department Mission
                 </span>
                 <h3 className="text-xl font-extrabold text-slate-900 mb-3">
@@ -325,15 +324,15 @@ export default function ComputerEngineeringShowcase() {
                 </h3>
                 <ul className="space-y-3 text-slate-700 text-xs sm:text-sm leading-relaxed">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-600 font-bold">1.</span>
+                    <span className="text-[#002b66] font-bold">1.</span>
                     <span>To impart rigorous outcome-based education in core algorithms, distributed cloud systems, and modern AI technologies.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-600 font-bold">2.</span>
+                    <span className="text-[#002b66] font-bold">2.</span>
                     <span>To bridge industrial demands through hands-on laboratory workshops, national coding hackathons, and corporate internships.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-600 font-bold">3.</span>
+                    <span className="text-[#002b66] font-bold">3.</span>
                     <span>To nurture professional ethics, collaborative team leadership, and lifelong adaptability in the rapidly evolving software ecosystem.</span>
                   </li>
                 </ul>
@@ -352,10 +351,7 @@ export default function ComputerEngineeringShowcase() {
       <section className="py-20 px-4 bg-white" id="labs">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="bg-blue-50 text-blue-800 border border-blue-200 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full">
-              Infrastructure &amp; Research
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
               State-of-the-Art Computing Laboratories
             </h2>
             <p className="text-slate-600 text-sm sm:text-base">
@@ -368,12 +364,12 @@ export default function ComputerEngineeringShowcase() {
             {labs.map((lab, idx) => (
               <div
                 key={idx}
-                className="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-blue-500 hover:bg-white shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                className="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-[#002b66] hover:bg-white shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-3xl">{lab.icon}</span>
-                    <span className="text-[10px] font-bold uppercase tracking-wider bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full">
+                    <span className="text-[10px] font-bold uppercase tracking-wider bg-blue-50 text-[#002b66] border border-blue-100 px-2.5 py-1 rounded-full">
                       {lab.badge}
                     </span>
                   </div>
@@ -406,9 +402,9 @@ export default function ComputerEngineeringShowcase() {
             ))}
 
             {/* Virtual Lab Tour Box (Light Theme) */}
-            <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-50 border-2 border-blue-200 rounded-3xl p-6 text-slate-900 flex flex-col justify-between shadow-sm">
+            <div className="bg-blue-50/60 border-2 border-blue-200 rounded-3xl p-6 text-slate-900 flex flex-col justify-between shadow-sm">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-blue-900 bg-blue-100 border border-blue-200 px-2.5 py-1 rounded-full inline-block mb-3">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#002b66] bg-blue-100/70 border border-blue-200 px-2.5 py-1 rounded-full inline-block mb-3">
                   Hardware &amp; Connectivity
                 </span>
                 <h3 className="text-xl font-bold mb-3 text-slate-900">
@@ -422,7 +418,7 @@ export default function ComputerEngineeringShowcase() {
 
               <button
                 onClick={() => setEnquiryOpen(true)}
-                className="w-full bg-[#002b66] hover:bg-blue-900 text-white font-bold text-xs py-3 rounded-xl transition-all cursor-pointer text-center shadow-sm"
+                className="w-full bg-[#002b66] hover:bg-[#001f4d] text-white font-bold text-xs py-3 rounded-xl transition-all cursor-pointer text-center shadow-sm"
               >
                 Schedule an In-Person Lab Visit →
               </button>
@@ -437,10 +433,7 @@ export default function ComputerEngineeringShowcase() {
       <section className="py-20 px-4 bg-slate-50 border-y border-slate-200">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="bg-amber-100 text-amber-900 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full">
-              DBATU Affiliated Syllabus
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-3">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-3">
               4-Year B.Tech Academic Roadmap
             </h2>
             <p className="text-slate-600 text-sm">
@@ -457,7 +450,7 @@ export default function ComputerEngineeringShowcase() {
                 onClick={() => setActiveYear(c.year)}
                 className={`px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all cursor-pointer ${
                   activeYear === c.year
-                    ? "bg-[#002b66] text-[#ffcc00] shadow-md scale-105"
+                    ? "bg-[#002b66] text-white shadow-md scale-105"
                     : "bg-white text-slate-700 border border-slate-200 hover:bg-slate-100"
                 }`}
               >
@@ -478,7 +471,7 @@ export default function ComputerEngineeringShowcase() {
                   <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">
                     {c.title}
                   </h3>
-                  <span className="text-xs font-bold uppercase tracking-wider bg-blue-50 text-blue-700 px-3 py-1 rounded-full">
+                  <span className="text-xs font-bold uppercase tracking-wider bg-blue-50 text-[#002b66] border border-blue-100 px-3 py-1 rounded-full">
                     {c.tag}
                   </span>
                 </div>
@@ -497,7 +490,7 @@ export default function ComputerEngineeringShowcase() {
                       key={sIdx}
                       className="p-3 bg-slate-50 border border-slate-100 rounded-xl flex items-center gap-2.5 text-xs text-slate-800 font-medium"
                     >
-                      <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0">
+                      <span className="w-5 h-5 rounded-full bg-blue-50 text-[#002b66] flex items-center justify-center font-bold text-[10px] shrink-0">
                         ✓
                       </span>
                       <span>{sub}</span>
@@ -515,10 +508,7 @@ export default function ComputerEngineeringShowcase() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="bg-red-50 text-red-700 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full">
-              Industry 4.0 Toolkit
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-3">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-3">
               Technologies Mastered by BSIET Coders
             </h2>
             <p className="text-slate-600 text-sm">
@@ -530,7 +520,7 @@ export default function ComputerEngineeringShowcase() {
             {techStack.map((t, idx) => (
               <div
                 key={idx}
-                className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-400 hover:bg-white hover:shadow-md transition-all text-center flex flex-col items-center justify-center"
+                className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#002b66] hover:bg-white hover:shadow-md transition-all text-center flex flex-col items-center justify-center"
               >
                 <div className="text-3xl mb-2">{t.icon}</div>
                 <strong className="text-slate-900 text-sm block font-bold">{t.name}</strong>
@@ -547,10 +537,7 @@ export default function ComputerEngineeringShowcase() {
       <section className="py-20 px-4 bg-slate-50 border-y border-slate-200 text-slate-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="bg-amber-100 text-amber-900 border border-amber-300 text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full">
-              TPO Career Track Record
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-3">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-3">
               Direct On-Campus Placements for CSE Graduates
             </h2>
             <p className="text-slate-600 text-sm">
@@ -565,11 +552,11 @@ export default function ComputerEngineeringShowcase() {
               <div className="text-xs text-slate-600 font-semibold">CSE Placement Rate</div>
             </div>
             <div className="bg-white border border-slate-200 p-6 rounded-2xl text-center shadow-sm">
-              <div className="text-3xl sm:text-4xl font-black text-amber-600 font-mono mb-1">12 LPA</div>
+              <div className="text-3xl sm:text-4xl font-black text-[#c01e2e] font-mono mb-1">12 LPA</div>
               <div className="text-xs text-slate-600 font-semibold">Highest Package Offered</div>
             </div>
             <div className="bg-white border border-slate-200 p-6 rounded-2xl text-center shadow-sm">
-              <div className="text-3xl sm:text-4xl font-black text-emerald-600 font-mono mb-1">4.8 LPA</div>
+              <div className="text-3xl sm:text-4xl font-black text-[#002b66] font-mono mb-1">4.8 LPA</div>
               <div className="text-xs text-slate-600 font-semibold">Average Package</div>
             </div>
             <div className="bg-white border border-slate-200 p-6 rounded-2xl text-center shadow-sm">
@@ -603,10 +590,7 @@ export default function ComputerEngineeringShowcase() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="bg-emerald-50 text-emerald-800 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full">
-              Student Ecosystem
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-3">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-3">
               Hackathons, Student Clubs &amp; Culture
             </h2>
             <p className="text-slate-600 text-sm">
@@ -645,7 +629,7 @@ export default function ComputerEngineeringShowcase() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* HOD Profile */}
             <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center gap-6">
-              <div className="relative w-28 h-32 sm:w-36 sm:h-40 rounded-2xl overflow-hidden border-2 border-blue-600/30 shrink-0 bg-slate-100 shadow-sm">
+              <div className="relative w-28 h-32 sm:w-36 sm:h-40 rounded-2xl overflow-hidden border-2 border-slate-200 shrink-0 bg-slate-100 shadow-sm">
                 <img
                   src="/images/management-1.jpg"
                   alt="Dr. S. K. Patil - HOD Computer Engineering"
@@ -653,23 +637,23 @@ export default function ComputerEngineeringShowcase() {
                 />
               </div>
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-2.5 py-1 rounded inline-block mb-2">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#002b66] bg-blue-50/70 border border-blue-100 px-2.5 py-1 rounded inline-block mb-2">
                   Head of Department
                 </span>
                 <h3 className="text-xl font-bold text-slate-900">Dr. S. K. Patil</h3>
                 <span className="text-xs font-semibold text-slate-500 block mb-3">
                   Ph.D., M.Tech (CSE) · 18+ Years Academic &amp; Research Experience
                 </span>
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed italic border-l-2 border-blue-600 pl-3">
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed italic border-l-2 border-[#002b66] pl-3">
                   &ldquo;Our vision is to empower students not only to write code, but to engineer robust, scalable solutions for real societal and industrial challenges. We welcome every young aspiring technologist to BSIET CSE.&rdquo;
                 </p>
               </div>
             </div>
 
             {/* Admission Summary Box (Light Theme) */}
-            <div className="lg:col-span-5 bg-gradient-to-br from-blue-50/80 via-indigo-50/50 to-white text-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-blue-200 shadow-sm flex flex-col justify-between">
+            <div className="lg:col-span-5 bg-blue-50/60 text-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-blue-200 shadow-sm flex flex-col justify-between">
               <div>
-                <span className="text-[11px] font-extrabold text-blue-900 uppercase tracking-wider block mb-1">
+                <span className="text-[11px] font-extrabold text-[#002b66] uppercase tracking-wider block mb-1">
                   Admissions 2026-27 · DTE: 646824210
                 </span>
                 <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-2">
@@ -683,7 +667,7 @@ export default function ComputerEngineeringShowcase() {
               <div className="flex flex-col sm:flex-row gap-3 pt-3 border-t border-blue-200">
                 <button
                   onClick={() => setEnquiryOpen(true)}
-                  className="flex-1 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold text-xs py-3 rounded-lg shadow-md transition-all cursor-pointer text-center"
+                  className="flex-1 bg-[#c01e2e] hover:bg-[#9e1423] text-white font-bold text-xs py-3 rounded-lg shadow-md transition-all cursor-pointer text-center"
                 >
                   Enquire Now via WhatsApp
                 </button>

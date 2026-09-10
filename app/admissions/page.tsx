@@ -50,10 +50,7 @@ export default function AdmissionsPage() {
     <div className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="mb-12 text-center max-w-3xl mx-auto">
-          <span className="bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-            Enroll for Academic Year 2026-27
-          </span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
             Admissions &amp; Eligibility Criteria
           </h1>
           <p className="text-slate-600 text-sm leading-relaxed">
@@ -63,7 +60,7 @@ export default function AdmissionsPage() {
           <div className="mt-6">
             <button
               onClick={() => setEnquiryOpen(true)}
-              className="bg-red-700 hover:bg-red-800 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-lg transition-all cursor-pointer"
+              className="bg-[#c01e2e] hover:bg-[#9e1423] text-white font-bold text-sm px-6 py-3 rounded-xl shadow-lg transition-all cursor-pointer"
             >
               Start Admission Counseling &raquo;
             </button>
@@ -72,7 +69,7 @@ export default function AdmissionsPage() {
 
         {/* Eligibility Cards */}
         <div className="space-y-6 mb-16" id="eligibility">
-          <h2 className="text-xl font-bold text-slate-900 mb-4 border-l-4 border-red-700 pl-3">
+          <h2 className="text-xl font-bold text-slate-900 mb-4 border-l-4 border-[#c01e2e] pl-3">
             Eligibility Benchmarks
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -94,7 +91,7 @@ export default function AdmissionsPage() {
                 </div>
                 <button
                   onClick={() => setEnquiryOpen(true)}
-                  className="mt-6 w-full text-center bg-white hover:bg-[#002b66] text-blue-900 hover:text-[#ffcc00] border border-slate-300 font-bold text-xs py-2.5 rounded-xl transition-all cursor-pointer"
+                  className="mt-6 w-full text-center bg-white hover:bg-[#002b66] text-[#002b66] hover:text-white border border-slate-300 font-bold text-xs py-2.5 rounded-xl transition-all cursor-pointer"
                 >
                   Check Your Seat Eligibility
                 </button>
@@ -104,9 +101,9 @@ export default function AdmissionsPage() {
         </div>
 
         {/* FRA Fees & Concessions (Light Theme) */}
-        <div className="bg-gradient-to-r from-blue-50/90 via-indigo-50/40 to-slate-50 border-2 border-blue-200/80 text-slate-900 rounded-3xl p-8 sm:p-10 mb-16 shadow-sm" id="fra">
+        <div className="bg-blue-50/60 border-2 border-blue-200/80 text-slate-900 rounded-3xl p-8 sm:p-10 mb-16 shadow-sm" id="fra">
           <div className="max-w-2xl">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-blue-900 bg-blue-100 border border-blue-200 px-2.5 py-1 rounded">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-[#002b66] bg-blue-100 border border-blue-200 px-2.5 py-1 rounded">
               Government Regulated
             </span>
             <h2 className="text-2xl font-extrabold text-slate-900 mt-3 mb-3">
@@ -120,7 +117,7 @@ export default function AdmissionsPage() {
             <div className="flex flex-wrap gap-4">
               <button
                 onClick={() => setEnquiryOpen(true)}
-                className="bg-[#002b66] hover:bg-blue-900 text-[#ffcc00] font-bold text-xs px-5 py-2.5 rounded-lg shadow cursor-pointer transition-all"
+                className="bg-[#002b66] hover:bg-[#001f4d] text-white font-bold text-xs px-5 py-2.5 rounded-lg shadow cursor-pointer transition-all"
               >
                 Request Current Year Fee Structure
               </button>
@@ -139,7 +136,7 @@ export default function AdmissionsPage() {
 
         {/* Scholarships */}
         <div className="mb-12" id="scholarships">
-          <h2 className="text-xl font-bold text-slate-900 mb-6 border-l-4 border-[#ffcc00] pl-3">
+          <h2 className="text-xl font-bold text-slate-900 mb-6 border-l-4 border-[#c01e2e] pl-3">
             Government &amp; Sanstha Scholarships
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

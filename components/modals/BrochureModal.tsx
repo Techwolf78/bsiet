@@ -35,7 +35,7 @@ export default function BrochureModal({ isOpen, onClose }: BrochureModalProps) {
         </button>
 
         <div className="mb-6">
-          <span className="text-[11px] font-extrabold uppercase tracking-wider text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded">
+          <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#002b66] bg-blue-50/70 border border-blue-100 px-2.5 py-0.5 rounded">
             Official Prospectus
           </span>
           <h3 className="text-xl font-extrabold text-slate-900 mt-2">
@@ -48,7 +48,7 @@ export default function BrochureModal({ isOpen, onClose }: BrochureModalProps) {
         </div>
 
         {downloaded ? (
-          <div className="py-6 text-center text-emerald-600 font-bold text-sm bg-emerald-50 rounded-2xl">
+          <div className="py-6 text-center text-[#002b66] font-bold text-sm bg-blue-50 border border-blue-200 rounded-2xl">
             ✓ Generating download link...
           </div>
         ) : (
@@ -63,13 +63,13 @@ export default function BrochureModal({ isOpen, onClose }: BrochureModalProps) {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="name@example.com"
-                className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:border-blue-600 focus:outline-none bg-slate-50"
+                className="w-full text-xs p-3 rounded-xl border border-slate-200 focus:border-[#002b66] focus:outline-none bg-slate-50"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold text-xs sm:text-sm py-3.5 rounded-xl shadow-lg transition-all cursor-pointer"
+              className="w-full bg-[#c01e2e] hover:bg-[#9e1423] text-white font-bold text-xs sm:text-sm py-3.5 rounded-xl shadow-lg transition-all cursor-pointer"
             >
               Download PDF Brochure (Instant)
             </button>
