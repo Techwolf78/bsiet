@@ -15,7 +15,7 @@ export const DEPARTMENTS: Department[] = [
     slug: "computer-engineering",
     name: "Computer Engineering",
     shortName: "CSE",
-    image: "/images/lab-computer.jpg",
+    image: "/images/modern-computer-lab.jpg",
     tag: "Cloud & HPC",
     keyLabs:
       "Cloud Computing Lab, Advanced Java & Python, Database Systems, Cyber Security Lab.",
@@ -28,7 +28,7 @@ export const DEPARTMENTS: Department[] = [
     slug: "aiml",
     name: "AI & Machine Learning",
     shortName: "AI & ML",
-    image: "/images/lab-aiml.jpg",
+    image: "/images/modern-aiml-lab.jpg",
     tag: "AI & GPU Labs",
     keyLabs:
       "Deep Learning GPU Workstations, Data Science Hub, Robotics & Vision Testing.",
@@ -41,7 +41,7 @@ export const DEPARTMENTS: Department[] = [
     slug: "mechanical-engineering",
     name: "Mechanical Engineering",
     shortName: "Mechanical",
-    image: "/images/lab-mechanical.jpg",
+    image: "/images/modern-mechanical-lab.jpg",
     tag: "CNC & CAD/CAM",
     keyLabs:
       "CNC Machine Center, CAD/CAM Studio, Fluid Mechanics & Heat Transfer, Metallurgy Lab.",
@@ -54,7 +54,7 @@ export const DEPARTMENTS: Department[] = [
     slug: "electrical-engineering",
     name: "Electrical Engineering",
     shortName: "Electrical",
-    image: "/images/lab-electrical.jpg",
+    image: "/images/modern-electrical-lab.jpg",
     tag: "Power & EV Lab",
     keyLabs:
       "AC/DC Machines Lab, Power Electronics & Drives, Switchgear & Protection, EV Simulation.",
@@ -67,7 +67,7 @@ export const DEPARTMENTS: Department[] = [
     slug: "civil-engineering",
     name: "Civil Engineering",
     shortName: "Civil",
-    image: "/images/lab-civil.jpg",
+    image: "/images/modern-civil-lab.jpg",
     tag: "Materials & Survey",
     keyLabs:
       "Total Station Surveying, Strength of Materials Lab, Environmental Engineering, Concrete Testing.",

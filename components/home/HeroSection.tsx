@@ -11,11 +11,20 @@ interface HeroSectionProps {
 
 const HERO_SLIDES = [
   { image: "/images/hero-campus-event.jpg", alt: "Convocation & Campus Event" },
-  { image: "/images/hero-seminar-hall.jpg", alt: "Modern Central Seminar Hall" },
-  { image: "/images/hero-annual-gathering.png", alt: "Annual Gathering & Youth Festival" },
+  {
+    image: "/images/hero-seminar-hall.jpg",
+    alt: "Modern Central Seminar Hall",
+  },
+  {
+    image: "/images/hero-annual-gathering.png",
+    alt: "Annual Gathering & Youth Festival",
+  },
   { image: "/images/hero-induction.jpg", alt: "Student Induction Program" },
   { image: "/images/hero-alumni-slider.jpg", alt: "Global Alumni Meet" },
-  { image: "/images/hero-lab-activity-1.jpg", alt: "Practical Engineering Workshop" },
+  {
+    image: "/images/hero-lab-activity-1.jpg",
+    alt: "Practical Engineering Workshop",
+  },
   { image: "/images/hero-nss-camp.jpg", alt: "NSS & Social Outreach Camp" },
 ];
 
@@ -103,7 +112,9 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
   }, []);
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
+    setCurrentSlide(
+      (prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length,
+    );
   };
 
   const nextSlide = () => {
@@ -114,7 +125,10 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
   const courses =
     discipline === "Engineering & Technology"
       ? ["B.Tech (First Year)", "Direct Second Year B.Tech (DSE)"]
-      : ["Polytechnic Diploma (First Year)", "Direct Second Year Diploma (DSE)"];
+      : [
+          "Polytechnic Diploma (First Year)",
+          "Direct Second Year Diploma (DSE)",
+        ];
 
   // Programs offered
   const programs = [
@@ -159,7 +173,7 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
     setTimeout(() => {
       if (
         confirm(
-          "Enquiry registered successfully! Would you like to connect directly on WhatsApp with our Admissions Desk now?"
+          "Enquiry registered successfully! Would you like to connect directly on WhatsApp with our Admissions Desk now?",
         )
       ) {
         window.open(waUrl, "_blank");
@@ -186,9 +200,14 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
           <div
             key={idx}
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              idx === currentSlide ? "opacity-100 scale-100" : "opacity-0 scale-105"
+              idx === currentSlide
+                ? "opacity-100 scale-100"
+                : "opacity-0 scale-105"
             }`}
-            style={{ transitionProperty: "opacity, transform", transitionDuration: "1000ms" }}
+            style={{
+              transitionProperty: "opacity, transform",
+              transitionDuration: "1000ms",
+            }}
           >
             <Image
               src={slide.image}
@@ -222,9 +241,17 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
             </div>
 
             <p className="text-slate-100 text-sm sm:text-base leading-relaxed max-w-xl font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
-              Affiliated to <strong className="text-white font-semibold">DBATU, Lonere</strong> (B.Tech Degree) and{" "}
-              <strong className="text-white font-semibold">MSBTE, Mumbai</strong> (Polytechnic Diploma). DTE Choice Code:{" "}
-              <strong className="text-white font-semibold">6468</strong>. Located in Tarabai Park, Kolhapur.
+              Affiliated to{" "}
+              <strong className="text-white font-semibold">
+                DBATU, Lonere
+              </strong>{" "}
+              (B.Tech Degree) and{" "}
+              <strong className="text-white font-semibold">
+                MSBTE, Mumbai
+              </strong>{" "}
+              (Polytechnic Diploma). DTE Choice Code:{" "}
+              <strong className="text-white font-semibold">6468</strong>.
+              Located in Tarabai Park, Kolhapur.
             </p>
 
             {/* Action Buttons */}
@@ -245,7 +272,7 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z" />
                 </svg>
-                <span>Information Brochure</span>
+                <span>Brochure</span>
               </button>
             </div>
 
@@ -268,7 +295,9 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
                       onClick={() => setCurrentSlide(i)}
                       aria-label={`Slide ${i + 1}`}
                       className={`h-1.5 rounded-full transition-all cursor-pointer ${
-                        i === currentSlide ? "w-5 bg-[#c01e2e]" : "w-1.5 bg-white/40 hover:bg-white/70"
+                        i === currentSlide
+                          ? "w-5 bg-[#c01e2e]"
+                          : "w-1.5 bg-white/40 hover:bg-white/70"
                       }`}
                     />
                   ))}
@@ -284,7 +313,8 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
               </div>
 
               <span className="text-xs text-white/90 font-medium drop-shadow">
-                {currentSlide + 1} / {HERO_SLIDES.length} · {HERO_SLIDES[currentSlide].alt}
+                {currentSlide + 1} / {HERO_SLIDES.length} ·{" "}
+                {HERO_SLIDES[currentSlide].alt}
               </span>
             </div>
           </div>
@@ -299,17 +329,17 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
                 <h3 className="text-base sm:text-lg font-bold text-[#002b66] leading-snug">
                   Admission Enquiry 2026-27
                 </h3>
-                <p className="text-[11px] text-slate-500 font-medium mt-0.5">
-                  B.Tech Degree (DBATU) &amp; Polytechnic Diploma (MSBTE) · DTE: 6468
-                </p>
               </div>
 
               {isSubmitted ? (
                 <div className="py-12 text-center text-[#002b66] font-bold text-sm bg-slate-50 border border-slate-200 rounded-xl p-6">
                   <div className="text-3xl mb-2 text-[#c01e2e]">✓</div>
-                  <div className="text-base">Enquiry Registered Successfully</div>
+                  <div className="text-base">
+                    Enquiry Registered Successfully
+                  </div>
                   <p className="text-xs font-normal text-slate-600 mt-1.5 leading-relaxed">
-                    Our Admissions Team is reviewing your submission and will connect with you on WhatsApp shortly.
+                    Our Admissions Team is reviewing your submission and will
+                    connect with you on WhatsApp shortly.
                   </p>
                 </div>
               ) : (
@@ -371,12 +401,16 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
                         onChange={(e) => {
                           const newState = e.target.value;
                           setState(newState);
-                          const cities = CITIES_BY_STATE[newState] || ["Other City"];
+                          const cities = CITIES_BY_STATE[newState] || [
+                            "Other City",
+                          ];
                           setCity(cities[0]);
                         }}
                         className="w-full border border-slate-300 rounded px-2.5 py-2 text-xs text-slate-700 bg-white focus:outline-none focus:border-[#c01e2e] cursor-pointer truncate"
                       >
-                        <option value="" disabled>Select State *</option>
+                        <option value="" disabled>
+                          Select State *
+                        </option>
                         {STATES.map((st) => (
                           <option key={st} value={st}>
                             {st}
@@ -391,7 +425,9 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
                         onChange={(e) => setCity(e.target.value)}
                         className="w-full border border-slate-300 rounded px-2.5 py-2 text-xs text-slate-700 bg-white focus:outline-none focus:border-[#c01e2e] cursor-pointer truncate"
                       >
-                        <option value="" disabled>Select City *</option>
+                        <option value="" disabled>
+                          Select City *
+                        </option>
                         {availableCities.map((c) => (
                           <option key={c} value={c}>
                             {c}
@@ -412,13 +448,17 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
                           setCourse(
                             newDisc === "Engineering & Technology"
                               ? "B.Tech (First Year)"
-                              : "Polytechnic Diploma (First Year)"
+                              : "Polytechnic Diploma (First Year)",
                           );
                         }}
                         className="w-full border border-slate-300 rounded px-2.5 py-2 text-xs text-slate-700 bg-white focus:outline-none focus:border-[#c01e2e] cursor-pointer truncate"
                       >
-                        <option value="Engineering & Technology">Engineering &amp; Technology</option>
-                        <option value="Polytechnic (Diploma)">Polytechnic (Diploma)</option>
+                        <option value="Engineering & Technology">
+                          Engineering &amp; Technology
+                        </option>
+                        <option value="Polytechnic (Diploma)">
+                          Polytechnic (Diploma)
+                        </option>
                       </select>
                     </div>
 
@@ -444,7 +484,9 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
                       onChange={(e) => setProgram(e.target.value)}
                       className="w-full border border-slate-300 rounded px-3 py-2 text-xs text-slate-700 bg-white focus:outline-none focus:border-[#c01e2e] cursor-pointer"
                     >
-                      <option value="" disabled>Select Program *</option>
+                      <option value="" disabled>
+                        Select Program *
+                      </option>
                       {programs.map((prg) => (
                         <option key={prg} value={prg}>
                           {prg}
@@ -521,7 +563,8 @@ export default function HeroSection({ onOpenBrochure }: HeroSectionProps) {
                       htmlFor="hero-enquiry-consent"
                       className="text-[11px] text-slate-700 leading-tight select-none cursor-pointer"
                     >
-                      I agree to receive information regarding my submitted enquiry*
+                      I agree to receive information regarding my submitted
+                      enquiry*
                     </label>
                   </div>
 
